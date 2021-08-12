@@ -1,0 +1,626 @@
+Using pre-set license
+Built from '2021.1/staging' branch; Version is '2021.1.3f1 (4bef613afd59) revision 4976481'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1110; Version 2009; 64bit' Language: 'en' Physical Memory: 16309 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.1.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/hdunp/Documents/GameDev/Unity/GitHub/MetroidVania
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+49747
+Successfully changed project path to: C:/Users/hdunp/Documents/GameDev/Unity/GitHub/MetroidVania
+C:/Users/hdunp/Documents/GameDev/Unity/GitHub/MetroidVania
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 81.91 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.1.3f1 (4bef613afd59)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/hdunp/Documents/GameDev/Unity/GitHub/MetroidVania/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
+    Vendor:   NVIDIA
+    VRAM:     5991 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56596
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002040 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 88.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.346 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002742 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 88.00 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.022 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3370 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 127.9 MB.
+System memory in use after: 128.0 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 3822.
+Total: 2.432500 ms (FindLiveObjects: 0.351400 ms CreateObjectMapping: 0.090500 ms MarkObjects: 1.880500 ms  DeleteObjects: 0.109000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efcc68737208a1d7a8581e190ec11b99') in 0.009439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.990877 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(41a39e05e755e7d409696299743f1459) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(41a39e05e755e7d409696299743f1459) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48eb31647d39ee6a83e91eb23d7f3c22') in 0.006134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.109171 seconds.
+  path: Assets/Scripts 1
+  artifactKey: Guid(960e5f60b2c7ccf44aeeecaa963b6ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts 1 using Guid(960e5f60b2c7ccf44aeeecaa963b6ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfe0c9fd41589bb2d06442fc1ff5c718') in 0.006609 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.852212 seconds.
+  path: Assets/Resources
+  artifactKey: Guid(960e5f60b2c7ccf44aeeecaa963b6ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources using Guid(960e5f60b2c7ccf44aeeecaa963b6ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa57e747dd9c0d51d3d835f31e2c873') in 0.006787 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.791558 seconds.
+  path: Assets/Resources/Art
+  artifactKey: Guid(8d35754e92c781b4aaef3cee866f8520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Art using Guid(8d35754e92c781b4aaef3cee866f8520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aefe27add4295ca6fdbd39f82b2c2066') in 0.009513 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002763 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.863 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3369 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.0 MB.
+System memory in use after: 128.1 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3830.
+Total: 2.382400 ms (FindLiveObjects: 0.340100 ms CreateObjectMapping: 0.097500 ms MarkObjects: 1.850000 ms  DeleteObjects: 0.094100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 748.784021 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Demo
+  artifactKey: Guid(6289fda832ad64b4295e560089668425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Demo using Guid(6289fda832ad64b4295e560089668425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bb3d0d68e5cedccfd92f8abe456d860') in 0.010168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.667041 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Demo/Demo.unity
+  artifactKey: Guid(c3dba8a76f24ef8409238cc6858385a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Demo/Demo.unity using Guid(c3dba8a76f24ef8409238cc6858385a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fae83d3caf881c480e403ff7108102e') in 0.013497 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002790 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.857 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3369 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.1 MB.
+System memory in use after: 128.2 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3834.
+Total: 2.291500 ms (FindLiveObjects: 0.307500 ms CreateObjectMapping: 0.083400 ms MarkObjects: 1.806800 ms  DeleteObjects: 0.092800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 241.043473 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Animations/Prototype Hero
+  artifactKey: Guid(a92db283cbbb35249902f2a0e12b2286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Animations/Prototype Hero using Guid(a92db283cbbb35249902f2a0e12b2286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fcaad53111333bd17e6af3a05aff71c') in 0.012011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.419997 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Animations/Prototype Hero/PrototypeHero.controller
+  artifactKey: Guid(1d4af8c325522f144a3ebdefb8d089f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Animations/Prototype Hero/PrototypeHero.controller using Guid(1d4af8c325522f144a3ebdefb8d089f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aab58a8a72e407007298957a537b4da') in 0.034044 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.900157 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Animations/Prototype Hero/Run.anim
+  artifactKey: Guid(75c251e51bb86f54389e4cdaf346fdbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Animations/Prototype Hero/Run.anim using Guid(75c251e51bb86f54389e4cdaf346fdbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b89f8c9dc3ea6c839f14eedbeda0282b') in 0.008939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.499940 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Sprites/PrototypeHero.png
+  artifactKey: Guid(300ea1a5869382b43bf6149aba92c4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Sprites/PrototypeHero.png using Guid(300ea1a5869382b43bf6149aba92c4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ee4e8d4391873864041aa3a8cedb3e3') in 0.152356 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.842359 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Sprites/EnvironmentTiles.png
+  artifactKey: Guid(7706d4b3f7d8d2e42b82d09010a105ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Sprites/EnvironmentTiles.png using Guid(7706d4b3f7d8d2e42b82d09010a105ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71c7c883346570ba53cda3a5f635e1c7') in 0.026327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.139126 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Sprites/Dust.png
+  artifactKey: Guid(197dc101be73bc64ebf9c4837ee28a15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Sprites/Dust.png using Guid(197dc101be73bc64ebf9c4837ee28a15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e65f98d219dcc3c07f13c8288df5603') in 0.062581 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.395925 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Sprites/Background.png
+  artifactKey: Guid(d9c5f41937dce6a4aaea431fd404415b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Sprites/Background.png using Guid(d9c5f41937dce6a4aaea431fd404415b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5d44e4e6df651c628a46bf0619c46ca') in 0.014836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.546748 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Sprites/PrototypeHero_noSword.png
+  artifactKey: Guid(0409f2fddf07780408257c186ab69681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Sprites/PrototypeHero_noSword.png using Guid(0409f2fddf07780408257c186ab69681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b82cc9c7d3ece59b185755ac9545d2') in 0.071654 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.709318 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Environment
+  artifactKey: Guid(52873c474e7fe244c871f1cb933736c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Environment using Guid(52873c474e7fe244c871f1cb933736c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b88b4af4372fa77805a6e32379a4f0b7') in 0.009069 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.211993 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Sprites
+  artifactKey: Guid(fe0dd8d84ad077a439f068110a4c1145) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Sprites using Guid(fe0dd8d84ad077a439f068110a4c1145) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ebaed858112166bea03b4f3159a796') in 0.008147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.792739 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Animations
+  artifactKey: Guid(41229bb698c230046aa08132e15eab69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Animations using Guid(41229bb698c230046aa08132e15eab69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1263ffec922773ee29fdabb13db4a353') in 0.008210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.695180 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art/Animations/Effects
+  artifactKey: Guid(74859b2488caa714388b4cedb7324ad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art/Animations/Effects using Guid(74859b2488caa714388b4cedb7324ad6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd00572071475821a6dfc7ab5447257dd') in 0.008154 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003180 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.890 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3388 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.8 MB.
+System memory in use after: 135.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3940.
+Total: 2.400100 ms (FindLiveObjects: 0.339800 ms CreateObjectMapping: 0.085700 ms MarkObjects: 1.877400 ms  DeleteObjects: 0.096400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 160.538584 seconds.
+  path: Assets/MetroidvaniaController/HowToSetup.pdf
+  artifactKey: Guid(510751490bb635a428642f70f0a9f5eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/HowToSetup.pdf using Guid(510751490bb635a428642f70f0a9f5eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e531e4bcefbcea1ef2d3d838f8495cc3') in 0.022517 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.107412 seconds.
+  path: Assets/MetroidvaniaController/Scenes
+  artifactKey: Guid(c966d703999ace24aa3cea84c77dc25d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Scenes using Guid(c966d703999ace24aa3cea84c77dc25d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecf9f0172342c72a4d69f85b3d5c7ef3') in 0.007765 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.106778 seconds.
+  path: Assets/MetroidvaniaController/Scenes/Demo.unity
+  artifactKey: Guid(32fdc3ddf95ba7b409bad2fc73299c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Scenes/Demo.unity using Guid(32fdc3ddf95ba7b409bad2fc73299c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '252810439439abb495d6fc936ecc805c') in 0.002761 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003200 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.027 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3383 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.6 MB.
+System memory in use after: 135.7 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3944.
+Total: 2.486100 ms (FindLiveObjects: 0.349000 ms CreateObjectMapping: 0.097200 ms MarkObjects: 1.943600 ms  DeleteObjects: 0.095400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 138.782600 seconds.
+  path: Assets/MetroidvaniaController/Sprites/TowerBig.png
+  artifactKey: Guid(98a542e663c16814da6ee90fc29fc185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/TowerBig.png using Guid(98a542e663c16814da6ee90fc29fc185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '841d858cbcd10f1b6a93437fb39eb078') in 0.053457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.956543 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Tower.png
+  artifactKey: Guid(729775612abe66c4780fcfc584f92fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Tower.png using Guid(729775612abe66c4780fcfc584f92fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4298ef155e870519f254511b09208b06') in 0.018477 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.338397 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Rock.png
+  artifactKey: Guid(d65e1377b36ed9c4ea0eae748ccc6868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Rock.png using Guid(d65e1377b36ed9c4ea0eae748ccc6868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f7c28233ad0c7f5f7550e3f33109718') in 0.024730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.230288 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Projectile.png
+  artifactKey: Guid(ab294bb9aa0b0b247bdf57bb4f855c4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Projectile.png using Guid(ab294bb9aa0b0b247bdf57bb4f855c4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ece4d3c01ba523b8881e02ac600dde47') in 0.014010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.415385 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Platform.png
+  artifactKey: Guid(0a6a07c3a27e25a4fac05689c53ac5a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Platform.png using Guid(0a6a07c3a27e25a4fac05689c53ac5a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4518b79059b7aa1885248d3e7d838428') in 0.013416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.295566 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Leaf.png
+  artifactKey: Guid(51de780576c3b234b9e8bd795ba2613f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Leaf.png using Guid(51de780576c3b234b9e8bd795ba2613f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41f82f173d251fbd22172e3556c08ef8') in 0.013213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.212975 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Keyboard.png
+  artifactKey: Guid(4473e5e5a7695db438fb822d2e53b545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Keyboard.png using Guid(4473e5e5a7695db438fb822d2e53b545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6da6471b520e558f4fbd2ce96c37dde8') in 0.018487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.821406 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Instructions.png
+  artifactKey: Guid(eb91d6a9176fa8d4f8809f640b0e69da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Instructions.png using Guid(eb91d6a9176fa8d4f8809f640b0e69da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76373d41f5c602d4db9bbfd3e4a31b1c') in 0.022102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.659622 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Ground.png
+  artifactKey: Guid(408c5669e6f1ab1498bbbc1efb6faab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Ground.png using Guid(408c5669e6f1ab1498bbbc1efb6faab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99440d7284ad52bc0e445191c1938ad5') in 0.068377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.641372 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Grass.png
+  artifactKey: Guid(036acc7c632d70543bcfc6718e6d8899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Grass.png using Guid(036acc7c632d70543bcfc6718e6d8899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3537b2d78819ce0040d7c4610246ad3') in 0.014518 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.471833 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player
+  artifactKey: Guid(6714aed10292f3246abfaa249356519c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player using Guid(6714aed10292f3246abfaa249356519c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '517f5874c99047292022d69cb22af414') in 0.006768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.103447 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player000.png
+  artifactKey: Guid(96be36fcbc69e8944b5d9f089bc07112) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player000.png using Guid(96be36fcbc69e8944b5d9f089bc07112) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5982d52008b5c533cfb3ce35fb65c6c4') in 0.014371 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.385678 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player001.png
+  artifactKey: Guid(dd13f9da5b5fef64a99f19974eca3e56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player001.png using Guid(dd13f9da5b5fef64a99f19974eca3e56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16adb7e462ac740209280735eb3923c1') in 0.033254 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.292840 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player002.png
+  artifactKey: Guid(b426a42f67a4b8340b3767ac423966ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player002.png using Guid(b426a42f67a4b8340b3767ac423966ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a866de37848882877ecac88659bb24d0') in 0.027835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.185991 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player003.png
+  artifactKey: Guid(931c9a50b206934449feef2193766b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player003.png using Guid(931c9a50b206934449feef2193766b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb38d23ec155ff968e4dfe2b1beddba') in 0.022912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.133906 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player004.png
+  artifactKey: Guid(88c4c5568c8818144997a74fca09a498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player004.png using Guid(88c4c5568c8818144997a74fca09a498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2cda424652a3b658f7812384038d2f9') in 0.014222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.173897 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player005.png
+  artifactKey: Guid(952aa3bb5fdd72f41b9e2529c9799fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player005.png using Guid(952aa3bb5fdd72f41b9e2529c9799fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e791771a50237a27f47ca15f6c142004') in 0.014314 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.170315 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player006.png
+  artifactKey: Guid(0a618977f687a7d4c9ddcd8b7dc8195b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player006.png using Guid(0a618977f687a7d4c9ddcd8b7dc8195b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '653c0578d828606add365855b023f1fa') in 0.024321 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.127315 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player007.png
+  artifactKey: Guid(68053666e105c5647a79490a13a6c799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player007.png using Guid(68053666e105c5647a79490a13a6c799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4e4dd93c6abc26165c72e2e3491e30b') in 0.014113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.197514 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player008.png
+  artifactKey: Guid(76ba824bed7346a47adb6be17a142737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player008.png using Guid(76ba824bed7346a47adb6be17a142737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e103f42249195a13083a05e1a15e3a67') in 0.011618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.131442 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player009.png
+  artifactKey: Guid(9e26b586ad2a40140a7735b215c6518e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player009.png using Guid(9e26b586ad2a40140a7735b215c6518e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '534f22f18379c0e5bcbc20b221b1caf3') in 0.011731 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.161466 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player010.png
+  artifactKey: Guid(deae11b4d9fe0044494672b782dfd27a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player010.png using Guid(deae11b4d9fe0044494672b782dfd27a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '887249cbd3796d7bc473d3c2c9945fe2') in 0.016707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.153685 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player011.png
+  artifactKey: Guid(d306092cb2c426246981b9b05754c182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player011.png using Guid(d306092cb2c426246981b9b05754c182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abfe2bc17a723a8ef1641646d824361a') in 0.012060 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.192332 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player012.png
+  artifactKey: Guid(94059be88e2c318428a6d0078e9da85e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player012.png using Guid(94059be88e2c318428a6d0078e9da85e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '375af1700eecb0717ef2f9ba5634cc34') in 0.011113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.160574 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player013.png
+  artifactKey: Guid(2d4618315131c7a4a8e8a59662c83111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player013.png using Guid(2d4618315131c7a4a8e8a59662c83111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4204da912734a0adf1f84652f8adb10') in 0.020113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.163015 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player014.png
+  artifactKey: Guid(65eeaaeba3ad3774a80bf0362f665fda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player014.png using Guid(65eeaaeba3ad3774a80bf0362f665fda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4a38a8341b1cba55158a7b61438ed34') in 0.013670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.190603 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player015.png
+  artifactKey: Guid(a302d419638803649891b3f6fb492813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player015.png using Guid(a302d419638803649891b3f6fb492813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc4d2885a3fd374f98edbb63340bd8a1') in 0.011329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.159240 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player016.png
+  artifactKey: Guid(57715cd58ce106a4ca65f4f8c8908557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player016.png using Guid(57715cd58ce106a4ca65f4f8c8908557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c37cd79b1888e599088e3ea9428469fc') in 0.012204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.224258 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player017.png
+  artifactKey: Guid(6e8e6091fdddfc649b2db99f3c8f46e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player017.png using Guid(6e8e6091fdddfc649b2db99f3c8f46e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f3acdc841542e07af1a5d26f55ce255') in 0.021660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.216869 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player018.png
+  artifactKey: Guid(411c22d900565ae41a2066dbfe31d80a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player018.png using Guid(411c22d900565ae41a2066dbfe31d80a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a30a90c53e75760b147220271d59636') in 0.012389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.201303 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player019.png
+  artifactKey: Guid(7d21e72c895d9e740be74630c03fb4bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player019.png using Guid(7d21e72c895d9e740be74630c03fb4bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77732773c1913e45a83d6032184d796b') in 0.011594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.224417 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player020.png
+  artifactKey: Guid(6a0cbc83492cac0468af5eea5e9feb9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player020.png using Guid(6a0cbc83492cac0468af5eea5e9feb9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2e024231f3d12b54382dda79ab87812') in 0.016895 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.170433 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player021.png
+  artifactKey: Guid(8eaeeaa5deeff4d47bb8ca4d5d09fca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player021.png using Guid(8eaeeaa5deeff4d47bb8ca4d5d09fca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '899dce35036f91b622f30f3bdbda225f') in 0.012198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.238960 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player022.png
+  artifactKey: Guid(ed135c8fb7182db41bd20d60f855eccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player022.png using Guid(ed135c8fb7182db41bd20d60f855eccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a36000df955c8a3636568de52c89ec2e') in 0.022603 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.292161 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player023.png
+  artifactKey: Guid(321f7c69b8685be42955f00716f66998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player023.png using Guid(321f7c69b8685be42955f00716f66998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21d38d1721efca231b4170cb73fc1c7e') in 0.012093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.175648 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player024.png
+  artifactKey: Guid(b929a1cc91fc2924dab4fdf2385bca0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player024.png using Guid(b929a1cc91fc2924dab4fdf2385bca0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb032dbc2d17e6ab14f0e135b1d47a02') in 0.015986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.177984 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player025.png
+  artifactKey: Guid(35583d2f7760cce4a98b27ac304e0bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player025.png using Guid(35583d2f7760cce4a98b27ac304e0bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '565c45a044cdcd6e2b204ca1671f8500') in 0.017029 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.170776 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player026.png
+  artifactKey: Guid(156140d59a8b24d4c8fe8e2c1bb890d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player026.png using Guid(156140d59a8b24d4c8fe8e2c1bb890d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63329b8e5492559e94ed31ba55edff9c') in 0.012147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.230561 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player027.png
+  artifactKey: Guid(c9b17c32a93934444886b50cb2b3b708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player027.png using Guid(c9b17c32a93934444886b50cb2b3b708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ab9d93e88d876f3bf866c71cb3f57e8') in 0.012829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.179850 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player028.png
+  artifactKey: Guid(21ed7c75d39726141b1393671f660a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player028.png using Guid(21ed7c75d39726141b1393671f660a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '642e53dccaf8c4887eeb85ff0a774b43') in 0.011891 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.419816 seconds.
+  path: Assets/MetroidvaniaController/Sprites/Player/Player029.png
+  artifactKey: Guid(3a7e4ecc33eacc84cb16faeac7b70267) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Sprites/Player/Player029.png using Guid(3a7e4ecc33eacc84cb16faeac7b70267) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca7fca808e47711532900617c5e32d1b') in 0.011950 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003323 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.994 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3423 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.5 MB.
+System memory in use after: 163.7 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 4571.
+Total: 2.752400 ms (FindLiveObjects: 0.405000 ms CreateObjectMapping: 0.106500 ms MarkObjects: 2.145800 ms  DeleteObjects: 0.094400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002903 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.871 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3383 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.9 MB.
+System memory in use after: 162.0 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 4575.
+Total: 2.602800 ms (FindLiveObjects: 0.399900 ms CreateObjectMapping: 0.089200 ms MarkObjects: 2.008400 ms  DeleteObjects: 0.104300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1522.199160 seconds.
+  path: Assets/MetroidvaniaController/Scripts/Player/PlayerMovement.cs
+  artifactKey: Guid(8644d33345e77614ba3ace9c18398d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Scripts/Player/PlayerMovement.cs using Guid(8644d33345e77614ba3ace9c18398d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b08650ba66eba31b570de9a1eef20f6f') in 0.013441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.039017 seconds.
+  path: Assets/MetroidvaniaController/Scripts/Player/ThrowableWeapon.cs
+  artifactKey: Guid(7c309590c262e87419e7bd1da3705910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Scripts/Player/ThrowableWeapon.cs using Guid(7c309590c262e87419e7bd1da3705910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7096a5e91f60def41771c6c7a66b631c') in 0.005045 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.034331 seconds.
+  path: Assets/MetroidvaniaController/Scripts/Player/CameraFollow.cs
+  artifactKey: Guid(59d11666ee1aeff4dbb0ae6b9f495a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Scripts/Player/CameraFollow.cs using Guid(59d11666ee1aeff4dbb0ae6b9f495a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73b339edad6ea6faf50929b272d626f1') in 0.005753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 57.173443 seconds.
+  path: Assets/MetroidvaniaController/Scripts/Player/Attack.cs
+  artifactKey: Guid(d9955788a5eaffa49a9297f38eaa6202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MetroidvaniaController/Scripts/Player/Attack.cs using Guid(d9955788a5eaffa49a9297f38eaa6202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4034cd2439586d437faeef731fdc871') in 0.006162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 264.971547 seconds.
+  path: Assets/Prototype Hero Demo - Pixel Art
+  artifactKey: Guid(f67cbf4e199d18d4e8515a98bbe7bf3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prototype Hero Demo - Pixel Art using Guid(f67cbf4e199d18d4e8515a98bbe7bf3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ff3b72175e74d5f098c727a909f4b95') in 0.007080 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003174 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.955 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.79 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3379 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.9 MB.
+System memory in use after: 162.0 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4575.
+Total: 2.994800 ms (FindLiveObjects: 0.570400 ms CreateObjectMapping: 0.093100 ms MarkObjects: 2.224100 ms  DeleteObjects: 0.105600 ms)
+
