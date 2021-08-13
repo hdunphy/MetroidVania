@@ -1,68 +1,58 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 
-	public CharacterController2D controller;
-	public Animator animator;
+    public CharacterController2D controller;
+    public Animator animator;
 
-	public float runSpeed = 40f;
+    public float runSpeed = 40f;
 
-	float horizontalMove = 0f;
-	bool jump = false;
-	bool dash = false;
+    float horizontalMove = 0f;
+    bool jump = false;
+    bool dash = false;
 
-	//bool dashAxis = false;
-	
-	// Update is called once per frame
-	void Update () {
+    //bool dashAxis = false;
 
-		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+    // Update is called once per frame
+    void Update()
+    {
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+    }
 
-		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+    public void SetMoveDirection(Vector2 inputVector)
+    {
+        horizontalMove = inputVector.x * runSpeed;
+    }
 
-		if (Input.GetKeyDown(KeyCode.Z))
-		{
-			jump = true;
-		}
+    public void SetIsJumping(bool _isJumping)
+    {
+        jump = _isJumping;
+    }
 
-		if (Input.GetKeyDown(KeyCode.C))
-		{
-			dash = true;
-		}
+    public void SetIsDashing(bool _isDashing)
+    {
+        dash = _isDashing;
+    }
 
-		/*if (Input.GetAxisRaw("Dash") == 1 || Input.GetAxisRaw("Dash") == -1) //RT in Unity 2017 = -1, RT in Unity 2019 = 1
-		{
-			if (dashAxis == false)
-			{
-				dashAxis = true;
-				dash = true;
-			}
-		}
-		else
-		{
-			dashAxis = false;
-		}
-		*/
+    public void OnFall()
+    {
+        animator.SetBool("IsJumping", true);
+    }
 
-	}
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
+    }
 
-	public void OnFall()
-	{
-		animator.SetBool("IsJumping", true);
-	}
-
-	public void OnLanding()
-	{
-		animator.SetBool("IsJumping", false);
-	}
-
-	void FixedUpdate ()
-	{
-		// Move our character
-		controller.Move(horizontalMove * Time.fixedDeltaTime, jump, dash);
-		jump = false;
-		dash = false;
-	}
+    void FixedUpdate()
+    {
+        // Move our character
+        controller.Move(horizontalMove * Time.fixedDeltaTime, jump, dash);
+        jump = false;
+        dash = false;
+    }
 }
