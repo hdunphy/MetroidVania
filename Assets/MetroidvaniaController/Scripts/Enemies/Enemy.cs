@@ -18,6 +18,9 @@ public class Enemy : MonoBehaviour {
 	public bool isInvincible = false;
 	private bool isHitted = false;
 
+	[SerializeField] private LayerMask DamageableLayerMask;
+	[SerializeField] private float DamageAmount;
+
 	void Awake () {
 		fallCheck = transform.Find("FallCheck");
 		wallCheck = transform.Find("WallCheck");
@@ -65,26 +68,35 @@ public class Enemy : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
-	public void ApplyDamage(float damage) {
-		if (!isInvincible) 
-		{
-			float direction = damage / Mathf.Abs(damage);
-			damage = Mathf.Abs(damage);
-			transform.GetComponent<Animator>().SetBool("Hit", true);
-			life -= damage;
-			rb.velocity = Vector2.zero;
-			rb.AddForce(new Vector2(direction * 500f, 100f));
-			StartCoroutine(HitTime());
-		}
-	}
+	//public void ApplyDamage(float damage) {
+	//	if (!isInvincible) 
+	//	{
+	//		float direction = damage / Mathf.Abs(damage);
+	//		damage = Mathf.Abs(damage);
+	//		transform.GetComponent<Animator>().SetBool("Hit", true);
+	//		life -= damage;
+	//		rb.velocity = Vector2.zero;
+	//		rb.AddForce(new Vector2(direction * 500f, 100f));
+	//		StartCoroutine(HitTime());
+	//	}
+	//}
 
 	void OnCollisionStay2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Player" && life > 0)
-		{
-			collision.gameObject.GetComponent<CharacterController2D>().ApplyDamage(2f, transform.position);
-		}
+		if(collision.gameObject.layer == DamageableLayerMask && life > 0)
+        {
+			if(collision.gameObject.TryGetComponent(out Damageable _damageable))
+            {
+				_damageable.ApplyDamage(DamageAmount, transform.position);
+            }
+        }
+		//if (collision.gameObject.tag == "Player" && life > 0)
+		//{
+		//	collision.gameObject.GetComponent<CharacterController2D>().ApplyDamage(2f, transform.position);
+		//}
 	}
+
+	public void SetCanMove(bool _canMove) { isHitted = !_canMove; }
 
 	IEnumerator HitTime()
 	{

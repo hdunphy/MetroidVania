@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4291727345091452}
-  m_Layer: 1
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114231493902538710}
   - component: {fileID: 114435281327171648}
   - component: {fileID: 114145887554720856}
+  - component: {fileID: 6544400467953956114}
   - component: {fileID: 212971026275759962}
   - component: {fileID: 95975118031919256}
   - component: {fileID: 50738830109512580}
@@ -49,7 +50,7 @@ GameObject:
   - component: {fileID: 82701611152381692}
   - component: {fileID: 6641737985052025845}
   - component: {fileID: 5029778508318072269}
-  m_Layer: 1
+  m_Layer: 9
   m_Name: DrawCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -154,6 +155,9 @@ MonoBehaviour:
   isTimeToCheck: 0
   projectileCooldown: 1
   cam: {fileID: 0}
+  EntityLayer:
+    serializedVersion: 2
+    m_Bits: 1280
 --- !u!114 &114145887554720856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +173,35 @@ MonoBehaviour:
   controller: {fileID: 114231493902538710}
   animator: {fileID: 95975118031919256}
   runSpeed: 40
+--- !u!114 &6544400467953956114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377240496476148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2682e1b74b23c94438dd48316070b596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  invincible: 0
+  SetCanMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114231493902538710}
+        m_TargetAssemblyTypeName: CharacterController2D, Assembly-CSharp
+        m_MethodName: SetCanMove
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!212 &212971026275759962
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -546,7 +579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4986330650710208}
-  m_Layer: 1
+  m_Layer: 9
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +611,7 @@ GameObject:
   - component: {fileID: 4202976304329374}
   - component: {fileID: 198584872278178884}
   - component: {fileID: 199702487371442802}
-  m_Layer: 1
+  m_Layer: 9
   m_Name: SmokeTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5395,7 +5428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4370582630649528}
-  m_Layer: 1
+  m_Layer: 9
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5427,7 +5460,7 @@ GameObject:
   - component: {fileID: 4559817074117408}
   - component: {fileID: 198967111524372206}
   - component: {fileID: 199720515671813628}
-  m_Layer: 1
+  m_Layer: 9
   m_Name: SmokeGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}

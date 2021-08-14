@@ -70,6 +70,7 @@ public class CharacterController2D : MonoBehaviour
     {
         bool wasGrounded = m_Grounded;
         m_Grounded = false;
+        m_IsWall = false;
 
         // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
         if (Physics2D.OverlapCircle(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround))
@@ -87,10 +88,7 @@ public class CharacterController2D : MonoBehaviour
                 canDoubleJump = true;
             }
         }
-
-        m_IsWall = false;
-
-        if (!m_Grounded)
+        else  //if (!m_Grounded)
         {
             OnFallEvent.Invoke();
             if (Physics2D.OverlapCircle(m_WallCheck.position, k_WallRadius, m_WhatIsWall))
@@ -260,26 +258,28 @@ public class CharacterController2D : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    public void ApplyDamage(float damage, Vector3 position)
-    {
-        if (!invincible)
-        {
-            animator.SetBool("Hit", true);
-            life -= damage;
-            Vector2 damageDir = Vector3.Normalize(transform.position - position) * 40f;
-            m_Rigidbody2D.velocity = Vector2.zero;
-            m_Rigidbody2D.AddForce(damageDir * 10);
-            if (life <= 0)
-            {
-                StartCoroutine(WaitToDead());
-            }
-            else
-            {
-                StartCoroutine(Stun(0.25f));
-                StartCoroutine(MakeInvincible(1f));
-            }
-        }
-    }
+    //public void ApplyDamage(float damage, Vector3 position)
+    //{
+    //    if (!invincible)
+    //    {
+    //        animator.SetBool("Hit", true);
+    //        life -= damage;
+    //        Vector2 damageDir = Vector3.Normalize(transform.position - position) * 40f;
+    //        m_Rigidbody2D.velocity = Vector2.zero;
+    //        m_Rigidbody2D.AddForce(damageDir * 10);
+    //        if (life <= 0)
+    //        {
+    //            StartCoroutine(WaitToDead());
+    //        }
+    //        else
+    //        {
+    //            StartCoroutine(Stun(0.25f));
+    //            StartCoroutine(MakeInvincible(1f));
+    //        }
+    //    }
+    //}
+
+    public void SetCanMove(bool _canMove) { canMove = _canMove; }
 
     IEnumerator DashCooldown()
     {

@@ -13,6 +13,7 @@ public class Attack : MonoBehaviour
 	public float projectileCooldown;
 
 	public GameObject cam;
+	[SerializeField] private LayerMask EntityLayer;
 
 	private bool isAttacking, isFiring;
 	private float nextProjectileTime;
@@ -49,22 +50,33 @@ public class Attack : MonoBehaviour
 		canAttack = true;
 	}
 
-	public void DoDashDamage()
+	public void DoDamage()
 	{
 		dmgValue = Mathf.Abs(dmgValue);
-		Collider2D[] collidersEnemies = Physics2D.OverlapCircleAll(attackCheck.position, 0.9f);
-		for (int i = 0; i < collidersEnemies.Length; i++)
-		{
-			if (collidersEnemies[i].gameObject.tag == "Enemy")
-			{
-				if (collidersEnemies[i].transform.position.x - transform.position.x < 0)
-				{
-					dmgValue = -dmgValue;
-				}
-				collidersEnemies[i].gameObject.SendMessage("ApplyDamage", dmgValue);
-				cam.GetComponent<CameraFollow>().ShakeCamera();
-			}
-		}
+
+		var _collider = Physics2D.OverlapCircle(attackCheck.position, 0.9f, EntityLayer);
+		if(_collider && _collider.TryGetComponent(out Damageable damageable))
+        {
+			damageable.ApplyDamage(dmgValue, attackCheck.position);
+
+			if(_collider.TryGetComponent(out CameraFollow cam))
+            {
+				cam.ShakeCamera();
+            }
+        }
+		//Collider2D[] collidersEnemies = Physics2D.OverlapCircleAll(attackCheck.position, 0.9f, EntityLayer);
+		//for (int i = 0; i < collidersEnemies.Length; i++)
+		//{
+		//	if (collidersEnemies[i].gameObject.tag == "Enemy")
+		//	{
+		//		if (collidersEnemies[i].transform.position.x - transform.position.x < 0)
+		//		{
+		//			dmgValue = -dmgValue;
+		//		}
+		//		collidersEnemies[i].gameObject.SendMessage("ApplyDamage", dmgValue);
+		//		cam.GetComponent<CameraFollow>().ShakeCamera();
+		//	}
+		//}
 	}
 
 	public void SetIsAttacking(bool _isAttacking) { isAttacking = _isAttacking; }

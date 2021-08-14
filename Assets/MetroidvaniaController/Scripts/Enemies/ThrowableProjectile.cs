@@ -8,6 +8,8 @@ public class ThrowableProjectile : MonoBehaviour
 	public bool hasHit = false;
 	public float speed = 15f;
 	public GameObject owner;
+	[SerializeField] private LayerMask DamageableLayerMask;
+	[SerializeField] private float DamageAmount;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -18,19 +20,23 @@ public class ThrowableProjectile : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Player")
-		{
-			collision.gameObject.GetComponent<CharacterController2D>().ApplyDamage(2f, transform.position);
-			Destroy(gameObject);
-		}
-		else if ( owner != null && collision.gameObject != owner && collision.gameObject.tag == "Enemy" )
-		{
-			collision.gameObject.SendMessage("ApplyDamage", Mathf.Sign(direction.x) * 2f);
-			Destroy(gameObject);
-		}
-		else if (collision.gameObject.tag != "Enemy" && collision.gameObject.tag != "Player")
-		{
-			Destroy(gameObject);
-		}
+		if(collision.gameObject.TryGetComponent(out Damageable damageable) && collision.gameObject.layer == DamageableLayerMask)
+        {
+			damageable.ApplyDamage(DamageAmount, transform.position);
+        }
+		//if (collision.gameObject.tag == "Player")
+		//{
+		//	collision.gameObject.GetComponent<CharacterController2D>().ApplyDamage(2f, transform.position);
+		//	Destroy(gameObject);
+		//}
+		//else if ( owner != null && collision.gameObject != owner && collision.gameObject.tag == "Enemy" )
+		//{
+		//	collision.gameObject.SendMessage("ApplyDamage", Mathf.Sign(direction.x) * 2f);
+		//	Destroy(gameObject);
+		//}
+		//else if (collision.gameObject.tag != "Enemy" && collision.gameObject.tag != "Player")
+		//{
+		//	Destroy(gameObject);
+		//}
 	}
 }

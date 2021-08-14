@@ -8,6 +8,9 @@ public class ThrowableWeapon : MonoBehaviour
 	public bool hasHit = false;
 	public float speed = 10f;
 
+	[SerializeField] private LayerMask DamageableLayerMask;
+	[SerializeField] private float DamageAmount;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,14 +26,22 @@ public class ThrowableWeapon : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Enemy")
+		if (collision.gameObject.layer == DamageableLayerMask)
 		{
-			collision.gameObject.SendMessage("ApplyDamage", Mathf.Sign(direction.x) * 2f);
-			Destroy(gameObject);
+			if (collision.gameObject.TryGetComponent(out Damageable _damageable))
+			{
+				_damageable.ApplyDamage(DamageAmount, transform.position);
+				Destroy(gameObject);
+			}
 		}
-		else if (collision.gameObject.tag != "Player")
-		{
-			Destroy(gameObject);
-		}
+		//if (collision.gameObject.tag == "Enemy")
+		//{
+		//	collision.gameObject.SendMessage("ApplyDamage", Mathf.Sign(direction.x) * 2f);
+		//	Destroy(gameObject);
+		//}
+		//else if (collision.gameObject.tag != "Player")
+		//{
+		//	Destroy(gameObject);
+		//}
 	}
 }

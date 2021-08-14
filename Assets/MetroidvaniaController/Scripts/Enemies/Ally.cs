@@ -17,6 +17,7 @@ public class Ally : MonoBehaviour
 	private bool isHitted = false;
 
 	[SerializeField] private float m_DashForce = 25f;
+	[SerializeField] private LayerMask DamageableLayer;
 	private bool isDashing = false;
 
 	public GameObject enemy;
@@ -48,7 +49,7 @@ public class Ally : MonoBehaviour
 
 		if (life <= 0)
 		{
-			StartCoroutine(DestroyEnemy());
+			StartCoroutine(DestoryAlly());
 		}
 
 		else if (enemy != null) 
@@ -146,39 +147,44 @@ public class Ally : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
-	public void ApplyDamage(float damage)
-	{
-		if (!isInvincible)
-		{
-			float direction = damage / Mathf.Abs(damage);
-			damage = Mathf.Abs(damage);
-			anim.SetBool("Hit", true);
-			life -= damage;
-			transform.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-			transform.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(direction * 300f, 100f)); 
-			StartCoroutine(HitTime());
-		}
-	}
+	//public void ApplyDamage(float damage)
+	//{
+	//	if (!isInvincible)
+	//	{
+	//		float direction = damage / Mathf.Abs(damage);
+	//		damage = Mathf.Abs(damage);
+	//		anim.SetBool("Hit", true);
+	//		life -= damage;
+	//		transform.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+	//		transform.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(direction * 300f, 100f)); 
+	//		StartCoroutine(HitTime());
+	//	}
+	//}
 
 	public void MeleeAttack()
 	{
 		transform.GetComponent<Animator>().SetBool("Attack", true);
-		Collider2D[] collidersEnemies = Physics2D.OverlapCircleAll(attackCheck.position, 0.9f);
-		for (int i = 0; i < collidersEnemies.Length; i++)
-		{
-			if (collidersEnemies[i].gameObject.tag == "Enemy" && collidersEnemies[i].gameObject != gameObject )
-			{
-				if (transform.localScale.x < 1)
-				{
-					dmgValue = -dmgValue;
-				}
-				collidersEnemies[i].gameObject.SendMessage("ApplyDamage", dmgValue);
-			}
-			else if (collidersEnemies[i].gameObject.tag == "Player")
-			{
-				collidersEnemies[i].gameObject.GetComponent<CharacterController2D>().ApplyDamage(2f, transform.position);
-			}
-		}
+		var _collider = Physics2D.OverlapCircle(attackCheck.position, 0.9f, DamageableLayer);
+		if(_collider && _collider.TryGetComponent(out Damageable _damageable))
+        {
+			_damageable.ApplyDamage(dmgValue, transform.position);
+        }
+		//Collider2D[] collidersEnemies = Physics2D.OverlapCircleAll(attackCheck.position, 0.9f);
+		//for (int i = 0; i < collidersEnemies.Length; i++)
+		//{
+		//	if (collidersEnemies[i].gameObject.tag == "Enemy" && collidersEnemies[i].gameObject != gameObject )
+		//	{
+		//		if (transform.localScale.x < 1)
+		//		{
+		//			dmgValue = -dmgValue;
+		//		}
+		//		collidersEnemies[i].gameObject.SendMessage("ApplyDamage", dmgValue);
+		//	}
+		//	else if (collidersEnemies[i].gameObject.tag == "Player")
+		//	{
+		//		collidersEnemies[i].gameObject.GetComponent<CharacterController2D>().ApplyDamage(2f, transform.position);
+		//	}
+		//}
 		StartCoroutine(WaitToAttack(0.5f));
 	}
 
@@ -238,6 +244,7 @@ public class Ally : MonoBehaviour
 		isHitted = false;
 		isInvincible = false;
 	}
+	public void SetCanMove(bool _canMove) { isHitted = !_canMove; }
 
 	IEnumerator WaitToAttack(float time)
 	{
@@ -264,7 +271,7 @@ public class Ally : MonoBehaviour
 		anim.SetBool("IsWaiting", false);
 	}
 
-	IEnumerator DestroyEnemy()
+	IEnumerator DestoryAlly()
 	{
 		CapsuleCollider2D capsule = GetComponent<CapsuleCollider2D>();
 		capsule.size = new Vector2(1f, 0.25f);

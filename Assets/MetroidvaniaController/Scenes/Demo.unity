@@ -243,27 +243,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1139487818724482, guid: 50936cccdb69523458c1b42052ebafff, type: 3}
       propertyPath: m_Layer
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1377240496476148, guid: 50936cccdb69523458c1b42052ebafff, type: 3}
       propertyPath: m_Layer
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1393053470196254, guid: 50936cccdb69523458c1b42052ebafff, type: 3}
       propertyPath: m_Layer
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1477428158609486, guid: 50936cccdb69523458c1b42052ebafff, type: 3}
       propertyPath: m_Layer
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1568700092027370, guid: 50936cccdb69523458c1b42052ebafff, type: 3}
       propertyPath: m_Layer
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1620716113202630, guid: 50936cccdb69523458c1b42052ebafff, type: 3}
       propertyPath: m_Layer
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4660076192433278, guid: 50936cccdb69523458c1b42052ebafff, type: 3}
       propertyPath: m_RootOrder
@@ -524,7 +524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 152427058}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: FallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1024,7 +1024,8 @@ GameObject:
   - component: {fileID: 344519106}
   - component: {fileID: 344519105}
   - component: {fileID: 344519104}
-  m_Layer: 9
+  - component: {fileID: 344519110}
+  m_Layer: 8
   m_Name: EnemySimple (2)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1157,6 +1158,10 @@ MonoBehaviour:
     m_Bits: 513
   speed: 5
   isInvincible: 0
+  DamageableLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  DamageAmount: 1
 --- !u!4 &344519109
 Transform:
   m_ObjectHideFlags: 0
@@ -1173,6 +1178,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &344519110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344519103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2682e1b74b23c94438dd48316070b596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  invincible: 0
+  SetCanMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 344519108}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: SetCanMove
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &351962461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1420,7 +1454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 389230851}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1450,7 +1484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 391378516}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1701,7 +1735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 464853732}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1959,7 +1993,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 630417908}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: FallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2419,7 +2453,8 @@ GameObject:
   - component: {fileID: 779425820}
   - component: {fileID: 779425819}
   - component: {fileID: 779425818}
-  m_Layer: 9
+  - component: {fileID: 779425824}
+  m_Layer: 8
   m_Name: EnemySimple (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2552,6 +2587,10 @@ MonoBehaviour:
     m_Bits: 513
   speed: 5
   isInvincible: 0
+  DamageableLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  DamageAmount: 1
 --- !u!4 &779425823
 Transform:
   m_ObjectHideFlags: 0
@@ -2568,6 +2607,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &779425824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779425817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2682e1b74b23c94438dd48316070b596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  invincible: 0
+  SetCanMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 779425822}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: SetCanMove
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &795341154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2582,7 +2650,8 @@ GameObject:
   - component: {fileID: 795341157}
   - component: {fileID: 795341156}
   - component: {fileID: 795341155}
-  m_Layer: 9
+  - component: {fileID: 795341161}
+  m_Layer: 8
   m_Name: EnemySimple (3)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2715,6 +2784,10 @@ MonoBehaviour:
     m_Bits: 513
   speed: 5
   isInvincible: 0
+  DamageableLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  DamageAmount: 1
 --- !u!4 &795341160
 Transform:
   m_ObjectHideFlags: 0
@@ -2731,6 +2804,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &795341161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795341154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2682e1b74b23c94438dd48316070b596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  invincible: 0
+  SetCanMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 795341159}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: SetCanMove
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &852398883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3598,7 +3700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1121280586}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: FallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4071,7 +4173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1291018041}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: FallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4391,7 +4493,8 @@ GameObject:
   - component: {fileID: 1427435424}
   - component: {fileID: 1427435423}
   - component: {fileID: 1427435422}
-  m_Layer: 9
+  - component: {fileID: 1427435428}
+  m_Layer: 8
   m_Name: EnemySimple (4)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -4524,6 +4627,10 @@ MonoBehaviour:
     m_Bits: 513
   speed: 5
   isInvincible: 0
+  DamageableLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  DamageAmount: 1
 --- !u!4 &1427435427
 Transform:
   m_ObjectHideFlags: 0
@@ -4540,6 +4647,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1427435428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427435421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2682e1b74b23c94438dd48316070b596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  invincible: 0
+  SetCanMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1427435426}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: SetCanMove
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1430048588
 GameObject:
   m_ObjectHideFlags: 0
@@ -5174,6 +5310,7 @@ GameObject:
   - component: {fileID: 1684264397}
   - component: {fileID: 1684264396}
   - component: {fileID: 1684264395}
+  - component: {fileID: 1684264402}
   m_Layer: 9
   m_Name: AllyAISimple (1)
   m_TagString: Enemy
@@ -5401,6 +5538,9 @@ MonoBehaviour:
   speed: 5
   isInvincible: 0
   m_DashForce: 25
+  DamageableLayer:
+    serializedVersion: 2
+    m_Bits: 1280
   enemy: {fileID: 1085154492}
   meleeDist: 1.5
   rangeDist: 5
@@ -5423,6 +5563,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1684264402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684264394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2682e1b74b23c94438dd48316070b596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  invincible: 0
+  SetCanMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1684264400}
+        m_TargetAssemblyTypeName: Ally, Assembly-CSharp
+        m_MethodName: SetCanMove
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1693818836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5917,7 +6086,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1997573416}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
