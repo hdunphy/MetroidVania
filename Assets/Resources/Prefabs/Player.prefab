@@ -373,8 +373,6 @@ MonoBehaviour:
     m_Bits: 128
   StartingAbilities:
   - {fileID: 11400000, guid: ff460d8df00c72942a0c00ac301cd3ae, type: 2}
-  - {fileID: 11400000, guid: 21fb8e028f384e34a9b1afabd0002a74, type: 2}
-  - {fileID: 11400000, guid: 02f44e5b2943b7242ad5c00f1aae4ec4, type: 2}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []

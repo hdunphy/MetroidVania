@@ -101,4 +101,16 @@ public class CharacterController2D : MonoBehaviour
             holder.SetAbilityButtonPressed(isButtonPressed);
         }
     }
+
+    public void AddAbility(Ability _ability)
+    {
+        if (Abilities.ContainsKey(_ability.AbilityType))
+        {
+            //Replace ability?
+        }
+        else
+        {
+            Abilities.Add(_ability.AbilityType, new AbilityHolder(_ability, gameObject));
+        }
+    }
 }
