@@ -26,7 +26,7 @@ public class CharacterController2D : MonoBehaviour
 
     private CharacterState CurrentCharacterState; //Current character state
 
-    private Dictionary<AbilityEnum, AbilityHolder> Abilities; //Keep track of all character  abilities
+    private AbilityController AbilityController; //Keep track of all character  abilities
     private Dictionary<CharacterState, ICharacterState> CharacterStateMachine; //Keep track of current character  state
 
     //Constants
@@ -37,19 +37,13 @@ public class CharacterController2D : MonoBehaviour
     {
         Movement = GetComponent<EntityMovement>(); //store movement for character states
 
-        //Build ability dictionary to reference each ability
-        Abilities = new Dictionary<AbilityEnum, AbilityHolder>();
-        //Add starting abilities
-        foreach (Ability _ability in StartingAbilities)
-        {
-            Abilities.Add(_ability.AbilityType, new AbilityHolder(_ability, gameObject));
-        }
+        AbilityController = new AbilityController(StartingAbilities, gameObject);
 
         //Build character state machine
         CharacterStateMachine = new Dictionary<CharacterState, ICharacterState>()
         {
-            { CharacterState.Gounded, new GroundedState(Abilities, Movement) },
-            { CharacterState.Airborn, new AirbornState(Abilities, HasAirControl, Movement) }
+            { CharacterState.Gounded, new GroundedState(AbilityController, Movement) },
+            { CharacterState.Airborn, new AirbornState(AbilityController, HasAirControl, Movement) }
         };
     }
 
@@ -58,10 +52,7 @@ public class CharacterController2D : MonoBehaviour
         CharacterStateMachine[CurrentCharacterState].Update();
 
         //Not sure this is best way
-        foreach (AbilityHolder holder in Abilities.Values)
-        { //Update each ability holder using delta time to increment any timers
-            holder.Update(Time.deltaTime);
-        }
+        AbilityController.Update(Time.deltaTime);
     }
 
     private void FixedUpdate()
@@ -95,23 +86,12 @@ public class CharacterController2D : MonoBehaviour
 
     public void TriggerAbility(AbilityEnum abilityType, bool isButtonPressed)
     {
-        //Used to trigger an ability in Ability Dictionary if it exists.
-        if (Abilities.TryGetValue(abilityType, out AbilityHolder holder))
-        {
-            holder.SetAbilityButtonPressed(isButtonPressed);
-        }
+        AbilityController.TriggerAbility(abilityType, isButtonPressed);
     }
 
     public void AddAbility(Ability _ability)
     {
-        if (Abilities.ContainsKey(_ability.AbilityType))
-        {
-            //Replace ability?
-        }
-        else
-        {
-            Abilities.Add(_ability.AbilityType, new AbilityHolder(_ability, gameObject));
-        }
+        AbilityController.AddAbility(_ability, gameObject);
     }
 
     public void OnDeath()

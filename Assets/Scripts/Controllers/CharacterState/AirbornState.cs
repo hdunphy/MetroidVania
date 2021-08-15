@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AirbornState : ICharacterState
 {
-    private Dictionary<AbilityEnum, AbilityHolder> Abilities;
+    private AbilityController AbilityController;
     private bool AirbornMovement;
     private EntityMovement Movement;
 
@@ -12,9 +12,9 @@ public class AirbornState : ICharacterState
     //If double jump is true -> can jump again
     //if can dash is true -> can dash
     //if airborn is true -> can move
-    public AirbornState(Dictionary<AbilityEnum, AbilityHolder> abilities, bool airbornMovement, EntityMovement movement)
+    public AirbornState(AbilityController abilityController, bool airbornMovement, EntityMovement movement)
     {
-        Abilities = abilities;
+        AbilityController = abilityController;
         AirbornMovement = airbornMovement;
         Movement = movement;
     }
@@ -26,15 +26,8 @@ public class AirbornState : ICharacterState
             Movement.SetCanMove(false);
         }
 
-        if (Abilities.TryGetValue(AbilityEnum.Jump, out AbilityHolder jumpHolder))
-        {
-            jumpHolder.SetAbilityHasUse(false);
-        }
-
-        if (Abilities.TryGetValue(AbilityEnum.DoubleJump, out AbilityHolder doubleJumpHolder))
-        {
-            doubleJumpHolder.SetAbilityHasUse(true);
-        }
+        AbilityController.SetAbilityHasUse(AbilityEnum.Jump, false);
+        AbilityController.SetAbilityHasUse(AbilityEnum.DoubleJump, true);
     }
 
     void ICharacterState.Update()
