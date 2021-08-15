@@ -9,11 +9,7 @@ public class Dash : Ability
 
     public override void Activate(GameObject parent)
     {
-        Debug.Log("Dashing in activate");
-        Transform transform = parent.transform;
-        Rigidbody2D m_Rigidbody2D = parent.GetComponent<Rigidbody2D>();
-
-        m_Rigidbody2D.velocity = new Vector2(transform.localScale.x * DashForce, 0);
+        parent.GetComponent<EntityMovement>().TriggerDash(DashForce);
 
         HasUse = false;
     }

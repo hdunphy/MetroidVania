@@ -113,4 +113,18 @@ public class CharacterController2D : MonoBehaviour
             Abilities.Add(_ability.AbilityType, new AbilityHolder(_ability, gameObject));
         }
     }
+
+    public void OnDeath()
+    {
+        Debug.Log("Character is Dead");
+
+        StartCoroutine(CharacterDeath());
+    }
+
+    IEnumerator CharacterDeath()
+    {
+        Movement.SetCanMove(false);
+        yield return new WaitForSeconds(1f);
+        gameObject.SetActive(false);
+    }
 }
