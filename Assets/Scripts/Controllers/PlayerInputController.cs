@@ -5,7 +5,9 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerInputController : MonoBehaviour
 {
-    [SerializeField] private CharacterController2D Controller;
+    /*Component to Take Player Input Events and redirect them to the appropriate methods */
+
+    [SerializeField] private CharacterController2D Controller; //Character controller to apply inputs to
 
     public void OnMove(CallbackContext callback)
     {

@@ -1,13 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class EntityMovement : MonoBehaviour
 {
     //Inspector properties
-    [SerializeField] private float RunSpeed = 10f;
+    [SerializeField] private float RunSpeed = 10f; //Velocity applied to horizontal movmenet
 
     [SerializeField, Tooltip("Absolute value for maximum fall speed")]
     private float FallSpeedLimit = 25f;
@@ -17,11 +14,11 @@ public class EntityMovement : MonoBehaviour
 
 
     //Internal Values
-    private Rigidbody2D m_RigidBody2D;
-    private float HorizontalMove = 0f;
-    private bool CanMove;
-    private bool IsFacingRight;
-    private Vector3 Velocity;
+    private Rigidbody2D m_RigidBody2D; //Entity's rigid body 2d
+    private float HorizontalMove = 0f; //current horizontal movement
+    private bool CanMove; //enable/disable movement
+    private bool IsFacingRight; //Is entity looking to the right
+    private Vector3 Velocity; //referenced velocity used in dampening function
 
     //Unity properties
     private void Start()
@@ -46,17 +43,20 @@ public class EntityMovement : MonoBehaviour
             m_RigidBody2D.velocity = Vector3.SmoothDamp(m_RigidBody2D.velocity, targetVelocity, ref Velocity, MovementSmoothing);
 
             if (HorizontalMove < 0 && IsFacingRight)
-            {
+            { //If entity is moving in negative horizontal direction (or left) but is facing right
                 Flip();
             }
             else if (HorizontalMove > 0 && !IsFacingRight)
-            {
+            { //If entity is moving in positive horizontal direction (or right) but is facing left
                 Flip();
             }
         }
 
     }
 
+    /// <summary>
+    /// Flip the direction of the entity
+    /// </summary>
     private void Flip()
     {
         // Switch the way the player is labelled as facing.
@@ -68,14 +68,22 @@ public class EntityMovement : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    public void TriggerJump(float jumpForce)
+    /// <summary>
+    /// If the entity can Move trigger the jump ability
+    /// </summary>
+    /// <param name="jumpVelocity">Set the Y velocity of the entity to this value</param>
+    public void TriggerJump(float jumpVelocity)
     {
         if (CanMove)
         {
-            m_RigidBody2D.velocity = new Vector2(m_RigidBody2D.velocity.x, jumpForce);
+            m_RigidBody2D.velocity = new Vector2(m_RigidBody2D.velocity.x, jumpVelocity);
         }
     }
 
+    /// <summary>
+    /// If the entity can move trigger the dash ability
+    /// </summary>
+    /// <param name="dashForce">Set the velocity of the dash in the x direction</param>
     public void TriggerDash(float dashForce)
     {
         if (CanMove)
@@ -84,6 +92,7 @@ public class EntityMovement : MonoBehaviour
         }
     }
 
+    //Setters
     public void SetCanMove(bool _canMove) { CanMove = _canMove; }
     public void SetMoveDirection(float moveX) { HorizontalMove = moveX * RunSpeed; }
 }

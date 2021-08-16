@@ -5,20 +5,17 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Dash", menuName = "Scriptable/Abilities/Dash")]
 public class Dash : Ability
 {
-    [SerializeField] private float DashForce;
+    [SerializeField, Tooltip("Velocity of the Dash")] private float DashVelocity;
 
     public override void Activate(GameObject parent)
     {
-        parent.GetComponent<EntityMovement>().TriggerDash(DashForce);
-
+        //Trigger dash movement ability
+        parent.GetComponent<EntityMovement>().TriggerDash(DashVelocity);
+        //Disable ability
         HasUse = false;
     }
 
     public override void BeginCooldown(GameObject parent)
     {
-        //Transform transform = parent.transform;
-        //Rigidbody2D m_Rigidbody2D = parent.GetComponent<Rigidbody2D>();
-
-        //m_Rigidbody2D.velocity = new Vector2(transform.localScale.x * DashForce, 0);
     }
 }

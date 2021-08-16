@@ -5,12 +5,12 @@ using UnityEngine.Events;
 
 public class Damageable : MonoBehaviour
 {
-    [SerializeField] private int Health;
-    [SerializeField] private float KnockbackForce;
-    [SerializeField] private float StunDuration;
-    [SerializeField] private float InvincibilityAfterDamageDuration;
-    [SerializeField] private bool IsInvincible;
-    [SerializeField] private Rigidbody2D m_Rigidbody2D;
+    [SerializeField] private float TotalHealth; //total health of the entity
+    [SerializeField] private float KnockbackForce; //Amount of knockback entity takes when damaged
+    [SerializeField] private float StunDuration; //Duration of stun entity takes when damaged
+    [SerializeField] private float InvincibilityAfterDamageDuration; //Duration of invincibility entity takes before can take additional damage
+    [SerializeField] private bool IsInvincible; //Mostly for debugging, if true entity cannot take damage
+    [SerializeField] private Rigidbody2D m_Rigidbody2D; //RigidBody2D attached to this game object
     
     [SerializeField, Tooltip("Event that triggers when ever the entity cannot move")] 
     private UnityEvent<bool> SetStun;
@@ -18,40 +18,58 @@ public class Damageable : MonoBehaviour
     [SerializeField, Tooltip("Event that triggers when Health >= 0")]
     private UnityEvent EntityDied;
 
-    private bool canTakeDamage;
+    private bool canTakeDamage; //Check if entity can take damage this frame
+    private float currentHealth; //Current health of the entity
 
     private void Start()
     {
         canTakeDamage = true;
+        currentHealth = TotalHealth;
     }
 
-    public void ApplyDamage(int damage, Vector3 damageDirection)
+    /// <summary>
+    /// Apply damage to this entity with knockback
+    /// </summary>
+    /// <param name="damage">amount of damage taken</param>
+    /// <param name="damagePosition">the position the damage is coming from</param>
+    public void ApplyDamage(float damage, Vector3 damagePosition)
     {
         if(!IsInvincible && canTakeDamage)
-        {
-            Health -= damage;
-            Vector2 _damageDirection = Vector3.Normalize(transform.position - damageDirection);
-            m_Rigidbody2D.velocity = Vector2.zero;
-            m_Rigidbody2D.AddForce(_damageDirection * KnockbackForce);
+        { //If the entity is not invincible and can take damage
+            currentHealth -= damage;
+            Vector2 _damageDirection = Vector3.Normalize(transform.position - damagePosition); //Find the direction the damge came from
+            m_Rigidbody2D.velocity = Vector2.zero; //stop entity movement
+            m_Rigidbody2D.AddForce(_damageDirection * KnockbackForce); //Add knockback force
 
-            if(Health <= 0)
-            {
+            if(currentHealth <= 0)
+            { //Check if the entity is dead. If so trigger Died UnityEvent
                 EntityDied?.Invoke();
             }
             else
-            {
+            { //Entity is still alive, Stun the entity and make temprorily invincible
                 StartCoroutine(Stun(StunDuration));
                 StartCoroutine(MakeInvincible(InvincibilityAfterDamageDuration));
             }
         }
     }
 
+    /// <summary>
+    /// Coroutine to Stun the entity for x amount of time
+    /// </summary>
+    /// <param name="time">Time that the stun will last</param>
+    /// <returns></returns>
     IEnumerator Stun(float time)
     {
         SetStun?.Invoke(false);
         yield return new WaitForSeconds(time);
         SetStun?.Invoke(true);
     }
+
+    /// <summary>
+    /// Coroutine to make the entity unhittable for duration
+    /// </summary>
+    /// <param name="time">duration of entity being temporarily invincible</param>
+    /// <returns></returns>
     IEnumerator MakeInvincible(float time)
     {
         canTakeDamage = false;
