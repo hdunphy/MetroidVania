@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 5026255635176180353}
   - component: {fileID: 7881196547339656336}
   - component: {fileID: 6580378475252913759}
+  - component: {fileID: 7673098036353286037}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -365,9 +366,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasAirControl: 1
   GroundCheck: {fileID: 2587293580383476798}
-  GroundLayer:
-    serializedVersion: 2
-    m_Bits: 64
   StartingAbilities:
   - {fileID: 11400000, guid: ff460d8df00c72942a0c00ac301cd3ae, type: 2}
   OnLandEvent:
@@ -385,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f07b36b1acbf42bd64ce47b8814f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
+  TotalHealth: 0
   KnockbackForce: 40
   StunDuration: 0.25
   InvincibilityAfterDamageDuration: 1
@@ -421,6 +419,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7673098036353286037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359398603106325508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9c582d467f7d940a96794e40a06fe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7844044056776457193
 GameObject:
   m_ObjectHideFlags: 0

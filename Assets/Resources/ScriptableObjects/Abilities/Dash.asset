@@ -16,4 +16,4 @@ MonoBehaviour:
   abilityType: 1
   actionTime: 0.25
   cooldownTime: 1
-  DashForce: 100
+  DashVelocity: 40

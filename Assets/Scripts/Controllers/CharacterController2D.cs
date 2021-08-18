@@ -11,7 +11,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private bool HasAirControl;  //True if player can control movement in the air
 
     [SerializeField] private Transform GroundCheck; //Get position of the players feet for checking if in contact with the ground
-    [SerializeField] private LayerMask GroundLayer; // which Object layers should be checked for a 'Ground' object
+    private LayerMask GroundLayer; // which Object layers should be checked for a 'Ground' object
 
     //Implement if we want wall sliding
     //[SerializeField] private Transform WallCheck;
@@ -35,6 +35,8 @@ public class CharacterController2D : MonoBehaviour
 
     private void Start()
     {
+        GroundLayer = GameLayers.Singleton.GroundLayer;
+
         Movement = GetComponent<EntityMovement>(); //store movement for character states. Needs this component on the same game object
 
         AbilityController = new AbilityController(StartingAbilities, gameObject); //Ability controller which stores all character abilities

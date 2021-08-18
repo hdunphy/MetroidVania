@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Awake()
     {
-        if(Target == null)
+        if (Target == null)
         { //If no Target exists set the target to its own transform
             Target = transform;
         }
@@ -36,7 +36,7 @@ public class CameraFollow : MonoBehaviour
         newPosition.z = ZValue; //Make sure to keep the z value the same otherwise camera will zoom towards the targets z value and will lose sight of the object
         transform.position = Vector3.Slerp(transform.position, newPosition, FollowSpeed * Time.deltaTime); //Interpolate from current pos to target pos
 
-        if(shakeDuration > 0)
+        if (shakeDuration > 0)
         { //Check if camera should be shaking
 
             //Get random value from unit sphere and add shake amount to it
@@ -56,4 +56,6 @@ public class CameraFollow : MonoBehaviour
         originalPosition = transform.localPosition;
         shakeDuration = _shakeDuration;
     }
+
+    public void SetTarget(Transform _transform) { Target = _transform; }
 }
