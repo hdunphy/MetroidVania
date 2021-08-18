@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameSceneController : MonoBehaviour
 {
-    [SerializeField] private string InitialSceneToLoad;
-    [SerializeField] private PlayerController Player;
-    [SerializeField] private Vector3 StartPosition;
+    [SerializeField] private string InitialSceneToLoad; //Name of scene to load on start
+    [SerializeField] private PlayerController Player; //Player prefab to instantiate on start
+    [SerializeField] private Vector3 StartPosition; //Start position of the player
 
     public static GameSceneController Singleton;
 
@@ -31,6 +31,11 @@ public class GameSceneController : MonoBehaviour
         StartCoroutine(LoadInitialScene(InitialSceneToLoad));
     }
 
+    /// <summary>
+    /// Which scene to load initially and all essential objects
+    /// </summary>
+    /// <param name="initialSceneName">Name of the scene to load</param>
+    /// <returns>IEnumerator so it can be run as a coroutine</returns>
     private IEnumerator LoadInitialScene(string initialSceneName)
     {
         yield return SceneManager.LoadSceneAsync(initialSceneName, LoadSceneMode.Additive);

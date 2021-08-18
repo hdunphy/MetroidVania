@@ -16,17 +16,14 @@ public class PlayerInputController : MonoBehaviour
 
     public void OnJump(CallbackContext callback)
     {
-        //Debug.Log($"phase: {callback.phase}, started: {callback.started}\nperformed: {callback.performed}, canceled: {callback.canceled}");
-        //Controller.TriggerAbility(AbilityEnum.DoubleJump, callback.performed);
-        //Controller.TriggerAbility(AbilityEnum.Jump, callback.performed);
-
+        
         if (callback.started)
-        {
+        { //On button pressed, set jump to true
             Controller.TriggerAbility(AbilityEnum.DoubleJump, true);
             Controller.TriggerAbility(AbilityEnum.Jump, true);
-        }
+        } 
         else if (callback.canceled)
-        {
+        { //on button released set jump to false
             Controller.TriggerAbility(AbilityEnum.DoubleJump, false);
             Controller.TriggerAbility(AbilityEnum.Jump, false);
         }

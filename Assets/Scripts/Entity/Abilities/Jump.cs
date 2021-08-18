@@ -17,6 +17,7 @@ public class Jump : Ability
             controller.TriggerAbility(AbilityEnum.DoubleJump, false);
         }
 
+        //Stop player from jumping nonstop. Need to manually press the button again to jump again
         IsButtonPressed = false;
     }
 
