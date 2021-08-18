@@ -14,6 +14,7 @@ public abstract class Ability : ScriptableObject
     [SerializeField, Tooltip("How long before you can use the ability again")] private float cooldownTime;
 
     public bool HasUse { get; set; } //Keeps track if this ability is enable/disabled. True if can be used
+    public bool IsButtonPressed { get; set; } //Keep track if input is being pressed
     public float ActionTime { get => actionTime; } //public member to get the action time
     public float CooldownTime { get => cooldownTime; } //public memeber to get the cooldown time
     public AbilityEnum AbilityType { get => abilityType; } //public member to get the ability type

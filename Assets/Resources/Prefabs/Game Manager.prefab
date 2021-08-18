@@ -62,5 +62,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d50e7e06eb54dc64782c74bcd276a242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialSceneToLoad: 1
+  InitialSceneToLoad: Starting Room
   Player: {fileID: 7673098036353286037, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
+  StartPosition: {x: -45, y: -2, z: 0}

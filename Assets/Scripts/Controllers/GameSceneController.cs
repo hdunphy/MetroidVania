@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameSceneController : MonoBehaviour
 {
-    [SerializeField] private int InitialSceneToLoad;
+    [SerializeField] private string InitialSceneToLoad;
     [SerializeField] private PlayerController Player;
+    [SerializeField] private Vector3 StartPosition;
 
     public static GameSceneController Singleton;
 
@@ -30,10 +31,10 @@ public class GameSceneController : MonoBehaviour
         StartCoroutine(LoadInitialScene(InitialSceneToLoad));
     }
 
-    private IEnumerator LoadInitialScene(int initialSceneBuildIndex)
+    private IEnumerator LoadInitialScene(string initialSceneName)
     {
-        yield return SceneManager.LoadSceneAsync(initialSceneBuildIndex, LoadSceneMode.Additive);
+        yield return SceneManager.LoadSceneAsync(initialSceneName, LoadSceneMode.Additive);
 
-        Instantiate(Player, Vector3.zero, Quaternion.identity);
+        Instantiate(Player, StartPosition, Quaternion.identity);
     }
 }

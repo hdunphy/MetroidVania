@@ -12,7 +12,7 @@ public class AbilityHolder
     private Ability Ability;  //Ability to trigger
     private AbilityState CurrentState; //Current state of the ability
     private GameObject Parent; //Parent game object that uses this ability
-    private bool IsButtonPressed; //Check if the ability should be triggered on next available update
+    //private bool IsButtonPressed; //Check if the ability should be triggered on next available update
     private float ActionTime; //Current action time duration
     private float CooldownTime; //Current cooldown time duration
 
@@ -27,7 +27,7 @@ public class AbilityHolder
         Ability = _ability;
         CurrentState = AbilityState.Ready; //Set ability to ready
         Parent = parent;
-        IsButtonPressed = false; //initialize to false so to not immediately trigger the ability
+        Ability.IsButtonPressed = false; //initialize to false so to not immediately trigger the ability
     }
 
     /// <summary>
@@ -40,7 +40,7 @@ public class AbilityHolder
         switch (CurrentState)
         {
             case AbilityState.Ready:
-                if (IsButtonPressed && Ability.HasUse) //If the ability button is being pressed and the ability can be used
+                if (Ability.IsButtonPressed && Ability.HasUse) //If the ability button is being pressed and the ability can be used
                 {
                     Ability.Activate(Parent); 
                     CurrentState = AbilityState.Active; //Move to the next state
@@ -73,7 +73,7 @@ public class AbilityHolder
     }
 
     //Setters
-    public void SetAbilityButtonPressed(bool _isPressed) { IsButtonPressed = _isPressed; }
+    public void SetAbilityButtonPressed(bool _isPressed) { Ability.IsButtonPressed = _isPressed; }
 
     public void SetAbilityHasUse(bool _hasUse) { Ability.HasUse = _hasUse; }
 }

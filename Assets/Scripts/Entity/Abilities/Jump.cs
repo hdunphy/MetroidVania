@@ -7,15 +7,17 @@ public class Jump : Ability
 
     public override void Activate(GameObject parent)
     {
-        if(parent.TryGetComponent(out EntityMovement movement))
+        if (parent.TryGetComponent(out EntityMovement movement))
         {
             movement.TriggerJump(JumpVelocity);
         }
 
-        if(parent.TryGetComponent(out CharacterController2D controller))
+        if (parent.TryGetComponent(out CharacterController2D controller))
         { //Might be overkill, but don't want to trigger the jump and the double jump at the same time
             controller.TriggerAbility(AbilityEnum.DoubleJump, false);
         }
+
+        IsButtonPressed = false;
     }
 
     public override void BeginCooldown(GameObject parent)

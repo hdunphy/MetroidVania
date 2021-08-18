@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 460719725
+    locked: 0
+  - name: Midground
+    uniqueID: 3664413775
+    locked: 0
+  - name: Foreground
+    uniqueID: 2481386895
+    locked: 0
+  - name: Entities
+    uniqueID: 67044341
+    locked: 0
+  - name: Environmental
+    uniqueID: 3890340045
+    locked: 0
