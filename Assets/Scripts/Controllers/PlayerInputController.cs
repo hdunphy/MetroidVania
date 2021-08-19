@@ -26,6 +26,10 @@ public class PlayerInputController : MonoBehaviour
         { //on button released set jump to false
             Controller.TriggerAbility(AbilityEnum.DoubleJump, false);
             Controller.TriggerAbility(AbilityEnum.Jump, false);
+
+            //cancel jump to limit jump height
+            Controller.CancelAbility(AbilityEnum.DoubleJump);
+            Controller.CancelAbility(AbilityEnum.Jump);
         }
     }
 

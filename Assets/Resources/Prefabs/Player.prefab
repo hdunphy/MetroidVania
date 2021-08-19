@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1102192836707604025}
   - component: {fileID: 7090656274756136396}
+  - component: {fileID: 6777983896083503351}
   - component: {fileID: 1748305981502414567}
   - component: {fileID: 1697440740529666087}
   - component: {fileID: 2685971665217064231}
@@ -77,15 +78,41 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7359398603106325508}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1.9}
+  m_Size: {x: 0.8, y: 1.5}
   m_Direction: 0
+--- !u!61 &6777983896083503351
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359398603106325508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: dc9f01842e94ec34bbefba93cdb69489, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 1.45}
+  m_EdgeRadius: 0
 --- !u!50 &1748305981502414567
 Rigidbody2D:
   serializedVersion: 4
@@ -267,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RunSpeed: 10
-  FallSpeedLimit: 25
+  FallSpeedLimit: 15
   MovementSmoothing: 0.05
 --- !u!114 &7881196547339656336
 MonoBehaviour:
@@ -489,7 +516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8298699833835635463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5683132520257274646}

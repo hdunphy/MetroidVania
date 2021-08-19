@@ -82,4 +82,16 @@ public class AbilityController
             Abilities.Add(_ability.AbilityType, new AbilityHolder(_ability, parentGameObject));
         }
     }
+
+    /// <summary>
+    /// Cancel ability
+    /// </summary>
+    /// <param name="abilityType">Which ability to cancel</param>
+    public void CancelAbility(AbilityEnum abilityType)
+    {
+        if(Abilities.TryGetValue(abilityType, out AbilityHolder holder))
+        {
+            holder.CancelAbility();
+        }
+    }
 }

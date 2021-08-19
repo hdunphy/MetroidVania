@@ -102,6 +102,16 @@ public class CharacterController2D : MonoBehaviour
         AbilityController.TriggerAbility(abilityType, isButtonPressed);
     }
 
+
+    /// <summary>
+    /// Cancel ability
+    /// </summary>
+    /// <param name="abilityType">Which ability to cancel</param>
+    public void CancelAbility(AbilityEnum abilityType)
+    {
+        AbilityController.CancelAbility(abilityType);
+    }
+
     /// <summary>
     /// Add a new ability to the ability controller
     /// </summary>

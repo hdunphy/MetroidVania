@@ -24,4 +24,12 @@ public class Jump : Ability
     public override void BeginCooldown(GameObject parent)
     {
     }
+
+    public override void CancelAbility(GameObject parent)
+    {
+        if (parent.TryGetComponent(out EntityMovement movement))
+        {
+            movement.EndJump();
+        }
+    }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,4 +31,10 @@ public abstract class Ability : ScriptableObject
     /// </summary>
     /// <param name="parent">the game object that this ability is connected to</param>
     public abstract void BeginCooldown(GameObject parent);
+
+    /// <summary>
+    /// Call to cancel the current ability
+    /// </summary>
+    /// <param name="parent">the game object that this ability is connected to</param>
+    public abstract void CancelAbility(GameObject parent);
 }

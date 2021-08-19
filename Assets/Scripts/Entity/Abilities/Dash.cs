@@ -18,4 +18,8 @@ public class Dash : Ability
     public override void BeginCooldown(GameObject parent)
     {
     }
+
+    public override void CancelAbility(GameObject parent)
+    {
+    }
 }

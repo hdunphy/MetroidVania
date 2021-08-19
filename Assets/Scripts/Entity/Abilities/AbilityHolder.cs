@@ -42,13 +42,13 @@ public class AbilityHolder
             case AbilityState.Ready:
                 if (Ability.IsButtonPressed && Ability.HasUse) //If the ability button is being pressed and the ability can be used
                 {
-                    Ability.Activate(Parent); 
+                    Ability.Activate(Parent);
                     CurrentState = AbilityState.Active; //Move to the next state
                     ActionTime = Ability.ActionTime; //Start action time counter
                 }
                 break;
             case AbilityState.Active:
-                if(ActionTime > 0)
+                if (ActionTime > 0)
                 { //If actiontime is greater than zero, ability is still activated
                     ActionTime -= deltaTime;
                 }
@@ -70,6 +70,15 @@ public class AbilityHolder
                 }
                 break;
         }
+    }
+
+    /// <summary>
+    /// Cancel ability early
+    /// </summary>
+    public void CancelAbility()
+    {
+        ActionTime = 0;
+        Ability.CancelAbility(Parent);
     }
 
     //Setters

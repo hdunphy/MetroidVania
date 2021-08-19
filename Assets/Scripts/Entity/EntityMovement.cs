@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -77,6 +78,17 @@ public class EntityMovement : MonoBehaviour
         if (CanMove)
         {
             m_RigidBody2D.velocity = new Vector2(m_RigidBody2D.velocity.x, jumpVelocity);
+        }
+    }
+
+    /// <summary>
+    /// Set Y velocity to 0 so player stops rising
+    /// </summary>
+    public void EndJump()
+    {
+        if (CanMove && m_RigidBody2D.velocity.y > 0)
+        {
+            m_RigidBody2D.velocity = new Vector2(m_RigidBody2D.velocity.x, 0);
         }
     }
 
