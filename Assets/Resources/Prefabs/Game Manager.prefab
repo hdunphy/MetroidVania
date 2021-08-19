@@ -63,5 +63,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialSceneToLoad: Starting Room
-  Player: {fileID: 7673098036353286037, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
+  CameraPrefab: {fileID: 6436813811881545108, guid: b9869d2afdb674843a261c7c6880cbda, type: 3}
+  PlayerPrefab: {fileID: 7673098036353286037, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
   StartPosition: {x: -45, y: -2, z: 0}

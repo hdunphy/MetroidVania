@@ -29,13 +29,14 @@ public class RoomPortal : MonoBehaviour
     private IEnumerator SwitchScene(string sceneName, PlayerController playerController)
     {
         Debug.Log($"Loading Scene: {sceneName}, From Scene: {gameObject.scene.buildIndex}");
+        playerController.LeaveRoom();
 
         //Load new scene
         yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
         //Once new scene is loaded, look for the connecting RoomPortal with the same identifier
         RoomPortal connectingPortal = FindObjectsOfType<RoomPortal>().First(x => x != this && x.RoomIdentifier == RoomIdentifier);
-        playerController.EnterRoom(LoadPosition); //Move the player to the load position of the new portal
+        playerController.EnterRoom(connectingPortal.LoadPosition); //Move the player to the load position of the new portal
 
         //Unload old scene
         yield return SceneManager.UnloadSceneAsync(gameObject.scene.name);

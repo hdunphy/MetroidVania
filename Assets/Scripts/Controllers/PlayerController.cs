@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private EntityMovement EntityMovement;
+    [SerializeField] private Rigidbody2D m_Rigidbody2D;
+
     private void Start()
     {
         //Connect main camera to player
@@ -9,6 +12,20 @@ public class PlayerController : MonoBehaviour
         {
             cameraFollow.SetTarget(transform);
         }
+
+        EntityMovement = GetComponent<EntityMovement>();
+        m_Rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+    /// <summary>
+    /// Leaving a room into another scene
+    ///     Need to stop all movement
+    ///     Block inputs so no abilities
+    /// </summary>
+    public void LeaveRoom()
+    {
+        m_Rigidbody2D.velocity = Vector2.zero;
+        EntityMovement.enabled = false; //Disable movement so player cannot move until scene is done loading
     }
 
     /// <summary>
@@ -17,6 +34,9 @@ public class PlayerController : MonoBehaviour
     /// <param name="loadPosition">The transform for where the player should move to in new room</param>
     public void EnterRoom(Transform loadPosition)
     {
-        transform.position = loadPosition.position;
+        Debug.Log($"Pos: {loadPosition.position}");
+        transform.position = loadPosition.position; //Move player to position
+        Camera.main.transform.position = new Vector3(loadPosition.position.x, loadPosition.position.y, Camera.main.transform.position.z); //Move camera to position
+        EntityMovement.enabled = true; //re-enable player movement
     }
 }

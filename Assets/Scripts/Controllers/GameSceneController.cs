@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameSceneController : MonoBehaviour
 {
     [SerializeField] private string InitialSceneToLoad; //Name of scene to load on start
-    [SerializeField] private PlayerController Player; //Player prefab to instantiate on start
+    [SerializeField] private CameraFollow CameraPrefab; //Camera Prefab to load
+    [SerializeField] private PlayerController PlayerPrefab; //Player prefab to instantiate on start
     [SerializeField] private Vector3 StartPosition; //Start position of the player
 
     public static GameSceneController Singleton;
@@ -38,8 +39,19 @@ public class GameSceneController : MonoBehaviour
     /// <returns>IEnumerator so it can be run as a coroutine</returns>
     private IEnumerator LoadInitialScene(string initialSceneName)
     {
-        yield return SceneManager.LoadSceneAsync(initialSceneName, LoadSceneMode.Additive);
+        if (SceneManager.GetActiveScene().name != initialSceneName)
+        { //Make sure the scene isn't already loaded
+            yield return SceneManager.LoadSceneAsync(initialSceneName, LoadSceneMode.Additive);
+        }
 
-        Instantiate(Player, StartPosition, Quaternion.identity);
+        if (Camera.main == null)
+        { //Make sure the camera is in the scene
+            Instantiate(CameraPrefab, StartPosition + (Vector3.back * 10), Quaternion.identity);
+        }
+
+        if (FindObjectOfType<PlayerController>() == null)
+        { //Make sure the player is in the scene
+            Instantiate(PlayerPrefab, StartPosition, Quaternion.identity);
+        }
     }
 }
