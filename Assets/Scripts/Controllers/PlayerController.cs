@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private EntityMovement EntityMovement;
+    [SerializeField] private EntityMovement Movement;
+    [SerializeField] private CharacterController2D CharacterController2D;
     [SerializeField] private Rigidbody2D m_Rigidbody2D;
 
     private void Start()
@@ -12,9 +14,36 @@ public class PlayerController : MonoBehaviour
         {
             cameraFollow.SetTarget(transform);
         }
+    }
 
-        EntityMovement = GetComponent<EntityMovement>();
-        m_Rigidbody2D = GetComponent<Rigidbody2D>();
+    /// <summary>
+    /// Function called by UnityEvent to trigger this character's death
+    ///     Will trigger any clean up, animations, and events that need to occur after this character dies
+    /// </summary>
+    public void OnDeath()
+    {
+        var damageable = GetComponent<Damageable>();
+        if(damageable.currentHealth <= 0)
+        {
+            Debug.Log("Character is Dead");
+
+            StartCoroutine(CharacterDeath());
+        }
+        else
+        {
+            CharacterController2D.Respawn();
+        }
+    }
+
+    /// <summary>
+    /// Coroutine for character death so some things are not instantanious like removing the object
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator CharacterDeath()
+    {
+        Movement.SetCanMove(false);
+        yield return new WaitForSeconds(1f);
+        gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -25,7 +54,7 @@ public class PlayerController : MonoBehaviour
     public void LeaveRoom()
     {
         m_Rigidbody2D.velocity = Vector2.zero;
-        EntityMovement.enabled = false; //Disable movement so player cannot move until scene is done loading
+        Movement.enabled = false; //Disable movement so player cannot move until scene is done loading
     }
 
     /// <summary>
@@ -37,6 +66,6 @@ public class PlayerController : MonoBehaviour
         Debug.Log($"Pos: {loadPosition.position}");
         transform.position = loadPosition.position; //Move player to position
         Camera.main.transform.position = new Vector3(loadPosition.position.x, loadPosition.position.y, Camera.main.transform.position.z); //Move camera to position
-        EntityMovement.enabled = true; //re-enable player movement
+        Movement.enabled = true; //re-enable player movement
     }
 }

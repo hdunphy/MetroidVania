@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,8 +19,8 @@ public class Damageable : MonoBehaviour
     [SerializeField, Tooltip("Event that triggers when Health >= 0")]
     private UnityEvent EntityDied;
 
+    public float currentHealth { get; private set; } //Current health of the entity
     private bool canTakeDamage; //Check if entity can take damage this frame
-    private float currentHealth; //Current health of the entity
 
     private void Start()
     {
@@ -43,7 +44,7 @@ public class Damageable : MonoBehaviour
 
             if(currentHealth <= 0)
             { //Check if the entity is dead. If so trigger Died UnityEvent
-                EntityDied?.Invoke();
+                KillEntity();
             }
             else
             { //Entity is still alive, Stun the entity and make temprorily invincible
@@ -51,6 +52,14 @@ public class Damageable : MonoBehaviour
                 StartCoroutine(MakeInvincible(InvincibilityAfterDamageDuration));
             }
         }
+    }
+
+    /// <summary>
+    /// Kill Entity
+    /// </summary>
+    public void KillEntity()
+    {
+        EntityDied?.Invoke();
     }
 
     /// <summary>

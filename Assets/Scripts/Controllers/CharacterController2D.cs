@@ -29,6 +29,8 @@ public class CharacterController2D : MonoBehaviour
     private AbilityController AbilityController; //Keep track of all character  abilities
     private Dictionary<CharacterState, ICharacterState> CharacterStateMachine; //Keep track of current character state
 
+    private Vector3 LastGroundPosition; //Keep track of ground position one frame ago
+
     //Constants
     private const float k_GroundRadiusCheck = 0.2f; //Radius for checking if character  is touching the ground
     //private const float k_WallRadiusCheck = 0.2f; //Radius for checking if character  is touching the wall
@@ -36,6 +38,7 @@ public class CharacterController2D : MonoBehaviour
     private void Start()
     {
         GroundLayer = GameLayers.Singleton.GroundLayer;
+        LastGroundPosition = transform.position; //set it to current position in case
 
         Movement = GetComponent<EntityMovement>(); //store movement for character states. Needs this component on the same game object
 
@@ -60,10 +63,11 @@ public class CharacterController2D : MonoBehaviour
     private void FixedUpdate()
     { 
         CharacterState previousCharacterState = CurrentCharacterState; //store state from last fixed update
-
+        
         if (Physics2D.OverlapCircle(GroundCheck.position, k_GroundRadiusCheck, GroundLayer))
         { // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             CurrentCharacterState = CharacterState.Gounded;
+            LastGroundPosition = transform.position;
         }
         /* Not needed yet
         else if (Physics2D.OverlapCircle(WallCheck.position, k_WallRadiusCheck, WallLayer))
@@ -121,25 +125,8 @@ public class CharacterController2D : MonoBehaviour
         AbilityController.AddAbility(_ability, gameObject);
     }
 
-    /// <summary>
-    /// Function called by UnityEvent to trigger this character's death
-    ///     Will trigger any clean up, animations, and events that need to occur after this character dies
-    /// </summary>
-    public void OnDeath()
+    public void Respawn()
     {
-        Debug.Log("Character is Dead");
-
-        StartCoroutine(CharacterDeath());
-    }
-
-    /// <summary>
-    /// Coroutine for character death so some things are not instantanious like removing the object
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator CharacterDeath()
-    {
-        Movement.SetCanMove(false);
-        yield return new WaitForSeconds(1f);
-        gameObject.SetActive(false);
+        transform.position = LastGroundPosition;
     }
 }
