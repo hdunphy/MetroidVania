@@ -10,17 +10,23 @@ public class ActionNode : Node
     /* The delegate that is called to evaluate this node */
     private ActionNodeDelegate m_action;
 
-    /* Because this node contains no logic itself, 
-     * the logic must be passed in in the form of  
-     * a delegate. As the signature states, the action 
-     * needs to return a NodeStates enum */
+    /// <summary>
+    /// Because this node contains no logic itself, 
+    /// the logic must be passed in in the form of
+    /// a delegate. As the signature states, the action
+    /// needs to return a NodeStates enum
+    /// </summary>
+    /// <param name="action">Delegate to run when evaluated</param>
     public ActionNode(ActionNodeDelegate action)
     {
         m_action = action;
     }
 
-    /* Evaluates the node using the passed in delegate and  
-     * reports the resulting state as appropriate */
+    /// <summary>
+    /// Evaluates the node using the passed in delegate and  
+    /// reports the resulting state as appropriate
+    /// </summary>
+    /// <returns>The current Node state after the evaluation </returns>
     public override NodeStates Evaluate()
     {
         switch (m_action())

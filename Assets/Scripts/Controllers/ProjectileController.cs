@@ -8,8 +8,13 @@ using UnityEngine.Events;
 public class ProjectileController : DamageOnHit
 {
     [SerializeField] private Rigidbody2D m_RigidBody2D;
-    [SerializeField] private UnityEvent OnObjectCollision;
+    [SerializeField, Tooltip("Call Event when projectile collides with a valid object")] private UnityEvent OnObjectCollision;
 
+    /// <summary>
+    /// Set the velocity in the desired direction
+    /// </summary>
+    /// <param name="projectileSpeed">max scalar velocity of the projectile</param>
+    /// <param name="direction">the direction the projectile should go in</param>
     public void SetVelocityandDirection(float projectileSpeed, Vector2 direction)
     {
         Vector2 velocity = direction.normalized * projectileSpeed;
@@ -21,8 +26,8 @@ public class ProjectileController : DamageOnHit
     {
         if (OnHit(collision.gameObject))
         {
-            OnObjectCollision?.Invoke();
-            Destroy(gameObject);
+            OnObjectCollision?.Invoke(); //Trigger the UnityEvent
+            Destroy(gameObject); //Destroy self
         }
     }
 }
