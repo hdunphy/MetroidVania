@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TotalHealth: 10
-  KnockbackForce: 40
+  KnockbackForce: 500
   StunDuration: 0.25
   InvincibilityAfterDamageDuration: 1
   IsInvincible: 0

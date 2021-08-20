@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HazardDamageOnCollision : DamageOnCollision
+public class HazardDamageOnTrigger : DamageOnHit
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bool isInDamageableLayer = GetIsInDamageableLayer(collision);
+        bool isInDamageableLayer = GameLayers.Singleton.IsLayerInLayerMask(collision.gameObject.layer, DamageableLayers);
 
         if (isInDamageableLayer && collision.TryGetComponent(out Damageable damageable))
         {

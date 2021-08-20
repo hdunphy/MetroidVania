@@ -24,6 +24,20 @@ public class GameLayers : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Determins if layer is in the mask
+    /// </summary>
+    /// <param name="layer">layer that is being tested</param>
+    /// <param name="mask">mask the layer is being tested against</param>
+    /// <returns>true if layer is in the layerMask else returns false</returns>
+    public bool IsLayerInLayerMask(int layer, LayerMask mask)
+    {
+        //Layers are stored as bits so found this answer on the internet
+        bool isInDamageableLayer = ((1 << layer) & mask) != 0;
+
+        return isInDamageableLayer;
+    }
+
     public LayerMask GroundLayer { get => ground; }
 
     public LayerMask PortalLayer { get => portal; }
