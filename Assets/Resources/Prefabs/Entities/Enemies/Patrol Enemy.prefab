@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8331372875020072860}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,10 +41,12 @@ GameObject:
   - component: {fileID: 8331372875102800453}
   - component: {fileID: 8331372875102800450}
   - component: {fileID: 8331372875102800455}
+  - component: {fileID: 4196551294258988677}
   - component: {fileID: 8331372875102800452}
   - component: {fileID: 3649178169298565981}
   - component: {fileID: 600617464}
-  m_Layer: 0
+  - component: {fileID: 6218387676497096559}
+  m_Layer: 10
   m_Name: Patrol Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,6 +116,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4196551294258988677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8331372875102800448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98ff37c60cb9724db1cbc9e23c6e987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8331372875102800452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +173,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Movement: {fileID: 8331372875102800452}
   CheckTransform: {fileID: 8331372875020072860}
+--- !u!114 &6218387676497096559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8331372875102800448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f07b36b1acbf42bd64ce47b8814f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalHealth: 2
+  KnockbackForce: 200
+  StunDuration: 0.5
+  InvincibilityAfterDamageDuration: 0.5
+  IsInvincible: 0
+  m_Rigidbody2D: {fileID: 8331372875102800455}
+  SetStun:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8331372875102800452}
+        m_TargetAssemblyTypeName: EntityMovement, Assembly-CSharp
+        m_MethodName: SetCanMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  EntityDied:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4196551294258988677}
+        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+        m_MethodName: OnDied
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8331372876453593386
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8331372876453593389}
   - component: {fileID: 8331372876453593388}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}

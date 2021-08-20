@@ -9,7 +9,7 @@ public abstract class DamageOnHit : MonoBehaviour
     [SerializeField, Tooltip("Layers that can take damage from this object")] protected LayerMask DamageableLayers;
     [SerializeField, Tooltip("Amount of Damage delt on collison")] protected float DamageDelt;
 
-    protected void OnHit(GameObject other)
+    protected bool OnHit(GameObject other)
     {
         bool isInDamageableLayer = GameLayers.Singleton.IsLayerInLayerMask(other.layer, DamageableLayers);
         //if other object is damageable layer and has the damageable componenet than apply damage
@@ -17,5 +17,7 @@ public abstract class DamageOnHit : MonoBehaviour
         {
             damageable.ApplyDamage(DamageDelt, transform.position);
         }
+
+        return isInDamageableLayer;
     }
 }

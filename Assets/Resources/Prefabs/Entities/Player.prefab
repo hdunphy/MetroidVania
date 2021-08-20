@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3761518613889922993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8517125784237465558}
+  m_Layer: 9
+  m_Name: Fire Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8517125784237465558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3761518613889922993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.75, y: 0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2169678452552083287}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4829832058644785487
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,6 +78,7 @@ GameObject:
   - component: {fileID: 7881196547339656336}
   - component: {fileID: 6580378475252913759}
   - component: {fileID: 7673098036353286037}
+  - component: {fileID: 1999510276172503054}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -378,6 +409,19 @@ MonoBehaviour:
   Movement: {fileID: 5026255635176180353}
   CharacterController2D: {fileID: 7881196547339656336}
   m_Rigidbody2D: {fileID: 1748305981502414567}
+--- !u!114 &1999510276172503054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359398603106325508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887cb61ab23b95f44971e1ee69370d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotInitialPosition: {fileID: 8517125784237465558}
 --- !u!1 &7844044056776457193
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2169678452552083287}
   m_Layer: 9
-  m_Name: Physics
+  m_Name: Transforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,6 +451,7 @@ Transform:
   m_Children:
   - {fileID: 2587293580383476798}
   - {fileID: 399194804638903183}
+  - {fileID: 8517125784237465558}
   m_Father: {fileID: 1102192836707604025}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
