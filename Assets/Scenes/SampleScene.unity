@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Patrol Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8331372875102800448, guid: 6f8456cbe2c03c14f956c362b4663d8f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8331372875102800453, guid: 6f8456cbe2c03c14f956c362b4663d8f, type: 3}
       propertyPath: m_RootOrder
       value: 1
