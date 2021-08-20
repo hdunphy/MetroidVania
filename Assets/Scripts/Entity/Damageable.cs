@@ -12,12 +12,15 @@ public class Damageable : MonoBehaviour
     [SerializeField] private float InvincibilityAfterDamageDuration; //Duration of invincibility entity takes before can take additional damage
     [SerializeField] private bool IsInvincible; //Mostly for debugging, if true entity cannot take damage
     [SerializeField] private Rigidbody2D m_Rigidbody2D; //RigidBody2D attached to this game object
-    
-    [SerializeField, Tooltip("Event that triggers when ever the entity cannot move")] 
+
+    [SerializeField, Tooltip("Event that triggers when ever the entity cannot move")]
     private UnityEvent<bool> SetStun;
 
     [SerializeField, Tooltip("Event that triggers when Health >= 0")]
     private UnityEvent EntityDied;
+
+    [SerializeField, Tooltip("Event that triggers when Apply Damage is called")]
+    private UnityEvent TakeDamage;
 
     public float currentHealth { get; private set; } //Current health of the entity
     private bool canTakeDamage; //Check if entity can take damage this frame
@@ -35,14 +38,20 @@ public class Damageable : MonoBehaviour
     /// <param name="damagePosition">the position the damage is coming from</param>
     public void ApplyDamage(float damage, Vector3 damagePosition)
     {
-        if(!IsInvincible && canTakeDamage)
+        if (!IsInvincible && canTakeDamage)
         { //If the entity is not invincible and can take damage
+            TakeDamage?.Invoke();
+
             currentHealth -= damage;
             Vector2 _damageDirection = Vector3.Normalize(transform.position - damagePosition); //Find the direction the damge came from
-            m_Rigidbody2D.velocity = Vector2.zero; //stop entity movement
-            m_Rigidbody2D.AddForce(_damageDirection * KnockbackForce); //Add knockback force
 
-            if(currentHealth <= 0)
+            if (m_Rigidbody2D != null)
+            {
+                m_Rigidbody2D.velocity = Vector2.zero; //stop entity movement
+                m_Rigidbody2D.AddForce(_damageDirection * KnockbackForce); //Add knockback force
+            }
+
+            if (currentHealth <= 0)
             { //Check if the entity is dead. If so trigger Died UnityEvent
                 KillEntity();
             }
