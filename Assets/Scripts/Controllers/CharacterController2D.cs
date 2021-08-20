@@ -50,6 +50,9 @@ public class CharacterController2D : MonoBehaviour
             { CharacterState.Gounded, new GroundedState(AbilityController, Movement) }, //State for when character's feet are colliding with ground obejct
             { CharacterState.Airborn, new AirbornState(AbilityController, HasAirControl, Movement) } //state for when player is in the air
         };
+
+        //Set shoot has use to true since player can always shoot
+        AbilityController.SetAbilityHasUse(AbilityEnum.Shoot, true);
     }
 
     private void Update()

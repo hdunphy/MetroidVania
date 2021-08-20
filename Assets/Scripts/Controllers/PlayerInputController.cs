@@ -40,7 +40,7 @@ public class PlayerInputController : MonoBehaviour
 
     public void OnFire(CallbackContext callback)
     {
-        //Controller.SetIsFiring(callback.performed);
+        Controller.TriggerAbility(AbilityEnum.Shoot, callback.performed);
     }
 
     public void OnAttack(CallbackContext callback)

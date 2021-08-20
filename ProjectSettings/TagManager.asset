@@ -53,6 +53,9 @@ TagManager:
   - name: Entities
     uniqueID: 67044341
     locked: 0
+  - name: Effects
+    uniqueID: 1020046459
+    locked: 0
   - name: Environmental
     uniqueID: 3890340045
     locked: 0
