@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 8331372875102800450}
   - component: {fileID: 8331372875102800455}
   - component: {fileID: 8331372875102800452}
-  - component: {fileID: 8331372875102800451}
   - component: {fileID: 3649178169298565981}
+  - component: {fileID: 600617464}
   m_Layer: 0
   m_Name: Patrol Enemy
   m_TagString: Untagged
@@ -129,21 +129,6 @@ MonoBehaviour:
   RunSpeed: 1
   FallSpeedLimit: 15
   MovementSmoothing: 0.05
---- !u!114 &8331372875102800451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8331372875102800448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a98ff37c60cb9724db1cbc9e23c6e987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyBehaviors: 00000000
-  CurrentState: 0
-  test: {fileID: 0}
 --- !u!114 &3649178169298565981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +145,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   DamageDelt: 1
+--- !u!114 &600617464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8331372875102800448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc56c42a7f7ec614091c6bc44a1f26da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Movement: {fileID: 8331372875102800452}
+  CheckTransform: {fileID: 8331372875020072860}
 --- !u!1 &8331372876453593386
 GameObject:
   m_ObjectHideFlags: 0
