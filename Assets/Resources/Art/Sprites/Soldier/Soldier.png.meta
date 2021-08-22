@@ -4,133 +4,175 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -3868812660829053132
-    second: Soldier_0
+    second: soldier_fire_1
   - first:
       213: 4748496047744815929
-    second: Soldier_1
+    second: soldier_fire_2
   - first:
       213: 2805721153289186860
-    second: Soldier_2
+    second: soldier_fire_3
   - first:
       213: -5331859181223373285
-    second: Soldier_3
+    second: soldier_fire_4
   - first:
       213: 8924183435215946824
-    second: Soldier_4
+    second: soldier_fire_5
   - first:
       213: 152417265559848108
-    second: Soldier_5
+    second: soldier_fire_6
   - first:
       213: -5572970920532211618
-    second: Soldier_6
+    second: soldier_fire_7
   - first:
       213: -2880666656720651278
-    second: Soldier_7
+    second: soldier_fireUp_1
   - first:
       213: -1733617733217763490
-    second: Soldier_8
+    second: soldier_fireUp_2
   - first:
       213: -7227817022452064393
-    second: Soldier_9
+    second: soldier_fireUp_3
   - first:
       213: 2742716491997213031
-    second: Soldier_10
+    second: soldier_fireUp_4
   - first:
       213: -62850490490929932
-    second: Soldier_11
+    second: soldier_fireUp_5
   - first:
       213: 1974314120003528485
-    second: Soldier_12
+    second: soldier_fireUp_6
   - first:
       213: -1692326888749062731
-    second: Soldier_13
+    second: soldier_fireUp_7
   - first:
       213: -8366205455049171761
-    second: Soldier_14
+    second: soldier_fireDown_1
   - first:
       213: -7202218996535425993
-    second: Soldier_15
+    second: soldier_fireDown_2
   - first:
       213: 2005700920829779246
-    second: Soldier_16
+    second: soldier_fireDown_3
   - first:
       213: -8503598735362372552
-    second: Soldier_17
+    second: soldier_fireDown_4
   - first:
       213: 6623777501556897501
-    second: Soldier_18
+    second: soldier_fireDown_5
   - first:
       213: 1444713933976088483
-    second: Soldier_19
+    second: soldier_fireDown_6
   - first:
       213: -2456867076102776368
-    second: Soldier_20
+    second: soldier_fireDown_7
   - first:
       213: 233768993629577626
-    second: Soldier_21
+    second: Soldier_Idle_1
   - first:
       213: -5651435147518545271
-    second: Soldier_22
+    second: Soldier_Idle_2
   - first:
       213: 6755985663967675594
-    second: Soldier_23
+    second: Soldier_Idle_3
   - first:
       213: -5687253064817044187
-    second: Soldier_24
+    second: Soldier_Idle_4
   - first:
       213: -7404624186788814934
-    second: Soldier_25
+    second: Soldier_Run_1
   - first:
       213: 235376660964857629
-    second: Soldier_26
+    second: Soldier_Run_2
   - first:
       213: -3603710560016398688
-    second: Soldier_27
+    second: Soldier_Run_3
   - first:
       213: 2776055807973595377
-    second: Soldier_28
+    second: Soldier_Run_4
   - first:
       213: 2180410314965149893
-    second: Soldier_29
+    second: Soldier_Run_5
   - first:
       213: -5707902934612390786
-    second: Soldier_30
+    second: Soldier_Run_6
   - first:
       213: -1334288636235299032
-    second: Soldier_31
+    second: Soldier_Hit_1
   - first:
       213: 4927697857163613625
-    second: Soldier_32
+    second: Soldier_Hit_2
   - first:
       213: 1282726659025278273
-    second: Soldier_33
+    second: Soldier_Hit_3
   - first:
       213: -8271518659021732292
-    second: Soldier_34
+    second: Soldier_Hit_4
   - first:
       213: 6025165729927441604
-    second: Soldier_35
+    second: Soldier_Hit_5
   - first:
       213: 6712230105077093423
-    second: Soldier_36
+    second: Soldier_Hit_6
   - first:
       213: -4285923211763185300
-    second: Soldier_37
+    second: Soldier_Hit_7
   - first:
       213: 156713526631975120
-    second: Soldier_38
+    second: Soldier_Death_1
   - first:
       213: 2133790352986412820
-    second: Soldier_39
+    second: Soldier_Death_2
   - first:
       213: 5816303354900572512
-    second: Soldier_40
+    second: Soldier_Death_3
   - first:
       213: 6284592324512227996
-    second: Soldier_41
+    second: Soldier_Death_4
   - first:
       213: 7050324879617185217
-    second: Soldier_42
+    second: Soldier_Death_5
+  - first:
+      213: -2607639254268547159
+    second: Soldier_Death_6
+  - first:
+      213: 5653757908176306338
+    second: Soldier_Death_7
+  - first:
+      213: 7927456554719778392
+    second: Soldier_Death_8
+  - first:
+      213: 449206504547973828
+    second: Soldier_Death_9
+  - first:
+      213: 6810723495125567110
+    second: Soldier_Death_10
+  - first:
+      213: -642152069011884208
+    second: Soldier_Death_11
+  - first:
+      213: -6214945519075569275
+    second: Soldier_Death_12
+  - first:
+      213: -3710885130930908971
+    second: Soldier_Death_13
+  - first:
+      213: 8598842666268618451
+    second: Soldier_Jump_1
+  - first:
+      213: -3540987017898227895
+    second: Soldier_Jump_2
+  - first:
+      213: -1783535810177115791
+    second: Soldier_Jump_3
+  - first:
+      213: -3002747679659128181
+    second: Soldier_Jump_4
+  - first:
+      213: -2092587461042694401
+    second: Soldier_Land_1
+  - first:
+      213: -21116039098738599
+    second: Soldier_Land_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -197,7 +239,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -209,7 +251,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -221,7 +263,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -232,11 +274,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soldier_0
+      name: soldier_fire_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 320
+        y: 576
         width: 32
         height: 32
       alignment: 0
@@ -253,11 +295,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_1
+      name: soldier_fire_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 320
+        y: 576
         width: 32
         height: 32
       alignment: 0
@@ -274,11 +316,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_2
+      name: soldier_fire_3
       rect:
         serializedVersion: 2
         x: 64
-        y: 320
+        y: 576
         width: 32
         height: 32
       alignment: 0
@@ -295,11 +337,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_3
+      name: soldier_fire_4
       rect:
         serializedVersion: 2
-        x: 96
-        y: 320
+        x: 0
+        y: 544
         width: 32
         height: 32
       alignment: 0
@@ -316,11 +358,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_4
+      name: soldier_fire_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 288
+        x: 32
+        y: 544
         width: 32
         height: 32
       alignment: 0
@@ -337,11 +379,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_5
+      name: soldier_fire_6
       rect:
         serializedVersion: 2
-        x: 32
-        y: 288
+        x: 64
+        y: 544
         width: 32
         height: 32
       alignment: 0
@@ -358,11 +400,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_6
+      name: soldier_fire_7
       rect:
         serializedVersion: 2
-        x: 64
-        y: 288
+        x: 0
+        y: 512
         width: 32
         height: 32
       alignment: 0
@@ -379,11 +421,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_7
+      name: soldier_fireUp_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 288
+        x: 32
+        y: 512
         width: 32
         height: 32
       alignment: 0
@@ -400,11 +442,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_8
+      name: soldier_fireUp_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
+        x: 64
+        y: 512
         width: 32
         height: 32
       alignment: 0
@@ -421,11 +463,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_9
+      name: soldier_fireUp_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 256
+        x: 0
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -442,11 +484,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_10
+      name: soldier_fireUp_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 256
+        x: 32
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -463,11 +505,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_11
+      name: soldier_fireUp_5
       rect:
         serializedVersion: 2
-        x: 96
-        y: 256
+        x: 64
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -484,11 +526,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_12
+      name: soldier_fireUp_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 224
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -505,11 +547,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_13
+      name: soldier_fireUp_7
       rect:
         serializedVersion: 2
         x: 32
-        y: 224
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -526,11 +568,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_14
+      name: soldier_fireDown_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 224
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -547,11 +589,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_15
+      name: soldier_fireDown_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 224
+        x: 0
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -568,11 +610,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_16
+      name: soldier_fireDown_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 32
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -589,11 +631,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_17
+      name: soldier_fireDown_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
+        x: 64
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -610,11 +652,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_18
+      name: soldier_fireDown_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
+        x: 0
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -631,11 +673,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_19
+      name: soldier_fireDown_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
+        x: 32
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -652,11 +694,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_20
+      name: soldier_fireDown_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
+        x: 64
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -673,11 +715,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_21
+      name: Soldier_Idle_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
+        x: 0
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -694,11 +736,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_22
+      name: Soldier_Idle_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
+        x: 32
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -715,11 +757,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_23
+      name: Soldier_Idle_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
+        x: 64
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -736,11 +778,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_24
+      name: Soldier_Idle_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 320
         width: 32
         height: 32
       alignment: 0
@@ -757,11 +799,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_25
+      name: Soldier_Run_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 128
+        y: 320
         width: 32
         height: 32
       alignment: 0
@@ -778,11 +820,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_26
+      name: Soldier_Run_2
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 320
         width: 32
         height: 32
       alignment: 0
@@ -799,11 +841,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_27
+      name: Soldier_Run_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 0
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -820,11 +862,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_28
+      name: Soldier_Run_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 32
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -841,11 +883,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_29
+      name: Soldier_Run_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 64
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -862,11 +904,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_30
+      name: Soldier_Run_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
+        x: 0
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -883,11 +925,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_31
+      name: Soldier_Hit_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
+        x: 32
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -904,11 +946,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_32
+      name: Soldier_Hit_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 64
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -925,11 +967,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_33
+      name: Soldier_Hit_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 0
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -946,11 +988,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_34
+      name: Soldier_Hit_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 32
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -967,11 +1009,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_35
+      name: Soldier_Hit_5
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 64
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -988,11 +1030,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_36
+      name: Soldier_Hit_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1009,11 +1051,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_37
+      name: Soldier_Hit_7
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1030,11 +1072,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_38
+      name: Soldier_Death_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1051,11 +1093,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_39
+      name: Soldier_Death_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
+        x: 0
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -1072,11 +1114,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_40
+      name: Soldier_Death_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 32
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -1093,11 +1135,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_41
+      name: Soldier_Death_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 64
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -1114,7 +1156,301 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_42
+      name: Soldier_Death_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c55ea0bf19c7d160800000000000000
+      internalID: 7050324879617185217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Death_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af65f20aedcfcbd0800000000000000
+      internalID: -2607639254268547159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Death_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a087e2dcde267e40800000000000000
+      internalID: 5653757908176306338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Death_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8561a6c2cbbf30e60800000000000000
+      internalID: 7927456554719778392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Death_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca70669fe6eb3600800000000000000
+      internalID: 449206504547973828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Death_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686cd5e1fec848e50800000000000000
+      internalID: 6810723495125567110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Death_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057b3c2781e9617f0800000000000000
+      internalID: -642152069011884208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Death_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58158158af310c9a0800000000000000
+      internalID: -6214945519075569275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Death_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0959072a9408cc0800000000000000
+      internalID: -3710885130930908971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dee96aa8d9355770800000000000000
+      internalID: 8598842666268618451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94708e37113ebdec0800000000000000
+      internalID: -3540987017898227895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179543651ab9f37e0800000000000000
+      internalID: -1783535810177115791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a0ac305e81456d0800000000000000
+      internalID: -3002747679659128181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Land_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff61d1b8ac2a5f2e0800000000000000
+      internalID: -2092587461042694401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier_Land_2
       rect:
         serializedVersion: 2
         x: 64
@@ -1128,8 +1464,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c55ea0bf19c7d160800000000000000
-      internalID: 7050324879617185217
+      spriteID: 958d476031bf4bff0800000000000000
+      internalID: -21116039098738599
       vertices: []
       indices: 
       edges: []

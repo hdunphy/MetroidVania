@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class EntityMovement : MonoBehaviour
@@ -13,6 +14,12 @@ public class EntityMovement : MonoBehaviour
     [SerializeField, Tooltip("How much to smooth out the movement")]
     private float MovementSmoothing = 0.05f;
 
+    [SerializeField, Tooltip("If entity changes moving state, trigger this event")] 
+    private UnityEvent<bool> SetIsMoving; //True if moving, False if idle
+    
+    [SerializeField, Tooltip("Triggers when the entity Jumps")] 
+    private UnityEvent OnJumpEvent; //When player jumps
+
 
     //Internal Values
     private Rigidbody2D m_RigidBody2D; //Entity's rigid body 2d
@@ -20,6 +27,7 @@ public class EntityMovement : MonoBehaviour
     private bool CanMove; //enable/disable movement
     private bool IsFacingRight; //Is entity looking to the right
     private Vector3 Velocity; //referenced velocity used in dampening function
+    private bool IsMoving; //Store moving state from last frame;
 
     //Unity properties
     private void Start()
@@ -27,6 +35,17 @@ public class EntityMovement : MonoBehaviour
         m_RigidBody2D = GetComponent<Rigidbody2D>();
         CanMove = true;
         IsFacingRight = true;
+        IsMoving = false;
+    }
+
+    private void Update()
+    {
+        bool movedLastFrame = IsMoving; //Save state to see if there has been a change in state since last frame
+        IsMoving = Mathf.Abs(HorizontalMove) > 0.01; //Set movement true if has a value in either direction
+        if (IsMoving != movedLastFrame)
+        { //Invoke the event when a change in state occurs
+            SetIsMoving?.Invoke(IsMoving);
+        }
     }
 
     private void FixedUpdate()
@@ -77,6 +96,7 @@ public class EntityMovement : MonoBehaviour
     {
         if (CanMove)
         {
+            OnJumpEvent?.Invoke(); //Trigger on jump event for other componets
             m_RigidBody2D.velocity = new Vector2(m_RigidBody2D.velocity.x, jumpVelocity);
         }
     }

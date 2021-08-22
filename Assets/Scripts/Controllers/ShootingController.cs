@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ShootingController : MonoBehaviour
 {
     [SerializeField, Tooltip("Transform for where the bullets come from")] private Transform shotInitialPosition;
+    [SerializeField, Tooltip("Triggers when the entity is shooting")] private UnityEvent OnShootEvent;
 
     private Vector2 direction; //will need this if we can shoot up
     public Transform ShotInitialPosition { get => shotInitialPosition; } //Getter for the Transform
@@ -22,5 +24,14 @@ public class ShootingController : MonoBehaviour
     {
         //need the local scale for when the player flips. Player flips by changing the sign of localScale.x
         return new Vector2(transform.localScale.x * direction.x, direction.y);
+    }
+
+    /// <summary>
+    /// Event used to let other components know the entity is shooting
+    ///     Used for animation, sound, particles, etc
+    /// </summary>
+    public void TriggerOnShootEvent()
+    {
+        OnShootEvent?.Invoke();
     }
 }

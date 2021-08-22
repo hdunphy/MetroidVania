@@ -21,6 +21,10 @@ public class CharacterController2D : MonoBehaviour
 
     [Header("Events")] //Triggerable events that can be assigned from the inspector
     [SerializeField] private UnityEvent OnLandEvent; //When the player transitions to the ground state, trigger this event
+    
+    [SerializeField, Tooltip("Trigger when character state changes from Grounded to airborn")] 
+    private UnityEvent<bool> IsAriborn; //True if Airborn false if grounded
+
 
     private EntityMovement Movement; //Component for handling movement abilities
 
@@ -71,6 +75,9 @@ public class CharacterController2D : MonoBehaviour
         { // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             CurrentCharacterState = CharacterState.Gounded;
             LastGroundPosition = transform.position; //Keep track of this position for respawning
+            
+            //Set event entity is not airborn
+            IsAriborn?.Invoke(false);
         }
         /* Not needed yet
         else if (Physics2D.OverlapCircle(WallCheck.position, k_WallRadiusCheck, WallLayer))
@@ -81,6 +88,8 @@ public class CharacterController2D : MonoBehaviour
         else
         { //Else the player is air born
             CurrentCharacterState = CharacterState.Airborn;
+            //Set event entity is airborn
+            IsAriborn?.Invoke(true);
         }
 
         //Entering a new state
