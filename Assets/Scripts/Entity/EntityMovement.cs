@@ -14,10 +14,10 @@ public class EntityMovement : MonoBehaviour
     [SerializeField, Tooltip("How much to smooth out the movement")]
     private float MovementSmoothing = 0.05f;
 
-    [SerializeField, Tooltip("If entity changes moving state, trigger this event")] 
+    [SerializeField, Tooltip("If entity changes moving state, trigger this event")]
     private UnityEvent<bool> SetIsMoving; //True if moving, False if idle
-    
-    [SerializeField, Tooltip("Triggers when the entity Jumps")] 
+
+    [SerializeField, Tooltip("Triggers when the entity Jumps")]
     private UnityEvent OnJumpEvent; //When player jumps
 
 
@@ -28,6 +28,8 @@ public class EntityMovement : MonoBehaviour
     private bool IsFacingRight; //Is entity looking to the right
     private Vector3 Velocity; //referenced velocity used in dampening function
     private bool IsMoving; //Store moving state from last frame;
+    private bool IsDashing; //Is the entity in the middle of a dash
+    private float DashVelocity; //Speed of the dash
 
     //Unity properties
     private void Start()
@@ -36,6 +38,8 @@ public class EntityMovement : MonoBehaviour
         CanMove = true;
         IsFacingRight = true;
         IsMoving = false;
+        IsDashing = false;
+        DashVelocity = 0;
     }
 
     private void Update()
@@ -50,7 +54,11 @@ public class EntityMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (CanMove) //Check if entity can move
+        if (IsDashing)
+        { //If entity is in the middle of a dash
+            m_RigidBody2D.velocity = new Vector2(transform.localScale.x * DashVelocity, 0); //Set y velocity to 0 so that entity won't fall
+        }
+        else if (CanMove) //Check if entity can move
         {
             if (m_RigidBody2D.velocity.y < -FallSpeedLimit)
             { //Limit the entity's falling speed
@@ -114,14 +122,26 @@ public class EntityMovement : MonoBehaviour
 
     /// <summary>
     /// If the entity can move trigger the dash ability
+    ///     Turn on IsDashing and turn off can move
     /// </summary>
-    /// <param name="dashForce">Set the velocity of the dash in the x direction</param>
-    public void TriggerDash(float dashForce)
+    /// <param name="_dashVelocity">Set the velocity of the dash in the x direction</param>
+    public void TriggerDash(float _dashVelocity)
     {
         if (CanMove)
         {
-            m_RigidBody2D.velocity = new Vector2(transform.localScale.x * dashForce, 0);
+            IsDashing = true;
+            DashVelocity = _dashVelocity;
+            CanMove = false;
         }
+    }
+
+    /// <summary>
+    /// Stop the dash. Set can move to true and isDashing to false
+    /// </summary>
+    public void StopDash()
+    {
+        CanMove = true;
+        IsDashing = false;
     }
 
     //Setters

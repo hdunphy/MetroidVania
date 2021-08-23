@@ -9,17 +9,27 @@ public class Dash : Ability
 
     public override void Activate(GameObject parent)
     {
+        EntityMovement movement = parent.GetComponent<EntityMovement>();
         //Trigger dash movement ability
-        parent.GetComponent<EntityMovement>().TriggerDash(DashVelocity);
-        //Disable ability
+        movement.TriggerDash(DashVelocity);
+
+        //Disable dash
         HasUse = false;
     }
 
     public override void BeginCooldown(GameObject parent)
     {
+        StopDash(parent);
     }
 
     public override void CancelAbility(GameObject parent)
     {
+        StopDash(parent);
+    }
+
+    private void StopDash(GameObject parent)
+    {
+        EntityMovement movement = parent.GetComponent<EntityMovement>();
+        movement.StopDash();
     }
 }
