@@ -22,6 +22,7 @@ public class ShootingController : MonoBehaviour
     /// <returns>Vector 2 of the direction the projectile should follow</returns>
     public Vector2 GetDirection()
     {
+        direction = Quaternion.AngleAxis(ShotInitialPosition.eulerAngles.z, Vector3.forward) * Vector3.right;
         //need the local scale for when the player flips. Player flips by changing the sign of localScale.x
         return new Vector2(transform.localScale.x * direction.x, direction.y);
     }
