@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Dash
   abilityType: 1
-  actionTime: 0.25
+  actionTime: 0.15
   cooldownTime: 1
-  DashVelocity: 40
+  DashVelocity: 30

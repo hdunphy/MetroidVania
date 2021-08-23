@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Player Shoot
   abilityType: 3
-  actionTime: 0.5
+  actionTime: 0.25
   cooldownTime: 1
   ProjectilePrefab: {fileID: 743153929439013874, guid: fef86f9da23970344aef68c81fed4e78, type: 3}
   ProjectileSpeed: 15
