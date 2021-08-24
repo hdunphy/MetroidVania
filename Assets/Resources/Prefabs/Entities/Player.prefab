@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 1999510276172503054}
   - component: {fileID: 2726960352672043874}
   - component: {fileID: 5203815505617522107}
+  - component: {fileID: 1683892876942621694}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -358,17 +359,35 @@ MonoBehaviour:
         m_CallState: 2
   OnJumpEvent:
     m_PersistentCalls:
+      m_Calls: []
+  OnDashEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5203815505617522107}
         m_TargetAssemblyTypeName: PlayerAnimator, Assembly-CSharp
-        m_MethodName: SetTrigger
-        m_Mode: 5
+        m_MethodName: SetIsDashing
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: JumpTrigger
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnYVelocityChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5203815505617522107}
+        m_TargetAssemblyTypeName: PlayerAnimator, Assembly-CSharp
+        m_MethodName: YVelocity
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &7881196547339656336
@@ -465,13 +484,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5203815505617522107}
+        m_TargetAssemblyTypeName: PlayerAnimator, Assembly-CSharp
+        m_MethodName: SetIsDead
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   TakeDamage:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5203815505617522107}
-        m_TargetAssemblyTypeName: PlayerAnimator, Assembly-CSharp
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 1683892876942621694}
+        m_TargetAssemblyTypeName: FlashSprite, Assembly-CSharp
+        m_MethodName: Flash
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -555,6 +586,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 2726960352672043874}
+--- !u!114 &1683892876942621694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359398603106325508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100d17333fcd67c4c971ae27dde8f894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteRenderer: {fileID: 7953997937666558934}
+  FlashMaterial: {fileID: 2100000, guid: 24b3d21846020b84da88fdfdd5411de4, type: 2}
+  Duration: 0.25
 --- !u!1 &7844044056776457193
 GameObject:
   m_ObjectHideFlags: 0

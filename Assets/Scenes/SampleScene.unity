@@ -12102,6 +12102,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6580378475252913759, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
+      propertyPath: TotalHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7359398603106325508, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -12114,34 +12118,6 @@ PrefabInstance:
       propertyPath: StartingAbilities.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 66056b68d567a9b429c7789047b6e053, type: 2}
-    - target: {fileID: 8517125784237465558, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.775
-      objectReference: {fileID: 0}
-    - target: {fileID: 8517125784237465558, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.128
-      objectReference: {fileID: 0}
-    - target: {fileID: 8517125784237465558, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8517125784237465558, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8517125784237465558, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8517125784237465558, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8517125784237465558, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10d628484b5b50c46b5fa6a7d8aef30d, type: 3}
 --- !u!1 &1191244895

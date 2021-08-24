@@ -24,12 +24,15 @@ public class PlayerAnimator : MonoBehaviour
         Animator.SetBool("IsDead", isDead);
     }
 
+    public void SetIsDashing(bool isDashing)
+    {
+        Animator.SetBool("IsDashing", isDashing);
+    }
+
     /// <summary>
     /// Used generically to start the Animator Trigger parameters
-    ///     Jump Trigger
     ///     Land Trigger
     ///     Fire Trigger
-    ///     Damage Trigger
     /// </summary>
     /// <param name="triggerName"></param>
     public void SetTrigger(string triggerName)
@@ -37,9 +40,22 @@ public class PlayerAnimator : MonoBehaviour
         Animator.SetTrigger(triggerName);
     }
 
+    /// <summary>
+    /// From PlayerInput component, read in the OnMove input and take the y value to determine where the player is looking
+    /// </summary>
+    /// <param name="callback">Player input</param>
     public void VerticleMovement(CallbackContext callback)
     {
         float verticleMovement = callback.ReadValue<Vector2>().y;
         Animator.SetFloat("Look_Y_Direction", verticleMovement);
+    }
+
+    /// <summary>
+    /// Get player y velocity and set the float for getting player is jumping or falling
+    /// </summary>
+    /// <param name="velocity">Velocity of player in y direction</param>
+    public void YVelocity(float velocity)
+    {
+        Animator.SetFloat("Y_Velocity", velocity);
     }
 }

@@ -18,7 +18,13 @@ public class EntityMovement : MonoBehaviour
     private UnityEvent<bool> SetIsMoving; //True if moving, False if idle
 
     [SerializeField, Tooltip("Triggers when the entity Jumps")]
-    private UnityEvent OnJumpEvent; //When player jumps
+    private UnityEvent OnJumpEvent; //When entity jumps
+
+    [SerializeField, Tooltip("Triggers when the entity Dashes")]
+    private UnityEvent<bool> OnDashEvent; //When entity Dashes
+
+    [SerializeField, Tooltip("Triggers when the Y velocity of entity changes")]
+    private UnityEvent<float> OnYVelocityChange;
 
 
     //Internal Values
@@ -30,6 +36,7 @@ public class EntityMovement : MonoBehaviour
     private bool IsMoving; //Store moving state from last frame;
     private bool IsDashing; //Is the entity in the middle of a dash
     private float DashVelocity; //Speed of the dash
+    private float LastYVelocity; //Store velocity from last frame
 
     //Unity properties
     private void Start()
@@ -40,6 +47,7 @@ public class EntityMovement : MonoBehaviour
         IsMoving = false;
         IsDashing = false;
         DashVelocity = 0;
+        LastYVelocity = 0;
     }
 
     private void Update()
@@ -50,6 +58,19 @@ public class EntityMovement : MonoBehaviour
         { //Invoke the event when a change in state occurs
             SetIsMoving?.Invoke(IsMoving);
         }
+
+        //Check the yVelocity of the rigid body and normalize it to 1, 0, -1
+        float yVelocity = m_RigidBody2D.velocity.y;
+        if (yVelocity > 0.01) yVelocity = 1;
+        else if (yVelocity < -0.01) yVelocity = -1;
+        else yVelocity = 0;
+
+        //if the yVelocity has changed than update the event
+        if(yVelocity != LastYVelocity)
+        {
+            OnYVelocityChange?.Invoke(yVelocity);
+        }
+        LastYVelocity = yVelocity;
     }
 
     private void FixedUpdate()
@@ -132,6 +153,7 @@ public class EntityMovement : MonoBehaviour
             IsDashing = true;
             DashVelocity = _dashVelocity;
             CanMove = false;
+            OnDashEvent?.Invoke(true);
         }
     }
 
@@ -142,6 +164,7 @@ public class EntityMovement : MonoBehaviour
     {
         CanMove = true;
         IsDashing = false;
+        OnDashEvent?.Invoke(false);
     }
 
     //Setters

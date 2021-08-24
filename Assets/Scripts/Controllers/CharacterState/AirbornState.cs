@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AirbornState : ICharacterState
 {
     private AbilityController AbilityController;
     private bool AirbornMovement;
     private EntityMovement Movement;
+    private UnityEvent<bool> IsAriborn;
 
     /// <summary>
     /// Airborn state constructor
@@ -14,11 +16,12 @@ public class AirbornState : ICharacterState
     /// <param name="abilityController">Ability controller so State can turn on and off abilities</param>
     /// <param name="airbornMovement">Set if character can move while airborn</param>
     /// <param name="movement">Objects movement controller</param>
-    public AirbornState(AbilityController abilityController, bool airbornMovement, EntityMovement movement)
+    public AirbornState(AbilityController abilityController, bool airbornMovement, EntityMovement movement, UnityEvent<bool> _isAirborn)
     {
         AbilityController = abilityController;
         AirbornMovement = airbornMovement;
         Movement = movement;
+        IsAriborn = _isAirborn;
     }
 
     public void EnterState()
@@ -32,6 +35,9 @@ public class AirbornState : ICharacterState
         AbilityController.SetAbilityHasUse(AbilityEnum.Jump, false);
         //Double jump ability is enabled. Double jump can only happen while airborn
         AbilityController.SetAbilityHasUse(AbilityEnum.DoubleJump, true);
+
+        //Set isAirborn to true
+        IsAriborn?.Invoke(true);
     }
 
     void ICharacterState.Update()

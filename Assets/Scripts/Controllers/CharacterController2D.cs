@@ -51,8 +51,8 @@ public class CharacterController2D : MonoBehaviour
         //Build character state machine
         CharacterStateMachine = new Dictionary<CharacterState, ICharacterState>()
         {
-            { CharacterState.Gounded, new GroundedState(AbilityController, Movement) }, //State for when character's feet are colliding with ground obejct
-            { CharacterState.Airborn, new AirbornState(AbilityController, HasAirControl, Movement) } //state for when player is in the air
+            { CharacterState.Gounded, new GroundedState(AbilityController, Movement, IsAriborn) }, //State for when character's feet are colliding with ground obejct
+            { CharacterState.Airborn, new AirbornState(AbilityController, HasAirControl, Movement, IsAriborn) } //state for when player is in the air
         };
 
         //Set shoot has use to true since player can always shoot
@@ -75,9 +75,11 @@ public class CharacterController2D : MonoBehaviour
         { // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             CurrentCharacterState = CharacterState.Gounded;
             LastGroundPosition = transform.position; //Keep track of this position for respawning
-            
-            //Set event entity is not airborn
-            IsAriborn?.Invoke(false);
+
+            if (previousCharacterState.Equals(CharacterState.Airborn))
+            { //move this to ground state?
+                OnLandEvent?.Invoke();
+            }
         }
         /* Not needed yet
         else if (Physics2D.OverlapCircle(WallCheck.position, k_WallRadiusCheck, WallLayer))
@@ -88,8 +90,6 @@ public class CharacterController2D : MonoBehaviour
         else
         { //Else the player is air born
             CurrentCharacterState = CharacterState.Airborn;
-            //Set event entity is airborn
-            IsAriborn?.Invoke(true);
         }
 
         //Entering a new state
