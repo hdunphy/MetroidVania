@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Character is Dead");
 
-            StartCoroutine(CharacterDeath());
+            Movement.SetCanMove(false);
+            damageable.enabled = false;
         }
         else
         {
@@ -36,13 +37,11 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Coroutine for character death so some things are not instantanious like removing the object
+    /// Function character death so some things are not instantanious like removing the object
+    ///     Gets called by Death Animation Event
     /// </summary>
-    /// <returns></returns>
-    IEnumerator CharacterDeath()
+    public void CharacterDeath()
     {
-        Movement.SetCanMove(false);
-        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
     }
 
