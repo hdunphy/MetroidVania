@@ -12,19 +12,12 @@ public class Shoot : Ability
     {
         if(parent.TryGetComponent(out ShootingController controller))
         {
-            controller.TriggerOnShootEvent();
+            controller.TriggerOnShootInit(ProjectilePrefab, ProjectileSpeed);
         }
     }
 
     public override void BeginCooldown(GameObject parent)
     {
-        //Must make Active time set to how long animation takes to shoot
-        if (parent.TryGetComponent(out ShootingController controller))
-        {
-            Transform initialPosition = controller.ShotInitialPosition;
-            ProjectileController projectile = Instantiate(ProjectilePrefab, initialPosition.position, initialPosition.rotation);
-            projectile.SetVelocityandDirection(ProjectileSpeed, controller.GetDirection());
-        }
             
     }
 
