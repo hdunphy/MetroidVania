@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RootNode : Node
+public class RepeatNode : DecoratorNode
 {
-    public Node child;
-
+    //Add repeat count or infinite
     protected override void OnStart()
     {
     }
@@ -16,13 +15,8 @@ public class RootNode : Node
 
     protected override NodeState OnUpdate()
     {
-        return child.Update();
-    }
+        child.Update();
 
-    public override Node Clone()
-    {
-        RootNode node = Instantiate(this);
-        node.child = child.Clone();
-        return node;
+        return NodeState.RUNNING;
     }
 }

@@ -2,27 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RootNode : Node
+public class DebugLogNode : ActionNode
 {
-    public Node child;
+    public string message;
 
     protected override void OnStart()
     {
+        Debug.Log($"OnStart {message}");
     }
 
     protected override void OnStop()
     {
+        Debug.Log($"OnStop {message}");
     }
 
     protected override NodeState OnUpdate()
     {
-        return child.Update();
-    }
-
-    public override Node Clone()
-    {
-        RootNode node = Instantiate(this);
-        node.child = child.Clone();
-        return node;
+        Debug.Log($"OnUpdate {message}");
+        return NodeState.SUCCESS;
     }
 }

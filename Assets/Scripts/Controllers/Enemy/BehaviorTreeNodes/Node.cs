@@ -1,27 +1,40 @@
 using UnityEngine;
 using System.Collections;
 
-public enum NodeStates { RUNNING, SUCCESS, FAILURE }
+public enum NodeState { RUNNING, SUCCESS, FAILURE }
 
-//[System.Serializable]
-public abstract class Node
+public abstract class Node : ScriptableObject
 {
+    [HideInInspector] public NodeState state = NodeState.RUNNING;
+    [HideInInspector] public bool started = false;
+    [HideInInspector] public string guid;
+    [HideInInspector] public Vector2 position;
 
-    /* Delegate that returns the state of the node.*/
-    public delegate NodeStates NodeReturn();
-
-    /* The current state of the node */
-    protected NodeStates m_nodeState;
-
-    public NodeStates nodeState
+    public NodeState Update()
     {
-        get { return m_nodeState; }
+        if (!started)
+        {
+            OnStart();
+            started = true;
+        }
+
+        state = OnUpdate();
+
+        if(state == NodeState.FAILURE || state == NodeState.SUCCESS)
+        {
+            OnStop();
+            started = false;
+        }
+
+        return state;
     }
 
-    /* The constructor for the node */
-    public Node() { }
+    public virtual Node Clone()
+    {
+        return Instantiate(this);
+    }
 
-    /* Implementing classes use this method to evaluate the desired set of conditions */
-    public abstract NodeStates Evaluate();
-
+    protected abstract void OnStart();
+    protected abstract void OnStop();
+    protected abstract NodeState OnUpdate();
 }
