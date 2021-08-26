@@ -1,11 +1,13 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private EntityMovement Movement;
     [SerializeField] private CharacterController2D CharacterController2D;
     [SerializeField] private Rigidbody2D m_Rigidbody2D;
+    [SerializeField] private UnityEvent OnDeathEvent;
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
             Movement.SetCanMove(false);
             damageable.enabled = false;
+            OnDeathEvent?.Invoke();
         }
         else
         {
