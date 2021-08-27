@@ -1,0 +1,284 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6823004598963745201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a4b2c267a20c947bed6bb11fbc41b4, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4b0d6d5ea4345a443a9a4240e803b748
+  position: {x: 626.18195, y: 742.9999}
+  enemyController: {fileID: 0}
+  description: 
+  Duration: 1
+--- !u!114 &-5787497039308811231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3068480fcb83d40ad26961cdfc4270, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1f68f1c1a7db0404aa3845a1d57b3f9c
+  position: {x: -444, y: 743}
+  enemyController: {fileID: 0}
+  description: 
+  message: 
+--- !u!114 &-4525916894490497485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba269dc24a6fdc4fad723614ce2033a, type: 3}
+  m_Name: FlipMovementDirection
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 566362ce6b448c141bd211c30a3f1c84
+  position: {x: 188.45526, y: 743}
+  enemyController: {fileID: 0}
+  description: 
+--- !u!114 &-2952815657199175312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d58b7588caeeda44b173e40b3c4f6f6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c56caf75ac3d6974eab138632e73256f
+  position: {x: -400.7375, y: 583.42}
+  enemyController: {fileID: 0}
+  description: 
+  children: []
+--- !u!114 &-2195191135110763633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0bce2407e640741b5551dbf3bec29c, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 75db8e4086d79bf41b28c38e75222ef0
+  position: {x: 78.99997, y: 312.9025}
+  enemyController: {fileID: 0}
+  description: 
+  child: {fileID: 8725345575677693565}
+  isInfinite: 1
+  repeatCount: 0
+--- !u!114 &-2087325236009003340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bbb41ce600e664281200dbd5bde6e2, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6a763451bb9ef1d43a42d56613d183bd
+  position: {x: 0, y: 0}
+  enemyController: {fileID: 0}
+  description: 
+  child: {fileID: 6535234529744400325}
+--- !u!114 &-1195534107510108464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c9f62487312214ca223062d16b01bd, type: 3}
+  m_Name: InvertorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 09afab917721ebf49903fcd4a9cc7db9
+  position: {x: -123.85004, y: 594}
+  enemyController: {fileID: 0}
+  description: 
+  child: {fileID: -1106529258938328511}
+--- !u!114 &-1106529258938328511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f80e97d51023e644ad503817eb2135f, type: 3}
+  m_Name: CheckForEdge
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 34a53ac4a7f8881449f220855d5b5267
+  position: {x: -123.85004, y: 743.00006}
+  enemyController: {fileID: 0}
+  description: 
+  WallRadiusCheck: 0.2
+  GroundDistanceCheck: 2
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d05e83ded5ab54490119732ef2b231, type: 3}
+  m_Name: Basic Patrol
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -2087325236009003340}
+  treeState: 0
+  nodes:
+  - {fileID: -2087325236009003340}
+  - {fileID: 5053725348819259877}
+  - {fileID: 6535234529744400325}
+  - {fileID: -2195191135110763633}
+  - {fileID: 8725345575677693565}
+  - {fileID: -1106529258938328511}
+  - {fileID: -4525916894490497485}
+  - {fileID: 6441953835433859359}
+  - {fileID: 2307744712167442390}
+  - {fileID: -1195534107510108464}
+  - {fileID: -2952815657199175312}
+  - {fileID: -5787497039308811231}
+  - {fileID: -6823004598963745201}
+--- !u!114 &2307744712167442390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7bf37588df9f2d45bbda45aebb1c4bc, type: 3}
+  m_Name: SetMovementDirection
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e195214b40f4ce34c8b25903ca05d3e7
+  position: {x: 407, y: 743}
+  enemyController: {fileID: 0}
+  description: 
+--- !u!114 &5053725348819259877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7bf37588df9f2d45bbda45aebb1c4bc, type: 3}
+  m_Name: SetMovementDirection
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f3e002ed5c304a342b2f883e6e822750
+  position: {x: -170, y: 324.8}
+  enemyController: {fileID: 0}
+  description: 
+--- !u!114 &6441953835433859359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d58b7588caeeda44b173e40b3c4f6f6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 43d00cdb441fe244d8135d0768c9f3bd
+  position: {x: 349.09753, y: 594}
+  enemyController: {fileID: 0}
+  description: 
+  children:
+  - {fileID: -4525916894490497485}
+  - {fileID: 2307744712167442390}
+  - {fileID: -6823004598963745201}
+--- !u!114 &6535234529744400325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d58b7588caeeda44b173e40b3c4f6f6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b34ca93850502894ea303c3d66f84750
+  position: {x: 0, y: 135}
+  enemyController: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 5053725348819259877}
+  - {fileID: -2195191135110763633}
+--- !u!114 &8725345575677693565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e253f9f3d275146a59704c9f918878, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: cc50d7d46770e244cb23a15d32db10d0
+  position: {x: 79.00006, y: 454.6001}
+  enemyController: {fileID: 0}
+  description: 
+  children:
+  - {fileID: -1195534107510108464}
+  - {fileID: 6441953835433859359}

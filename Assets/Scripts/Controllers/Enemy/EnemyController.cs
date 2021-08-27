@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public Transform CheckTransform;
     /// <summary>
     /// What happens when the Enemy Entity has been killed
     /// </summary>

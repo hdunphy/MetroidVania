@@ -7,7 +7,7 @@ public class BT_Patrol : MonoBehaviour
 {
     //[SerializeField] private EntityMovement Movement;
     //[SerializeField, Tooltip("Transform from where to start the physics checks")] private Transform CheckTransform;
-    
+
     //private float MoveDirection; //Keep track of which direction the entity should be moving in
 
     //private LayerMask GroundLayer; //What is considered ground
@@ -54,7 +54,7 @@ public class BT_Patrol : MonoBehaviour
     //    var wallCheck = Physics2D.OverlapCircle(CheckTransform.position, PhsysicsRadiusCheck, GroundLayer);
     //    var FloorCheck = Physics2D.Raycast(CheckTransform.position, Vector2.down, GroundDistanceCheck, GroundLayer);
 
-    //    if(wallCheck || !FloorCheck)
+    //    if (wallCheck || !FloorCheck)
     //    {
     //        state = NodeState.SUCCESS;
     //    }

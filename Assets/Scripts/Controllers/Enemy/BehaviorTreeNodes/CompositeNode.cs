@@ -13,4 +13,9 @@ public abstract class CompositeNode : Node
 
         return node;
     }
+
+    public override string GetClass()
+    {
+        return "composite";
+    }
 }

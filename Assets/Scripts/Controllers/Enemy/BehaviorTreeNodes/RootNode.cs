@@ -25,4 +25,9 @@ public class RootNode : Node
         node.child = child.Clone();
         return node;
     }
+
+    public override string GetClass()
+    {
+        return "root";
+    }
 }

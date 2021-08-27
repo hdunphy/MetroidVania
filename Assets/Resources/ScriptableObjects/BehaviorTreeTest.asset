@@ -15,8 +15,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: af060b4b896cf11418b27e35429304d0
-  position: {x: -305.16, y: -60}
-  child: {fileID: 6269372736708371963}
+  position: {x: 25.73997, y: -162.38754}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: Root
+  child: {fileID: 8904825085903538086}
 --- !u!114 &-5194493773017909531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,7 +37,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 531de224e0d363247be3df9e5c24f255
-  position: {x: 143, y: 208}
+  position: {x: 100.99994, y: 319}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: 
   message: Test 2
 --- !u!114 &-2415775126556034845
 MonoBehaviour:
@@ -49,7 +59,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 933c31143000f69488095c1672a16da9
-  position: {x: 152, y: 49}
+  position: {x: -183.55252, y: 319}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: 
   message: Test 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -70,6 +85,10 @@ MonoBehaviour:
   - {fileID: 6269372736708371963}
   - {fileID: -5696027685834202355}
   - {fileID: -5194493773017909531}
+  - {fileID: 8904825085903538086}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
 --- !u!114 &6269372736708371963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,7 +104,34 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8307a9198381e0a4a8f8d9eb7c7f4566
-  position: {x: -69, y: 141}
+  position: {x: 12.999886, y: 135.99998}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: 
   children:
   - {fileID: -2415775126556034845}
   - {fileID: -5194493773017909531}
+--- !u!114 &8904825085903538086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0bce2407e640741b5551dbf3bec29c, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 3d6d147f1c28cbb41bf03a0b1f409979
+  position: {x: 25.999966, y: -30.93506}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: banannaa banannaa banannaa banannaa banannaa banannaa
+  child: {fileID: 6269372736708371963}

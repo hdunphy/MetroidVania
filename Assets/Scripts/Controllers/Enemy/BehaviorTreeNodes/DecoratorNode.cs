@@ -13,4 +13,9 @@ public abstract class DecoratorNode : Node
 
         return node;
     }
+
+    public override string GetClass()
+    {
+        return "decorator";
+    }
 }

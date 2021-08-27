@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class RepeatNode : DecoratorNode
 {
-    //Add repeat count or infinite
+    public bool isInfinite;
+    public int repeatCount;
+
+    private int count;
     protected override void OnStart()
     {
+        count = 0;
     }
 
     protected override void OnStop()
@@ -15,8 +19,23 @@ public class RepeatNode : DecoratorNode
 
     protected override NodeState OnUpdate()
     {
-        child.Update();
+        NodeState _state = NodeState.RUNNING;
+        if (isInfinite)
+        {
+            child.Update();
+        }
+        else if(count < repeatCount)
+        {
+            if (child.Update() == NodeState.FAILURE)
+            {
+                count++;
+            }
 
-        return NodeState.RUNNING;
+            _state = count == repeatCount ? NodeState.SUCCESS : NodeState.RUNNING;
+        }
+
+
+
+        return _state;
     }
 }

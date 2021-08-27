@@ -1,5 +1,143 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6097889839801576877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c9f62487312214ca223062d16b01bd, type: 3}
+  m_Name: InvertorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f11c7fd3884b4874192ff30431885232
+  position: {x: -57.793285, y: 458}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: 
+  child: {fileID: -381151968051113722}
+--- !u!114 &-2094288868009868361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e253f9f3d275146a59704c9f918878, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 57eac9162f3378e4d9a964e259aa3bed
+  position: {x: -0.000022888184, y: 121.01988}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: 
+  children:
+  - {fileID: -1156959236673363886}
+  - {fileID: 4101874002406698838}
+--- !u!114 &-1997877232341303729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0bce2407e640741b5551dbf3bec29c, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 9756fd85d093fac41ad9290fbc2b8075
+  position: {x: -0.0001636137, y: -36.52976}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: 
+  child: {fileID: -2094288868009868361}
+  isInfinite: 0
+  repeatCount: 2
+--- !u!114 &-1156959236673363886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d58b7588caeeda44b173e40b3c4f6f6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 96d1854e33acec34186c12e7835acc5f
+  position: {x: -197, y: 275}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 1415124549826321097}
+  - {fileID: -6097889839801576877}
+--- !u!114 &-381151968051113722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3068480fcb83d40ad26961cdfc4270, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: fdcd70e3b351bfb4290f0fe3cc6beb99
+  position: {x: -58.00001, y: 611.70776}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: 
+  message: Test 1B
+--- !u!114 &-289926650138059866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bbb41ce600e664281200dbd5bde6e2, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a3dd1ff318f374440b3e0e7b3e35035b
+  position: {x: -0.00016254082, y: -191.40083}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: 
+  child: {fileID: -1997877232341303729}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,6 +150,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d05e83ded5ab54490119732ef2b231, type: 3}
   m_Name: New Behavior Tree
   m_EditorClassIdentifier: 
-  rootNode: {fileID: 0}
+  rootNode: {fileID: -289926650138059866}
   treeState: 0
-  nodes: []
+  nodes:
+  - {fileID: -289926650138059866}
+  - {fileID: -1156959236673363886}
+  - {fileID: 1415124549826321097}
+  - {fileID: -381151968051113722}
+  - {fileID: 4101874002406698838}
+  - {fileID: -6097889839801576877}
+  - {fileID: -1997877232341303729}
+  - {fileID: -2094288868009868361}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+--- !u!114 &1415124549826321097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3068480fcb83d40ad26961cdfc4270, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: db6ec17e9992b1249a391923bad99ba4
+  position: {x: -320.06815, y: 458.23956}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: 
+  message: Test 1A
+--- !u!114 &4101874002406698838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3068480fcb83d40ad26961cdfc4270, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f9a984f1cb40fe34ead19a3a4a4fb2c1
+  position: {x: 100.000015, y: 274.99997}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    objectToPickup: {fileID: 0}
+  enemyController: {fileID: 0}
+  description: 
+  message: Test 2
