@@ -10,5 +10,6 @@ namespace TheKiwiCoder {
     [System.Serializable]
     public class Blackboard {
         public Vector3 moveToPosition;
+        public float moveDirection;
     }
 }

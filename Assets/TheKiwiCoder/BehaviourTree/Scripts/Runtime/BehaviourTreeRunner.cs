@@ -9,7 +9,7 @@ namespace TheKiwiCoder {
         public BehaviourTree tree;
 
         // Storage container object to hold game object subsystems
-        Context context;
+        EnemyContext context;
 
         // Start is called before the first frame update
         void Start() {
@@ -25,8 +25,8 @@ namespace TheKiwiCoder {
             }
         }
 
-        Context CreateBehaviourTreeContext() {
-            return Context.CreateFromGameObject(gameObject);
+        EnemyContext CreateBehaviourTreeContext() {
+            return EnemyContext.CreateFromGameObject(gameObject);
         }
 
         private void OnDrawGizmosSelected() {

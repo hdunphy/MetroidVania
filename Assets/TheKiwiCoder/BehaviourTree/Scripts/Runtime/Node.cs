@@ -14,7 +14,7 @@ namespace TheKiwiCoder {
         [HideInInspector] public bool started = false;
         [HideInInspector] public string guid;
         [HideInInspector] public Vector2 position;
-        [HideInInspector] public Context context;
+        [HideInInspector] public EnemyContext context;
         [HideInInspector] public Blackboard blackboard;
         [TextArea] public string description;
         public bool drawGizmos = false;
