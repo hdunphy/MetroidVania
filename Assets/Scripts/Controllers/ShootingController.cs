@@ -28,7 +28,7 @@ public class ShootingController : MonoBehaviour
     {
         direction = Quaternion.AngleAxis(shotInitialPosition.eulerAngles.z, Vector3.forward) * Vector3.right;
         //need the local scale for when the player flips. Player flips by changing the sign of localScale.x
-        return new Vector2(transform.localScale.x * direction.x, direction.y);
+        return new Vector2(direction.x, direction.y);
     }
 
     /// <summary>
@@ -50,6 +50,10 @@ public class ShootingController : MonoBehaviour
     /// </summary>
     public void TriggerOnShootEvent()
     {
+        if(transform.localScale.x == -1)
+        { //if player is flipped and facing right then need to flip the shotinitialposition transform
+            shotInitialPosition.eulerAngles += Vector3.back * 180; 
+        }
         ProjectileController projectile = Instantiate(projectilePrefab, shotInitialPosition.position, shotInitialPosition.rotation);
         projectile.SetVelocityandDirection(projectileSpeed, GetDirection());
         OnShootEvent?.Invoke();
