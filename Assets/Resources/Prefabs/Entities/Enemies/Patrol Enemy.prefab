@@ -44,10 +44,10 @@ GameObject:
   - component: {fileID: 4196551294258988677}
   - component: {fileID: 8331372875102800452}
   - component: {fileID: 3649178169298565981}
-  - component: {fileID: 600617464}
   - component: {fileID: 6218387676497096559}
   - component: {fileID: 4928184809424933440}
   - component: {fileID: 9220394208418433390}
+  - component: {fileID: 1673685310404208581}
   m_Layer: 10
   m_Name: Patrol Enemy
   m_TagString: Untagged
@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98ff37c60cb9724db1cbc9e23c6e987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CheckTransform: {fileID: 8331372875020072860}
 --- !u!114 &8331372875102800452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,20 +201,6 @@ MonoBehaviour:
           m_StringArgument: DealDamage
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &600617464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8331372875102800448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc56c42a7f7ec614091c6bc44a1f26da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Movement: {fileID: 8331372875102800452}
-  CheckTransform: {fileID: 8331372875020072860}
 --- !u!114 &6218387676497096559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,6 +296,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 4928184809424933440}
+--- !u!114 &1673685310404208581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8331372875102800448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ddb853ae966be042b2467e8bfc90915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tree: {fileID: 11400000, guid: 3d56a2c3cb3028948b1d2efcbf2da79d, type: 2}
 --- !u!1 &8331372876453593386
 GameObject:
   m_ObjectHideFlags: 0

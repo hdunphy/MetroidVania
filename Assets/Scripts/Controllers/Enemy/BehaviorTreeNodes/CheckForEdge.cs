@@ -36,7 +36,6 @@ public class CheckForEdge : ActionNode
         {
             _state = NodeState.FAILURE;
         }
-        Debug.Log($"returning {_state}");
 
         return _state;
     }
