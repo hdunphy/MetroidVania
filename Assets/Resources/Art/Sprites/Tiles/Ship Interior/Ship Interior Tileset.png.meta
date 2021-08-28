@@ -92,6 +92,12 @@ TextureImporter:
   - first:
       213: 1065757740891652761
     second: Ship Interior Tileset_29
+  - first:
+      213: 9140422086224722772
+    second: Ship Interior Door Top1
+  - first:
+      213: 592968859465239264
+    second: Ship Interior Door Top2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -908,6 +914,48 @@ TextureImporter:
       bones: []
       spriteID: 992487ac4055ace00800000000000000
       internalID: 1065757740891652761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ship Interior Door Top1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b3f8a957d49de70800000000000000
+      internalID: 9140422086224722772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ship Interior Door Top2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea4b473906aa3800800000000000000
+      internalID: 592968859465239264
       vertices: []
       indices: 
       edges: []
