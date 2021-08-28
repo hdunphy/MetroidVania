@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class DoorSwitchController : MonoBehaviour
 {
-    [SerializeField] private DoorController Door;
-    [SerializeField] private SpriteRenderer SpriteRenderer;
-    [SerializeField] private Sprite OffSprite;
-    [SerializeField] private Sprite OnSprite;
-    [SerializeField] private Animator Animator;
+    [SerializeField] private DoorController Door; //The door this switch controls
+    [SerializeField] private SpriteRenderer SpriteRenderer; //Sprite render for the switch
+    [SerializeField] private Sprite OffSprite; //Sprite for off state
+    [SerializeField] private Sprite OnSprite; //Sprite for on State
+    [SerializeField] private Animator Animator; //Animator
 
+    /// <summary>
+    /// Called when switch is damaged by player
+    /// </summary>
     public void OnDoorSwitched()
     {
         FindObjectOfType<Damageable>().enabled = false;
@@ -18,6 +21,9 @@ public class DoorSwitchController : MonoBehaviour
         Door.Open();
     }
 
+    /// <summary>
+    /// Called by animator after animation is done
+    /// </summary>
     public void SetDoorSwitchOnState()
     {
         Animator.enabled = false;
