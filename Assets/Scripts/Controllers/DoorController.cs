@@ -6,8 +6,9 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     [SerializeField] private Animator Animator;
+    [SerializeField, Tooltip("GUID used by save system")] private string GUID;
 
-    //private bool isOpen;
+    public string guid { get => GUID; }
 
     /// <summary>
     /// Called to start the open door animation
@@ -16,7 +17,11 @@ public class DoorController : MonoBehaviour
     {
         //Animate
         Animator.enabled = true;
-        //isOpen = true;
+
+        //Save door state
+        SceneData sceneData = SaveData.current.GetScene(gameObject.scene.name);
+        int index = sceneData.SceneObjectStates.FindIndex(x => x.guid == guid);
+        sceneData.SceneObjectStates[index] = new SceneObjectState { guid = guid, isOn = true };
     }
 
     /// <summary>
@@ -24,6 +29,13 @@ public class DoorController : MonoBehaviour
     /// </summary>
     public void SetObjectInactive()
     {
+        Animator.enabled = false;
         gameObject.SetActive(false);
+    }
+
+    public void SetIsOpen(bool _isOpen)
+    {
+        Animator.enabled = false;
+        gameObject.SetActive(!_isOpen);
     }
 }

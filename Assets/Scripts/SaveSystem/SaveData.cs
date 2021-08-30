@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -27,13 +29,31 @@ public class SaveData
         set { _PlayerHeldAbilityIds = value; }
     }
 
+    public List<SceneData> LoadedScenes;
     public string PlayerSceneName;
     public Vector3 PlayerPosition;
     public string SaveName;
 
     public SaveData()
     {
+        LoadedScenes = new List<SceneData>();
         _PlayerHeldAbilityIds = PlayerAbilityManager.Singleton.GetStartingAbilities();
         SaveName = "save1"; //Set here for now, but will need to set from Menu UI eventually
+    }
+
+    public SceneData GetScene(string name)
+    {
+        SceneData data;
+        if (LoadedScenes.Any(x => x.SceneName == name))
+        {
+            data = LoadedScenes.First(x => x.SceneName == name);
+        }
+        else
+        {
+            data = new SceneData(name);
+            LoadedScenes.Add(data);
+        }
+
+        return data;
     }
 }

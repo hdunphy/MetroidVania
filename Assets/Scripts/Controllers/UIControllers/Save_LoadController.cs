@@ -21,5 +21,9 @@ public class Save_LoadController : MonoBehaviour
         Debug.Log("Loaded");
 
         FindObjectOfType<PlayerController>().OnLoad(SaveData.current.PlayerPosition);
+        foreach(var switches in FindObjectsOfType<DoorSwitchController>())
+        {
+            switches.OnLoad();
+        }
     }
 }

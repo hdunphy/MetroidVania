@@ -11,7 +11,7 @@ public class SaveStationController : MonoBehaviour, IPlayerTrigger
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.TryGetComponent(out PlayerController controller))
+        if (collision.TryGetComponent(out PlayerController controller))
         {
             controller.SetTriggerObject(this);
             SpriteRenderer.sprite = OnSprite;
@@ -29,10 +29,17 @@ public class SaveStationController : MonoBehaviour, IPlayerTrigger
 
     public void Interact(PlayerController controller)
     {
-        Debug.Log("Interacting");
         SaveData.current.PlayerPosition = controller.transform.position;
-        SerializationManager.Save(SaveData.current.SaveName, SaveData.current);
-        StartCoroutine(SaveFlash());
+        SaveData.current.PlayerSceneName = gameObject.scene.name;
+        if (SerializationManager.Save(SaveData.current.SaveName, SaveData.current))
+        {
+            Debug.Log("Game Saved");
+            StartCoroutine(SaveFlash());
+        }
+        else
+        {
+            Debug.LogError("Could not save Save Data");
+        }
     }
 
     private IEnumerator SaveFlash()

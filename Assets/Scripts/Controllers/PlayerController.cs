@@ -98,6 +98,12 @@ public class PlayerController : MonoBehaviour
         EnterRoom(loadPosition);
     }
 
+    public void AddAbility(Ability ability)
+    {
+        CharacterController2D.AddAbility(ability);
+    }
+
+
     public void OnPlayerInteraction()
     {
         triggerObject?.Interact(this);
