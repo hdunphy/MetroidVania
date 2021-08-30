@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AbilityController
@@ -20,8 +21,10 @@ public class AbilityController
     /// </summary>
     /// <param name="startingAbilities">List of starting abilities to add to the dictionary</param>
     /// <param name="parentObject">game obejct that the abilities are attributed to</param>
-    public AbilityController(List<Ability> startingAbilities, GameObject parentObject) : this()
+    public void SetAbilities(List<Ability> startingAbilities, GameObject parentObject)
     {
+        Abilities.Clear();
+
         foreach(Ability _ability in startingAbilities)
         {
             Abilities.Add(_ability.AbilityType, new AbilityHolder(_ability, parentObject));
@@ -93,5 +96,14 @@ public class AbilityController
         {
             holder.CancelAbility();
         }
+    }
+
+    /// <summary>
+    /// Gets the list of ability enums held by the entity
+    /// </summary>
+    /// <returns>list of strings of the ability ids held by the entity</returns>
+    public List<string> GetAbilityList()
+    {
+        return Abilities.Values.Select(x => x.GetAbilityId()).ToList();
     }
 }

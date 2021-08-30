@@ -36,7 +36,7 @@ public class RoomPortal : MonoBehaviour
 
         //Once new scene is loaded, look for the connecting RoomPortal with the same identifier
         RoomPortal connectingPortal = FindObjectsOfType<RoomPortal>().First(x => x != this && x.RoomIdentifier == RoomIdentifier);
-        playerController.EnterRoom(connectingPortal.LoadPosition); //Move the player to the load position of the new portal
+        playerController.EnterRoom(connectingPortal.LoadPosition.position); //Move the player to the load position of the new portal
 
         //Unload old scene
         yield return SceneManager.UnloadSceneAsync(gameObject.scene.name);

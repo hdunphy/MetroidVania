@@ -12921,6 +12921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1191244896}
   - component: {fileID: 1191244897}
+  - component: {fileID: 1191244898}
   m_Layer: 0
   m_Name: Essential Objects
   m_TagString: Untagged
@@ -12962,6 +12963,27 @@ MonoBehaviour:
   portal:
     serializedVersion: 2
     m_Bits: 2048
+--- !u!114 &1191244898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191244895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d1783b3fabcc84781eda4d43a9d0f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerAbilities:
+  - Ability: {fileID: 11400000, guid: ff460d8df00c72942a0c00ac301cd3ae, type: 2}
+    IsStartingPlayerAbility: 1
+  - Ability: {fileID: 11400000, guid: 66056b68d567a9b429c7789047b6e053, type: 2}
+    IsStartingPlayerAbility: 1
+  - Ability: {fileID: 11400000, guid: 21fb8e028f384e34a9b1afabd0002a74, type: 2}
+    IsStartingPlayerAbility: 0
+  - Ability: {fileID: 11400000, guid: 02f44e5b2943b7242ad5c00f1aae4ec4, type: 2}
+    IsStartingPlayerAbility: 0
 --- !u!1 &1404834769
 GameObject:
   m_ObjectHideFlags: 0
@@ -14812,8 +14834,12 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 423197430433617283, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423197430433617283, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.45
+      value: 52.96
       objectReference: {fileID: 0}
     - target: {fileID: 423197430433617283, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
       propertyPath: m_LocalPosition.y

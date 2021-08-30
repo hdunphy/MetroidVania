@@ -25,6 +25,8 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField, Tooltip("Trigger when character state changes from Grounded to airborn")] 
     private UnityEvent<bool> IsAriborn; //True if Airborn false if grounded
 
+    public event Action UpdateAbilityList;
+
 
     private EntityMovement Movement; //Component for handling movement abilities
 
@@ -46,7 +48,12 @@ public class CharacterController2D : MonoBehaviour
 
         Movement = GetComponent<EntityMovement>(); //store movement for character states. Needs this component on the same game object
 
-        AbilityController = new AbilityController(StartingAbilities, gameObject); //Ability controller which stores all character abilities
+        AbilityController = new AbilityController(); //Ability controller which stores all character abilities
+
+        if(StartingAbilities.Count > 0)
+        {
+            AbilityController.SetAbilities(StartingAbilities, gameObject);
+        }
 
         //Build character state machine
         CharacterStateMachine = new Dictionary<CharacterState, ICharacterState>()
@@ -56,7 +63,11 @@ public class CharacterController2D : MonoBehaviour
         };
 
         //Set shoot has use to true since player can always shoot
-        AbilityController.SetAbilityHasUse(AbilityEnum.Shoot, true);
+    }
+
+    public void SetCharacterAbilities(List<Ability> startingAbilities)
+    {
+        AbilityController.SetAbilities(startingAbilities, gameObject);
     }
 
     private void Update()
@@ -134,6 +145,7 @@ public class CharacterController2D : MonoBehaviour
     public void AddAbility(Ability _ability)
     {
         AbilityController.AddAbility(_ability, gameObject);
+        UpdateAbilityList?.Invoke();
     }
 
     /// <summary>
@@ -143,5 +155,15 @@ public class CharacterController2D : MonoBehaviour
     {
         //Might want to move this logic into PlayerController.
         transform.position = LastGroundPosition;
+    }
+
+
+    /// <summary>
+    /// Gets the list of ability enums held by the entity
+    /// </summary>
+    /// <returns>list of strings of the ability ids held by the entity</returns>
+    public List<string> GetAbilityList()
+    {
+        return AbilityController.GetAbilityList();
     }
 }

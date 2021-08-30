@@ -29,6 +29,12 @@ public class GameSceneController : MonoBehaviour
 
     private void Start()
     {
+    }
+
+    public void StartGame()
+    {
+        InitialSceneToLoad = string.IsNullOrEmpty(SaveData.current.PlayerSceneName) ?
+            InitialSceneToLoad : SaveData.current.PlayerSceneName;
         StartCoroutine(LoadInitialScene(InitialSceneToLoad));
     }
 
