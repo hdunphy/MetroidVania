@@ -9,9 +9,9 @@ public enum AbilityState { Ready, Active, Cooldown }
 
 public class AbilityHolder
 {
-    private Ability Ability;  //Ability to trigger
+    private readonly Ability Ability;  //Ability to trigger
+    private readonly GameObject Parent; //Parent game object that uses this ability
     private AbilityState CurrentState; //Current state of the ability
-    private GameObject Parent; //Parent game object that uses this ability
     //private bool IsButtonPressed; //Check if the ability should be triggered on next available update
     private float ActionTime; //Current action time duration
     private float CooldownTime; //Current cooldown time duration
@@ -24,7 +24,8 @@ public class AbilityHolder
     /// <param name="parent">Parent game object that uses this ability</param>
     public AbilityHolder(Ability _ability, GameObject parent)
     {
-        Ability = _ability;
+        Ability = ScriptableObject.Instantiate(_ability); //Instantiate so that we create a clone of the scriptable object
+                                                          //and don't have to worry about multiple instances
         CurrentState = AbilityState.Ready; //Set ability to ready
         Parent = parent;
         Ability.IsButtonPressed = false; //initialize to false so to not immediately trigger the ability
@@ -79,6 +80,15 @@ public class AbilityHolder
     {
         ActionTime = 0;
         Ability.CancelAbility(Parent);
+    }
+
+    /// <summary>
+    /// Gets the ability Id that makes each scriptable object unique
+    /// </summary>
+    /// <returns>String with ability id</returns>
+    public string GetAbilityId()
+    {
+        return Ability.Id;
     }
 
     //Setters

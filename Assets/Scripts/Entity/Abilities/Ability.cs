@@ -19,6 +19,15 @@ public abstract class Ability : ScriptableObject
     public float ActionTime { get => actionTime; } //public member to get the action time
     public float CooldownTime { get => cooldownTime; } //public memeber to get the cooldown time
     public AbilityEnum AbilityType { get => abilityType; } //public member to get the ability type
+    public string Id { get => $"{abilityType}_{name}"; }  //Unique Id to refernce this ScriptableObject
+
+    /// <summary>
+    /// Want the default value of hasUse to be true
+    /// </summary>
+    private void OnEnable()
+    {
+        HasUse = true;
+    }
 
     /// <summary>
     /// Abstract function called on ability activation

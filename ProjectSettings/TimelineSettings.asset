@@ -1,19 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
+--- !u!114 &1
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 61
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a04d5c93a1b99924d92fe0319baec04a, type: 3}
-  m_Name: DoubleJump2
+  m_Script: {fileID: 11500000, guid: a287be6c49135cd4f9b2b8666c39d999, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  name: Double Jump
-  abilityType: 0
-  actionTime: 0
-  cooldownTime: 0
-  JumpVelocity: 15
+  assetDefaultFramerate: 60

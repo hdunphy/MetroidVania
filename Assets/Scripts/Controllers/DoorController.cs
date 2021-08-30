@@ -7,7 +7,7 @@ public class DoorController : MonoBehaviour
 {
     [SerializeField] private Animator Animator;
 
-    private bool isOpen;
+    //private bool isOpen;
 
     /// <summary>
     /// Called to start the open door animation
@@ -16,7 +16,7 @@ public class DoorController : MonoBehaviour
     {
         //Animate
         Animator.enabled = true;
-        isOpen = true;
+        //isOpen = true;
     }
 
     /// <summary>

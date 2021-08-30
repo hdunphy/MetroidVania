@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,18 @@ public class PlayerController : MonoBehaviour
         {
             cameraFollow.SetTarget(transform);
         }
+
+        CharacterController2D.UpdateAbilityList += CharacterController2D_UpdateAbilityList;
+    }
+
+    private void OnDestroy()
+    {
+        CharacterController2D.UpdateAbilityList -= CharacterController2D_UpdateAbilityList;
+    }
+
+    private void CharacterController2D_UpdateAbilityList()
+    {
+        SaveData.current.PlayerHeldAbilityIds = CharacterController2D.GetAbilityList();
     }
 
     /// <summary>
@@ -62,12 +75,19 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Move player to new room
     /// </summary>
-    /// <param name="loadPosition">The transform for where the player should move to in new room</param>
-    public void EnterRoom(Transform loadPosition)
+    /// <param name="loadPosition">The Vector3 for where the player should move to in new room</param>
+    public void EnterRoom(Vector3 loadPosition)
     {
-        Debug.Log($"Pos: {loadPosition.position}");
-        transform.position = loadPosition.position; //Move player to position
-        Camera.main.transform.position = new Vector3(loadPosition.position.x, loadPosition.position.y, Camera.main.transform.position.z); //Move camera to position
+        Debug.Log($"Pos: {loadPosition}");
+        transform.position = loadPosition; //Move player to position
+        Camera.main.transform.position = new Vector3(loadPosition.x, loadPosition.y, Camera.main.transform.position.z); //Move camera to position
         Movement.enabled = true; //re-enable player movement
+    }
+
+    public void OnLoad(Vector3 loadPosition)
+    {
+        List<Ability> startingAbilities = PlayerAbilityManager.Singleton.GetAbilitiesByIds(SaveData.current.PlayerHeldAbilityIds);
+        CharacterController2D.SetCharacterAbilities(startingAbilities);
+        EnterRoom(loadPosition);
     }
 }
