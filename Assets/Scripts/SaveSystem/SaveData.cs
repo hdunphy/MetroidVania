@@ -29,9 +29,11 @@ public class SaveData
 
     public string PlayerSceneName;
     public Vector3 PlayerPosition;
+    public string SaveName;
 
     public SaveData()
     {
         _PlayerHeldAbilityIds = PlayerAbilityManager.Singleton.GetStartingAbilities();
+        SaveName = "save1"; //Set here for now, but will need to set from Menu UI eventually
     }
 }

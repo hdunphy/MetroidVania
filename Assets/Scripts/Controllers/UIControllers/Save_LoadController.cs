@@ -7,6 +7,7 @@ public class Save_LoadController : MonoBehaviour
     [SerializeField] private string saveName;
     public void OnSavePressed()
     {
+        SaveData.current.SaveName = saveName;
         var success = SerializationManager.Save(saveName, SaveData.current);
 
         Debug.Log($"Save succeeded? {success}");

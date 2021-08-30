@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CharacterController2D CharacterController2D;
     [SerializeField] private Rigidbody2D m_Rigidbody2D;
     [SerializeField] private UnityEvent OnDeathEvent;
+
+    private IPlayerTrigger triggerObject;
 
     private void Start()
     {
@@ -84,10 +87,33 @@ public class PlayerController : MonoBehaviour
         Movement.enabled = true; //re-enable player movement
     }
 
+    /// <summary>
+    /// When a saved game is loaded, call this function to restore player to last loaded state
+    /// </summary>
+    /// <param name="loadPosition">position player will load in at</param>
     public void OnLoad(Vector3 loadPosition)
     {
         List<Ability> startingAbilities = PlayerAbilityManager.Singleton.GetAbilitiesByIds(SaveData.current.PlayerHeldAbilityIds);
         CharacterController2D.SetCharacterAbilities(startingAbilities);
         EnterRoom(loadPosition);
+    }
+
+    public void OnPlayerInteraction()
+    {
+        triggerObject?.Interact(this);
+    }
+
+    public void OnPlayerInteractionComplete()
+    {
+        //Change player state to not interacting
+    }
+
+    /// <summary>
+    /// Set the trigger object for when player pressed interactable button
+    /// </summary>
+    /// <param name="_triggerObject">Object to trigger on interaction</param>
+    public void SetTriggerObject(IPlayerTrigger _triggerObject)
+    {
+        triggerObject = _triggerObject;
     }
 }

@@ -309,6 +309,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 390d5da6-18a6-4594-bad6-353354e0d6ba
     m_ActionName: Player/Dash[/Keyboard/leftShift,/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2685971665217064231}
+        m_TargetAssemblyTypeName: PlayerInputController, Assembly-CSharp
+        m_MethodName: OnInteraction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 333b365f-0fb1-48f7-82a8-ef799f5b5998
+    m_ActionName: Player/Interaction[/Keyboard/w]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -326,7 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b35ff47f0188b46beaa79beb59dbb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Controller: {fileID: 7881196547339656336}
+  CharacterController: {fileID: 7881196547339656336}
+  PlayerController: {fileID: 7673098036353286037}
 --- !u!114 &5026255635176180353
 MonoBehaviour:
   m_ObjectHideFlags: 0
