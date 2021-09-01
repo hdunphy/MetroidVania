@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018c2456e54cbbf4590eda3ca4a6d818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GUID: Switch_1
   Door: {fileID: 0}
   SpriteRenderer: {fileID: 423197430937498450}
   OffSprite: {fileID: -1494352897237206093, guid: bfb372de0d086e24e9af5d2b4fc9b98d, type: 3}

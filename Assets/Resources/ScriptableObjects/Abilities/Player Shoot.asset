@@ -16,5 +16,6 @@ MonoBehaviour:
   abilityType: 3
   actionTime: 0.25
   cooldownTime: 0.5
+  sprite: {fileID: 7482667652216324306, guid: e6f64059679c4b64da31e2c5de7dd67a, type: 3}
   ProjectilePrefab: {fileID: 743153929439013874, guid: fef86f9da23970344aef68c81fed4e78, type: 3}
   ProjectileSpeed: 15

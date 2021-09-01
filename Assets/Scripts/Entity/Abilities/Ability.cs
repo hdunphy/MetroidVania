@@ -13,6 +13,7 @@ public abstract class Ability : ScriptableObject
     [SerializeField] private AbilityEnum abilityType; //ability type
     [SerializeField, Tooltip("How long it takes for the ability to complete")] private float actionTime; 
     [SerializeField, Tooltip("How long before you can use the ability again")] private float cooldownTime;
+    [SerializeField] private Sprite sprite;
 
     public bool HasUse { get; set; } //Keeps track if this ability is enable/disabled. True if can be used
     public bool IsButtonPressed { get; set; } //Keep track if input is being pressed
@@ -20,6 +21,7 @@ public abstract class Ability : ScriptableObject
     public float CooldownTime { get => cooldownTime; } //public memeber to get the cooldown time
     public AbilityEnum AbilityType { get => abilityType; } //public member to get the ability type
     public string Id { get => $"{abilityType}_{name}"; }  //Unique Id to refernce this ScriptableObject
+    public Sprite Sprite { get => sprite; } //The sprite to display for this ability
 
     /// <summary>
     /// Want the default value of hasUse to be true

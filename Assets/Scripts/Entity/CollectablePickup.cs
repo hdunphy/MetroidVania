@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public abstract class CollectablePickup : MonoBehaviour
 {
-    [SerializeField, Tooltip("GUID used by save system")] private string GUID;
     [SerializeField] private float ShakeDuration; //Duration of camera shake upon pickup
+    [SerializeField] private UnityEvent OnPickupEvent; //Triggers on a successful pickup
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,8 +17,7 @@ public abstract class CollectablePickup : MonoBehaviour
             {
                 follow.ShakeCamera(ShakeDuration);
             }
-            //After adding the ability, destroy the object from the scene
-            Destroy(gameObject);
+            OnPickupEvent?.Invoke();
         }
     }
 

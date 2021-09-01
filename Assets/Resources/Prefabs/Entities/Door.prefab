@@ -130,6 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 6147190664054765957}
+  SpriteRenderer: {fileID: 4449899342664903407}
+  DoorClosedSprite: {fileID: 5213229242370633579, guid: 6d2f24a49db892041984b1b9672be372, type: 3}
 --- !u!61 &4449899342751719405
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Save_LoadController : MonoBehaviour
@@ -13,6 +14,9 @@ public class Save_LoadController : MonoBehaviour
         Debug.Log($"Save succeeded? {success}");
     }
 
+    /// <summary>
+    /// Called by Load Button from UI
+    /// </summary>
     public void OnLoadPressed()
     {
         string path = Application.persistentDataPath + "/saves/" + saveName + ".save";
@@ -21,9 +25,10 @@ public class Save_LoadController : MonoBehaviour
         Debug.Log("Loaded");
 
         FindObjectOfType<PlayerController>().OnLoad(SaveData.current.PlayerPosition);
-        foreach(var switches in FindObjectsOfType<DoorSwitchController>())
+
+        foreach (var sceneObject in FindObjectsOfType<SceneObjectState>())
         {
-            switches.OnLoad();
+            sceneObject.OnLoad();
         }
     }
 }
