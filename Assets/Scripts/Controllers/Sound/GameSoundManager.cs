@@ -1,20 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class GameSoundManager : MonoBehaviour
+public class GameSoundManager : SoundPlayerBase
 {
     public static GameSoundManager Singleton { get; set; }
 
-    private void Awake()
+    protected override void OnAwake()
     {
-        if(Singleton == null)
+        if (Singleton == null)
         {
             Singleton = this;
         }
         else
         {
             Destroy(this);
+            return;
         }
+    }
+
+    protected override void OnStart()
+    {
     }
 }
