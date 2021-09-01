@@ -243,3 +243,4 @@ Received Import Request.
   path: Assets/Scripts/Controllers/Sound/Sound.cs
   artifactKey: Guid(9b617c3933973c248a5415f200361bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/Controllers/Sound/Sound.cs using Guid(9b617c3933973c248a5415f200361bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5081d77698ddda1a5054967d97e8f2f') in 0.013114 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
