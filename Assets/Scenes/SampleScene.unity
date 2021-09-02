@@ -15633,6 +15633,10 @@ PrefabInstance:
       propertyPath: Door
       value: 
       objectReference: {fileID: 1840508264}
+    - target: {fileID: 423197430433617308, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
+      propertyPath: GUID
+      value: Switch_1
+      objectReference: {fileID: 0}
     - target: {fileID: 423197430433617311, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
       propertyPath: m_Name
       value: Switch
