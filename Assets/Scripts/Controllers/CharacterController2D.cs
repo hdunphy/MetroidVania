@@ -30,7 +30,7 @@ public class CharacterController2D : MonoBehaviour
 
     private EntityMovement Movement; //Component for handling movement abilities
 
-    private CharacterState CurrentCharacterState; //Current character state
+    public CharacterState CurrentCharacterState { get; private set; } //Current character state
 
     private AbilityController AbilityController; //Keep track of all character  abilities
     private Dictionary<CharacterState, ICharacterState> CharacterStateMachine; //Keep track of current character state
@@ -41,19 +41,13 @@ public class CharacterController2D : MonoBehaviour
     private const float k_GroundRadiusCheck = 0.2f; //Radius for checking if character  is touching the ground
     //private const float k_WallRadiusCheck = 0.2f; //Radius for checking if character  is touching the wall
 
-    private void Start()
+    private void Awake()
     {
         GroundLayer = GameLayers.Singleton.GroundLayer;
-        LastGroundPosition = transform.position; //set it to current position in case
 
         Movement = GetComponent<EntityMovement>(); //store movement for character states. Needs this component on the same game object
 
         AbilityController = new AbilityController(); //Ability controller which stores all character abilities
-
-        if(StartingAbilities.Count > 0)
-        {
-            AbilityController.SetAbilities(StartingAbilities, gameObject);
-        }
 
         //Build character state machine
         CharacterStateMachine = new Dictionary<CharacterState, ICharacterState>()
@@ -61,8 +55,11 @@ public class CharacterController2D : MonoBehaviour
             { CharacterState.Gounded, new GroundedState(AbilityController, Movement, IsAriborn) }, //State for when character's feet are colliding with ground obejct
             { CharacterState.Airborn, new AirbornState(AbilityController, HasAirControl, Movement, IsAriborn) } //state for when player is in the air
         };
+    }
 
-        //Set shoot has use to true since player can always shoot
+    private void Start()
+    {
+        LastGroundPosition = transform.position; //set it to current position in case
     }
 
     public void SetCharacterAbilities(List<Ability> startingAbilities)

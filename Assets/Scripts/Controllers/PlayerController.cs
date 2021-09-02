@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     private IPlayerTrigger triggerObject;
 
+    private bool hasLoaded = false; //used when opening a scene without loading in first
+
     private void Start()
     {
         //Connect main camera to player
@@ -22,6 +24,11 @@ public class PlayerController : MonoBehaviour
         }
 
         CharacterController2D.UpdateAbilityList += CharacterController2D_UpdateAbilityList;
+
+        if (!hasLoaded)
+        {
+            OnLoad(transform.position);
+        }
     }
 
     private void OnDestroy()
@@ -93,6 +100,7 @@ public class PlayerController : MonoBehaviour
     /// <param name="loadPosition">position player will load in at</param>
     public void OnLoad(Vector3 loadPosition)
     {
+        hasLoaded = true;
         List<Ability> startingAbilities = PlayerAbilityManager.Singleton.GetAbilitiesByIds(SaveData.current.PlayerHeldAbilityIds);
         CharacterController2D.SetCharacterAbilities(startingAbilities);
         EnterRoom(loadPosition);

@@ -4,6 +4,8 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+# Too many Audio Files:
+Assets/Ultimate SFX Bundle - HD Remaster/
 
 # Visual Studio cache directory
 .vs/

@@ -60,6 +60,149 @@ Transform:
   m_Father: {fileID: 2169678452552083287}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6516114742857072115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8062236119534334823}
+  - component: {fileID: 8592589025403850738}
+  - component: {fileID: 2095411770052157961}
+  m_Layer: 9
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8062236119534334823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516114742857072115}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.727, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1102192836707604025}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8592589025403850738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516114742857072115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fec8726186a0c24792680b527632645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FootStepClip: {fileID: 8300000, guid: cd73e817f1510864b996c20253518267, type: 3}
+  FootStepSource: {fileID: 2095411770052157961}
+  SecondsBetweenSteps: 0.3
+--- !u!82 &2095411770052157961
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516114742857072115}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4848508456681430859, guid: 5603ceec1a915b74fa60764c29028e54, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 3e59b8d76c2f5604a938b1b223c9712e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7359398603106325508
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,6 +225,7 @@ GameObject:
   - component: {fileID: 2726960352672043874}
   - component: {fileID: 5203815505617522107}
   - component: {fileID: 1683892876942621694}
+  - component: {fileID: 8085673201148087619}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -102,6 +246,7 @@ Transform:
   m_Children:
   - {fileID: 7990732142156916178}
   - {fileID: 2169678452552083287}
+  - {fileID: 8062236119534334823}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -374,9 +519,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8592589025403850738}
+        m_TargetAssemblyTypeName: FootStepPlayer, Assembly-CSharp
+        m_MethodName: SetIsMoving
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnJumpEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8085673201148087619}
+        m_TargetAssemblyTypeName: EntitySoundEventSystem, Assembly-CSharp
+        m_MethodName: CallSoundFromGameSoundManager
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Player_Jump
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDashEvent:
     m_PersistentCalls:
       m_Calls:
@@ -421,8 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasAirControl: 1
   GroundCheck: {fileID: 2587293580383476798}
-  StartingAbilities:
-  - {fileID: 11400000, guid: ff460d8df00c72942a0c00ac301cd3ae, type: 2}
+  StartingAbilities: []
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -438,11 +606,35 @@ MonoBehaviour:
           m_StringArgument: LandTrigger
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8085673201148087619}
+        m_TargetAssemblyTypeName: EntitySoundEventSystem, Assembly-CSharp
+        m_MethodName: CallSoundFromGameSoundManager
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Player_Land
+          m_BoolArgument: 0
+        m_CallState: 2
   IsAriborn:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5203815505617522107}
         m_TargetAssemblyTypeName: PlayerAnimator, Assembly-CSharp
+        m_MethodName: SetIsAirborn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8592589025403850738}
+        m_TargetAssemblyTypeName: FootStepPlayer, Assembly-CSharp
         m_MethodName: SetIsAirborn
         m_Mode: 0
         m_Arguments:
@@ -576,7 +768,19 @@ MonoBehaviour:
         m_CallState: 2
   OnShootEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8085673201148087619}
+        m_TargetAssemblyTypeName: EntitySoundEventSystem, Assembly-CSharp
+        m_MethodName: CallSoundFromGameSoundManager
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Player_Shoot
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &2726960352672043874
 Animator:
   serializedVersion: 3
@@ -624,6 +828,18 @@ MonoBehaviour:
   SpriteRenderer: {fileID: 7953997937666558934}
   FlashMaterial: {fileID: 2100000, guid: 24b3d21846020b84da88fdfdd5411de4, type: 2}
   Duration: 0.25
+--- !u!114 &8085673201148087619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359398603106325508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9a42ed60a2b7d4293ac42c68cc9209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7844044056776457193
 GameObject:
   m_ObjectHideFlags: 0
