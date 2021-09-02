@@ -2157,3 +2157,4 @@ Received Import Request.
   path: Assets/Resources/Sound/Ultimate SFX Bundle
   artifactKey: Guid(853001609454b2046be593b53c41dfd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Resources/Sound/Ultimate SFX Bundle using Guid(853001609454b2046be593b53c41dfd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7462c8da43ca1cc8a4d00a29424d85a3') in 0.006599 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
