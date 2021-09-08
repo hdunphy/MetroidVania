@@ -15,9 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Scenes/Boot Scene.unity
     guid: 03465cf33c891d347958280b7c6a5197
   - enabled: 1
-    path: Assets/Scenes/Game Scenes/Starting Room.unity
+    path: Assets/Scenes/Game Scenes old/Starting Room.unity
     guid: e05f79ce5ba41cd4fa057766a0790c0e
   - enabled: 1
-    path: Assets/Scenes/Game Scenes/Room_1.unity
+    path: Assets/Scenes/Game Scenes old/Room_1.unity
     guid: 4295a9245ade90146a74ad9c6556963f
   m_configObjects: {}
