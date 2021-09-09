@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
 
         if (!hasLoaded)
         {
-            OnLoad(transform.position);
+            Vector3 startPos = GameSceneController.Singleton != null ? GameSceneController.Singleton._startPosition : transform.position;
+            OnLoad(startPos);
         }
     }
 

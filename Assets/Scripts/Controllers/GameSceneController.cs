@@ -12,6 +12,7 @@ public class GameSceneController : MonoBehaviour
     [SerializeField] private Vector3 StartPosition; //Start position of the player
 
     public static GameSceneController Singleton;
+    public Vector3 _startPosition { get => StartPosition; }
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class GameSceneController : MonoBehaviour
 
     private void Start()
     {
+        StartGame();
     }
 
     public void StartGame()
@@ -55,9 +57,14 @@ public class GameSceneController : MonoBehaviour
             Instantiate(CameraPrefab, StartPosition + (Vector3.back * 10), Quaternion.identity);
         }
 
-        if (FindObjectOfType<PlayerController>() == null)
+        var player = FindObjectOfType<PlayerController>();
+        if (player == null)
         { //Make sure the player is in the scene
             Instantiate(PlayerPrefab, StartPosition, Quaternion.identity);
         }
+        //else
+        //{
+        //    player.transform.position = StartPosition;
+        //}
     }
 }
