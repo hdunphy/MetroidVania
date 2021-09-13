@@ -35,8 +35,6 @@ public class CharacterController2D : MonoBehaviour
     private AbilityController AbilityController; //Keep track of all character  abilities
     private Dictionary<CharacterState, ICharacterState> CharacterStateMachine; //Keep track of current character state
 
-    private Vector3 LastGroundPosition; //Keep track of ground position one frame ago
-
     //Constants
     private const float k_GroundRadiusCheck = 0.2f; //Radius for checking if character  is touching the ground
     //private const float k_WallRadiusCheck = 0.2f; //Radius for checking if character  is touching the wall
@@ -55,11 +53,6 @@ public class CharacterController2D : MonoBehaviour
             { CharacterState.Gounded, new GroundedState(AbilityController, Movement, IsAriborn) }, //State for when character's feet are colliding with ground obejct
             { CharacterState.Airborn, new AirbornState(AbilityController, HasAirControl, Movement, IsAriborn) } //state for when player is in the air
         };
-    }
-
-    private void Start()
-    {
-        LastGroundPosition = transform.position; //set it to current position in case
     }
 
     public void SetCharacterAbilities(List<Ability> startingAbilities)
@@ -82,7 +75,6 @@ public class CharacterController2D : MonoBehaviour
         if (Physics2D.OverlapCircle(GroundCheck.position, k_GroundRadiusCheck, GroundLayer))
         { // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             CurrentCharacterState = CharacterState.Gounded;
-            LastGroundPosition = transform.position; //Keep track of this position for respawning
 
             if (previousCharacterState.Equals(CharacterState.Airborn))
             { //move this to ground state?
@@ -144,16 +136,6 @@ public class CharacterController2D : MonoBehaviour
         AbilityController.AddAbility(_ability, gameObject);
         UpdateAbilityList?.Invoke();
     }
-
-    /// <summary>
-    /// When the character needs to respawn they will respawn at last known ground position.
-    /// </summary>
-    public void Respawn()
-    {
-        //Might want to move this logic into PlayerController.
-        transform.position = LastGroundPosition;
-    }
-
 
     /// <summary>
     /// Gets the list of ability enums held by the entity
