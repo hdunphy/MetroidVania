@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Scenes/Boot Scene.unity
     guid: 03465cf33c891d347958280b7c6a5197
   - enabled: 1
+    path: Assets/Scenes/Game Scenes/Armory.unity
+    guid: 8839296c88cdee8439fd3eb40777d365
+  - enabled: 1
     path: Assets/Scenes/Game Scenes/Vent Shaft.unity
     guid: ea6d9b0d2505f9143b0dd108eb3b458b
   - enabled: 1
-    path: Assets/Scenes/Game Scenes/Armory.unity
-    guid: 8839296c88cdee8439fd3eb40777d365
+    path: Assets/Scenes/Game Scenes/Vent Split.unity
+    guid: d457b36e987097d46842898dc5735670
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Vent Shaft 2.unity
+    guid: 7a71ca7fd689a864f9135f4eb264a768
   m_configObjects: {}
