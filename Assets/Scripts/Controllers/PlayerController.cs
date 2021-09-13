@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     private bool hasLoaded = false; //used when opening a scene without loading in first
 
+    private Vector3 respawnPosition;
+
     private void Start()
     {
         //Connect main camera to player
@@ -30,6 +32,8 @@ public class PlayerController : MonoBehaviour
             Vector3 startPos = GameSceneController.Singleton != null ? GameSceneController.Singleton._startPosition : transform.position;
             OnLoad(startPos);
         }
+
+        respawnPosition = transform.position;
     }
 
     private void OnDestroy()
@@ -40,6 +44,11 @@ public class PlayerController : MonoBehaviour
     private void CharacterController2D_UpdateAbilityList()
     {
         SaveData.current.PlayerHeldAbilityIds = CharacterController2D.GetAbilityList();
+    }
+
+    public void SetRespawnPoint(Vector3 _respawnPosition)
+    {
+        respawnPosition = _respawnPosition;
     }
 
     /// <summary>
@@ -59,7 +68,8 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            CharacterController2D.Respawn();
+            //CharacterController2D.Respawn();
+            transform.position = respawnPosition;
         }
     }
 
