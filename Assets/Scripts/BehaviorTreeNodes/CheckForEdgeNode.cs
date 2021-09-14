@@ -24,9 +24,9 @@ public class CheckForEdgeNode : ActionNode
         Node.State _state;
 
         var wallCheck = Physics2D.OverlapCircle(CheckTransform.position, WallRadiusCheck, GroundLayer);
-        var floorCheck = Physics2D.Raycast(CheckTransform.position, Vector2.down, GroundDistanceCheck, GroundLayer);
+        var groundCheck = Physics2D.Raycast(CheckTransform.position, -1 * CheckTransform.up, GroundDistanceCheck, GroundLayer);
 
-        if (wallCheck || !floorCheck)
+        if (wallCheck || !groundCheck)
         { //if touching a wall or cannot see the floor
             _state = Node.State.Success;
         }
