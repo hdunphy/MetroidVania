@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
 
-public class CheckForEdgeNode : ActionNode
+public class IsNearEdgeNode : ActionNode
 {
     private Transform CheckTransform;
     private LayerMask GroundLayer;
@@ -36,5 +36,18 @@ public class CheckForEdgeNode : ActionNode
         }
 
         return _state;
+    }
+
+    public override void OnDrawGizmos()
+    {
+        if(CheckTransform != null)
+        {
+            Gizmos.color = Color.white;
+            Gizmos.DrawRay(CheckTransform.position, -1 * CheckTransform.up * GroundDistanceCheck);
+
+            Gizmos.color = Color.gray;
+            Gizmos.DrawWireSphere(CheckTransform.position, WallRadiusCheck);
+        }
+
     }
 }

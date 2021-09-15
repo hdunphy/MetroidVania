@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaveStationController : MonoBehaviour, IPlayerTrigger
+public class SaveStationController : MonoBehaviour, IPlayerInteractable
 {
     [SerializeField] private SpriteRenderer SpriteRenderer;
     [SerializeField] private Sprite OffSprite;

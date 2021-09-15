@@ -40,6 +40,12 @@ namespace TheKiwiCoder {
             return Instantiate(this);
         }
 
+        public virtual void Bind(EnemyContext _context, Blackboard _blackboard)
+        {
+            context = _context;
+            blackboard = _blackboard;
+        }
+
         public void Abort() {
             BehaviourTree.Traverse(this, (node) => {
                 node.started = false;
@@ -49,7 +55,8 @@ namespace TheKiwiCoder {
         }
 
         public virtual void OnDrawGizmos() { }
-
+        
+        //behavior tree functions
         protected abstract void OnStart();
         protected abstract void OnStop();
         protected abstract State OnUpdate();

@@ -11,5 +11,11 @@ namespace TheKiwiCoder {
             node.children = children.ConvertAll(c => c.Clone());
             return node;
         }
+
+        public override void Bind(EnemyContext _context, Blackboard _blackboard)
+        {
+            base.Bind(_context, _blackboard);
+            children.ForEach(n => n.Bind(_context, _blackboard));
+        }
     }
 }

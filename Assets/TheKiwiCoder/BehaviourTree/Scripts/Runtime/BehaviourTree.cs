@@ -59,12 +59,14 @@ namespace TheKiwiCoder {
         }
 
         public void Bind(EnemyContext context) {
-            Traverse(rootNode, node => {
-                node.context = context;
-                node.blackboard = blackboard;
-            });
+            Traverse(rootNode, node => node.Bind(context, blackboard));
         }
 
+        public void Bind(EnemyContext context, Blackboard _blackboard)
+        {
+            blackboard = _blackboard;
+            Bind(context);
+        }
 
         #region Editor Compatibility
 #if UNITY_EDITOR

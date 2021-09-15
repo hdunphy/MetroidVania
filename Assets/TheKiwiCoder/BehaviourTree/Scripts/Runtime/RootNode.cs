@@ -24,5 +24,11 @@ namespace TheKiwiCoder {
             node.child = child.Clone();
             return node;
         }
+
+        public override void Bind(EnemyContext _context, Blackboard _blackboard)
+        {
+            base.Bind(_context, _blackboard);
+            child.Bind(_context, _blackboard);
+        }
     }
 }

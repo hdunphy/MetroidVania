@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D m_Rigidbody2D;
     [SerializeField] private UnityEvent OnDeathEvent;
 
-    private IPlayerTrigger triggerObject;
+    private IPlayerInteractable interactableObject;
 
     private bool hasLoaded = false; //used when opening a scene without loading in first
 
@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnPlayerInteraction()
     {
-        triggerObject?.Interact(this);
+        interactableObject?.Interact(this);
     }
 
     public void OnPlayerInteractionComplete()
@@ -137,8 +137,8 @@ public class PlayerController : MonoBehaviour
     /// Set the trigger object for when player pressed interactable button
     /// </summary>
     /// <param name="_triggerObject">Object to trigger on interaction</param>
-    public void SetTriggerObject(IPlayerTrigger _triggerObject)
+    public void SetTriggerObject(IPlayerInteractable _triggerObject)
     {
-        triggerObject = _triggerObject;
+        interactableObject = _triggerObject;
     }
 }
