@@ -7,7 +7,8 @@ public class IsPlayerInAttackRangeNode : ActionNode
 {
     public float attackRange;
 
-    protected override void OnStart() {
+    protected override void OnStart()
+    {
     }
 
     protected override void OnStop() {

@@ -11,13 +11,12 @@ public class AttackAfterTimeNode : ActionNode
     protected override void OnStart()
     {
         startTime = Time.time;
-        context.entityMovement.SetCanMove(false);
     }
 
     protected override void OnStop()
     {
+        context.entityMovement.SetMoveDirection(0);
         context.enemyController.Attack();
-        context.entityMovement.SetCanMove(true);
     }
 
     protected override State OnUpdate()

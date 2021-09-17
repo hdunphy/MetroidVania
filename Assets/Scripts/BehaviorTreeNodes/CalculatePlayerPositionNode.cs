@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
 
-public class MoveTowardsPlayerNode : ActionNode
+public class CalculatePlayerPositionNode : ActionNode
 {
     protected override void OnStart() {
     }

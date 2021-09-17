@@ -6,7 +6,14 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public Transform CheckWallTransform;
+    private IEnemyAttack EnemyAttack;
+
     public PlayerController Player { get; private set; }
+
+    private void Start()
+    {
+        EnemyAttack = GetComponent<IEnemyAttack>();
+    }
 
     /// <summary>
     /// What happens when the Enemy Entity has been killed
@@ -24,5 +31,6 @@ public class EnemyController : MonoBehaviour
     public void Attack()
     {
         Debug.Log("Attack!");
+        EnemyAttack.Attack();
     }
 }
