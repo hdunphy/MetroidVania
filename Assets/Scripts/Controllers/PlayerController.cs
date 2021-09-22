@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private EntityMovement Movement;
+    [SerializeField] private EntityMovementHorizontal Movement;
     [SerializeField] private CharacterController2D CharacterController2D;
     [SerializeField] private Rigidbody2D m_Rigidbody2D;
     [SerializeField] private UnityEvent OnDeathEvent;

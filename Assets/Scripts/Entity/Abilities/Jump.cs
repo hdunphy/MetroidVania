@@ -7,7 +7,7 @@ public class Jump : Ability
 
     public override void Activate(GameObject parent)
     {
-        if (parent.TryGetComponent(out EntityMovement movement))
+        if (parent.TryGetComponent(out EntityMovementHorizontal movement))
         {
             movement.TriggerJump(JumpVelocity);
         }
@@ -27,7 +27,7 @@ public class Jump : Ability
 
     public override void CancelAbility(GameObject parent)
     {
-        if (parent.TryGetComponent(out EntityMovement movement))
+        if (parent.TryGetComponent(out EntityMovementHorizontal movement))
         {
             movement.EndJump();
         }

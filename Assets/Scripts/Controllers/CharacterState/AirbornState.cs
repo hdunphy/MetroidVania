@@ -7,7 +7,7 @@ public class AirbornState : ICharacterState
 {
     private AbilityController AbilityController;
     private bool AirbornMovement;
-    private EntityMovement Movement;
+    private EntityMovementHorizontal Movement;
     private UnityEvent<bool> IsAriborn;
 
     /// <summary>
@@ -16,7 +16,7 @@ public class AirbornState : ICharacterState
     /// <param name="abilityController">Ability controller so State can turn on and off abilities</param>
     /// <param name="airbornMovement">Set if character can move while airborn</param>
     /// <param name="movement">Objects movement controller</param>
-    public AirbornState(AbilityController abilityController, bool airbornMovement, EntityMovement movement, UnityEvent<bool> _isAirborn)
+    public AirbornState(AbilityController abilityController, bool airbornMovement, EntityMovementHorizontal movement, UnityEvent<bool> _isAirborn)
     {
         AbilityController = abilityController;
         AirbornMovement = airbornMovement;

@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class GroundedState : ICharacterState
 {
     private AbilityController AbilityController;
-    private EntityMovement Movement;
+    private EntityMovementHorizontal Movement;
     private UnityEvent<bool> IsAriborn;
 
     /// <summary>
@@ -15,7 +15,7 @@ public class GroundedState : ICharacterState
     /// <param name="abilityController">Ability controller so State can turn on and off abilities</param>
     /// <param name="movement">Objects movement controller</param>
     /// <param name="_isAirborn">Unity event triggered when airborn state is changed</param>
-    public GroundedState(AbilityController abilityController, EntityMovement movement, UnityEvent<bool> _isAirborn)
+    public GroundedState(AbilityController abilityController, EntityMovementHorizontal movement, UnityEvent<bool> _isAirborn)
     {
         AbilityController = abilityController;
         Movement = movement;

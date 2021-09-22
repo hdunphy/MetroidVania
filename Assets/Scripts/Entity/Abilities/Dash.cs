@@ -9,7 +9,7 @@ public class Dash : Ability
 
     public override void Activate(GameObject parent)
     {
-        EntityMovement movement = parent.GetComponent<EntityMovement>();
+        EntityMovementHorizontal movement = parent.GetComponent<EntityMovementHorizontal>();
         //Trigger dash movement ability
         movement.TriggerDash(DashVelocity);
 
@@ -29,7 +29,7 @@ public class Dash : Ability
 
     private void StopDash(GameObject parent)
     {
-        EntityMovement movement = parent.GetComponent<EntityMovement>();
+        EntityMovementHorizontal movement = parent.GetComponent<EntityMovementHorizontal>();
         movement.StopDash();
     }
 }

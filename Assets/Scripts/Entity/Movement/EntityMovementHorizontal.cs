@@ -1,21 +1,12 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class EntityMovement : MonoBehaviour
+public class EntityMovementHorizontal : EntityMovementBase
 {
-    //Inspector properties
-    [SerializeField] private float RunSpeed = 10f; //Velocity applied to horizontal movmenet
 
     [SerializeField, Tooltip("Absolute value for maximum fall speed")]
-    private float FallSpeedLimit = 25f;
-
-    [SerializeField, Tooltip("How much to smooth out the movement")]
-    private float MovementSmoothing = 0.05f;
-
-    [SerializeField, Tooltip("If entity changes moving state, trigger this event")]
-    private UnityEvent<bool> SetIsMoving; //True if moving, False if idle
+    protected float FallSpeedLimit = 25f;
 
     [SerializeField, Tooltip("Triggers when the entity Jumps")]
     private UnityEvent OnJumpEvent; //When entity jumps
@@ -30,14 +21,10 @@ public class EntityMovement : MonoBehaviour
     //Internal Values
     private Rigidbody2D m_RigidBody2D; //Entity's rigid body 2d
     private float HorizontalMove = 0f; //current horizontal movement
-    private bool CanMove; //enable/disable movement
-    private bool IsFacingRight; //Is entity looking to the right
     private Vector3 Velocity; //referenced velocity used in dampening function
-    private bool IsMoving; //Store moving state from last frame;
     private bool IsDashing; //Is the entity in the middle of a dash
     private float DashVelocity; //Speed of the dash
     private float LastYVelocity; //Store velocity from last frame
-    private float SpeedModifier = 1; //Modifier to multiply speed by. Defaulted to 1
 
     //Unity properties
     private void Start()
@@ -53,12 +40,7 @@ public class EntityMovement : MonoBehaviour
 
     private void Update()
     {
-        bool movedLastFrame = IsMoving; //Save state to see if there has been a change in state since last frame
-        IsMoving = Mathf.Abs(HorizontalMove) > 0.01; //Set movement true if has a value in either direction
-        if (IsMoving != movedLastFrame)
-        { //Invoke the event when a change in state occurs
-            SetIsMoving?.Invoke(IsMoving);
-        }
+        CheckIfMoving(new Vector2(HorizontalMove, 0f));
 
         //Check the yVelocity of the rigid body and normalize it to 1, 0, -1
         float yVelocity = m_RigidBody2D.velocity.y;
@@ -67,7 +49,7 @@ public class EntityMovement : MonoBehaviour
         else yVelocity = 0;
 
         //if the yVelocity has changed than update the event
-        if(yVelocity != LastYVelocity)
+        if (yVelocity != LastYVelocity)
         {
             OnYVelocityChange?.Invoke(yVelocity);
         }
@@ -92,30 +74,10 @@ public class EntityMovement : MonoBehaviour
             // And then smoothing it out and applying it to the character
             m_RigidBody2D.velocity = Vector3.SmoothDamp(m_RigidBody2D.velocity, targetVelocity, ref Velocity, MovementSmoothing);
 
-            if (HorizontalMove < 0 && IsFacingRight)
-            { //If entity is moving in negative horizontal direction (or left) but is facing right
-                Flip();
-            }
-            else if (HorizontalMove > 0 && !IsFacingRight)
-            { //If entity is moving in positive horizontal direction (or right) but is facing left
-                Flip();
-            }
+            //Check if we need to flip directions
+            CheckForFlip(HorizontalMove);
         }
 
-    }
-
-    /// <summary>
-    /// Flip the direction of the entity
-    /// </summary>
-    private void Flip()
-    {
-        // Switch the way the player is labelled as facing.
-        IsFacingRight = !IsFacingRight;
-
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
     }
 
     /// <summary>
@@ -169,7 +131,9 @@ public class EntityMovement : MonoBehaviour
     }
 
     //Setters
-    public void SetCanMove(bool _canMove) { CanMove = _canMove; }
-    public void SetMoveDirection(float moveX) { HorizontalMove = moveX * (RunSpeed * SpeedModifier); }
-    public void SetSpeedModifier(float _speedModifier) { SpeedModifier =_speedModifier; } //Don't want it to be negative
+    public override void SetMoveDirection(Vector2 moveDirection)
+    { //Take the sign of the x direction so move speed is always 1, 0, -1
+        float xDirection = moveDirection.x == 0 ? 0 : Mathf.Sign(moveDirection.x);
+        HorizontalMove =  xDirection * (MovementSpeed * SpeedModifier);
+    }
 }

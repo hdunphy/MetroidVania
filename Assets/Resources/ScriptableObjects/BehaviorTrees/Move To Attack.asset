@@ -18,7 +18,7 @@ MonoBehaviour:
   position: {x: -0.0000051259995, y: 516}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -45,7 +45,7 @@ MonoBehaviour:
   position: {x: 1230.279, y: 1115}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -69,7 +69,7 @@ MonoBehaviour:
   position: {x: 0.000025510788, y: 739}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: Resets speed modifier
@@ -93,7 +93,7 @@ MonoBehaviour:
   position: {x: -674.6084, y: 1511}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: Atack range of .25
@@ -117,7 +117,7 @@ MonoBehaviour:
   position: {x: -369.60837, y: 966}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -144,7 +144,7 @@ MonoBehaviour:
   position: {x: -0.0000051259995, y: 358}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: Always repeating
@@ -170,7 +170,7 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -194,7 +194,7 @@ MonoBehaviour:
   position: {x: 812.2791, y: 1115}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -217,7 +217,7 @@ MonoBehaviour:
   position: {x: -369.60837, y: 1116}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -269,7 +269,7 @@ MonoBehaviour:
   - {fileID: 206024987129007819}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 1
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
 --- !u!114 &206024987129007819
@@ -290,7 +290,7 @@ MonoBehaviour:
   position: {x: -271.6084, y: 1512}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -314,7 +314,7 @@ MonoBehaviour:
   position: {x: -259.99994, y: 358.00006}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -338,7 +338,7 @@ MonoBehaviour:
   position: {x: -1036.4797, y: 966.00006}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -362,7 +362,7 @@ MonoBehaviour:
   position: {x: 787.2793, y: 739.0001}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: Patrol behavior
@@ -388,7 +388,7 @@ MonoBehaviour:
   position: {x: 1016.2791, y: 1115}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -412,7 +412,7 @@ MonoBehaviour:
   position: {x: -1036, y: 1120}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: If player is not null then success. Else failure
@@ -435,7 +435,7 @@ MonoBehaviour:
   position: {x: -643.6084, y: 1120}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: '
@@ -460,7 +460,7 @@ MonoBehaviour:
   position: {x: -467.60834, y: 1325}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: Move to attack
@@ -487,7 +487,7 @@ MonoBehaviour:
   position: {x: 0, y: 177}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -513,7 +513,7 @@ MonoBehaviour:
   position: {x: -51.6084, y: 1116}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -537,12 +537,12 @@ MonoBehaviour:
   position: {x: -467.60834, y: 1511}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
-  description: attack after .25 seconds
+  description: attack with no delay
   drawGizmos: 0
-  duration: 0.25
+  duration: 0
 --- !u!114 &5924320815528260574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,7 +561,7 @@ MonoBehaviour:
   position: {x: -745.4798, y: 739.0001}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: Check if can attack
@@ -588,7 +588,7 @@ MonoBehaviour:
   position: {x: 556.2791, y: 966.00006}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -612,12 +612,12 @@ MonoBehaviour:
   position: {x: -51.6084, y: 1322}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
   drawGizmos: 0
-  duration: 0.5
+  duration: 0.25
 --- !u!114 &6281243585732541457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
   position: {x: 556.2791, y: 1116}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -661,7 +661,7 @@ MonoBehaviour:
   position: {x: 1016.2791, y: 966.00006}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -688,7 +688,7 @@ MonoBehaviour:
   position: {x: -745.4798, y: 966.00006}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: 
@@ -713,7 +713,7 @@ MonoBehaviour:
   position: {x: -252.6084, y: 1325}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
+    moveDirection: {x: 0, y: 0}
     playerDistance: 0
     player: {fileID: 0}
   description: Sets speed Modifier

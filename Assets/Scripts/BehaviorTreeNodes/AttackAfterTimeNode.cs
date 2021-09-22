@@ -15,7 +15,7 @@ public class AttackAfterTimeNode : ActionNode
 
     protected override void OnStop()
     {
-        context.entityMovement.SetMoveDirection(0);
+        context.entityMovement.SetMoveDirection(Vector2.zero);
         context.enemyController.Attack();
     }
 

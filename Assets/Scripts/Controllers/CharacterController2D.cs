@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-[RequireComponent(typeof(EntityMovement))]
+[RequireComponent(typeof(EntityMovementHorizontal))]
 public class CharacterController2D : MonoBehaviour
 {
     [SerializeField] private bool HasAirControl;  //True if player can control movement in the air
@@ -28,7 +28,7 @@ public class CharacterController2D : MonoBehaviour
     public event Action UpdateAbilityList;
 
 
-    private EntityMovement Movement; //Component for handling movement abilities
+    private EntityMovementHorizontal Movement; //Component for handling movement abilities
 
     public CharacterState CurrentCharacterState { get; private set; } //Current character state
 
@@ -43,7 +43,7 @@ public class CharacterController2D : MonoBehaviour
     {
         GroundLayer = GameLayers.Singleton.GroundLayer;
 
-        Movement = GetComponent<EntityMovement>(); //store movement for character states. Needs this component on the same game object
+        Movement = GetComponent<EntityMovementHorizontal>(); //store movement for character states. Needs this component on the same game object
 
         AbilityController = new AbilityController(); //Ability controller which stores all character abilities
 
@@ -105,7 +105,7 @@ public class CharacterController2D : MonoBehaviour
     /// <param name="moveVector"> Takes a 2d Vector, but only needs the x component for horizontal movment</param>
     public void SetMove(Vector2 moveVector)
     {
-        Movement.SetMoveDirection(moveVector.x);
+        Movement.SetMoveDirection(moveVector);
     }
 
     /// <summary>
