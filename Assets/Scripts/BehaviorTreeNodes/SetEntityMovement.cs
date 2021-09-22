@@ -5,6 +5,8 @@ using TheKiwiCoder;
 
 public class SetEntityMovement : ActionNode
 {
+    public bool SetSpeedModifier;
+
     protected override void OnStart() {
     }
 
@@ -12,6 +14,7 @@ public class SetEntityMovement : ActionNode
     }
 
     protected override State OnUpdate() {
+        context.entityMovement.SetSpeedModifier(SetSpeedModifier ? context.enemyController.SpeedModifier : 1);
         context.entityMovement.SetMoveDirection(blackboard.moveDirection);
         return State.Success;
     }

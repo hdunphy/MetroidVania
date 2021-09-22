@@ -6,9 +6,11 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public Transform CheckWallTransform;
+    [SerializeField] private float PlayerFoundSpeedModifier = 1;
     private IEnemyAttack EnemyAttack;
 
     public PlayerController Player { get; private set; }
+    public float SpeedModifier { get => PlayerFoundSpeedModifier; }
 
     private void Start()
     {
@@ -30,7 +32,6 @@ public class EnemyController : MonoBehaviour
 
     public void Attack()
     {
-        Debug.Log("Attack!");
         EnemyAttack.Attack();
     }
 }

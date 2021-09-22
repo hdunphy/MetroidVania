@@ -16976,6 +16976,7 @@ GameObject:
   - component: {fileID: 1638888537}
   - component: {fileID: 1638888536}
   - component: {fileID: 1638888541}
+  - component: {fileID: 1638888542}
   m_Layer: 10
   m_Name: Ceiling Laser
   m_TagString: Untagged
@@ -17027,6 +17028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CheckWallTransform: {fileID: 26240552}
+  PlayerFoundSpeedModifier: 0
 --- !u!114 &1638888538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17117,6 +17119,45 @@ MonoBehaviour:
   AttackDuration: 1
   LaserDeltaMove: 0.1
   Damage: 1
+--- !u!114 &1638888542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638888534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f07b36b1acbf42bd64ce47b8814f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalHealth: 1
+  KnockbackForce: 0
+  StunDuration: 0
+  InvincibilityAfterDamageDuration: 0
+  IsInvincible: 0
+  m_Rigidbody2D: {fileID: 0}
+  SetStun:
+    m_PersistentCalls:
+      m_Calls: []
+  EntityDied:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1638888537}
+        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+        m_MethodName: OnDied
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  TakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1653744315
 GameObject:
   m_ObjectHideFlags: 0

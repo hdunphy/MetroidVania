@@ -37,6 +37,7 @@ public class EntityMovement : MonoBehaviour
     private bool IsDashing; //Is the entity in the middle of a dash
     private float DashVelocity; //Speed of the dash
     private float LastYVelocity; //Store velocity from last frame
+    private float SpeedModifier = 1; //Modifier to multiply speed by. Defaulted to 1
 
     //Unity properties
     private void Start()
@@ -169,5 +170,6 @@ public class EntityMovement : MonoBehaviour
 
     //Setters
     public void SetCanMove(bool _canMove) { CanMove = _canMove; }
-    public void SetMoveDirection(float moveX) { HorizontalMove = moveX * RunSpeed; }
+    public void SetMoveDirection(float moveX) { HorizontalMove = moveX * (RunSpeed * SpeedModifier); }
+    public void SetSpeedModifier(float _speedModifier) { SpeedModifier =_speedModifier; } //Don't want it to be negative
 }

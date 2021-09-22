@@ -72,8 +72,9 @@ MonoBehaviour:
     moveDirection: 0
     playerDistance: 0
     player: {fileID: 0}
-  description: 
+  description: Resets speed modifier
   drawGizmos: 0
+  SetSpeedModifier: 0
 --- !u!114 &-4125883441905274965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +319,7 @@ MonoBehaviour:
     player: {fileID: 0}
   description: 
   drawGizmos: 0
+  SetSpeedModifier: 0
 --- !u!114 &1680023499060097635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +393,7 @@ MonoBehaviour:
     player: {fileID: 0}
   description: 
   drawGizmos: 0
+  SetSpeedModifier: 0
 --- !u!114 &2143616694488328673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,5 +716,6 @@ MonoBehaviour:
     moveDirection: 0
     playerDistance: 0
     player: {fileID: 0}
-  description: 
+  description: Sets speed Modifier
   drawGizmos: 0
+  SetSpeedModifier: 1
