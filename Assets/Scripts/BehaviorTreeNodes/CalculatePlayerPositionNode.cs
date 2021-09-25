@@ -13,7 +13,7 @@ public class CalculatePlayerPositionNode : ActionNode
 
     protected override State OnUpdate() {
         Vector2 distanceAndDirection = blackboard.player.transform.position - context.enemyController.transform.position;
-        blackboard.playerDistance = Mathf.Abs( Vector2.Distance(blackboard.player.transform.position, context.enemyController.transform.position) );
+        blackboard.playerDistance = distanceAndDirection;
         blackboard.moveDirection = new Vector2(distanceAndDirection.x, distanceAndDirection.y);
 
         return State.Success;

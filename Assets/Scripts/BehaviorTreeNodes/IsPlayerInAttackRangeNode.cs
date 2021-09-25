@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
 
+public enum DirectionEnum { X, Y}
+
 public class IsPlayerInAttackRangeNode : ActionNode
 {
     public float attackRange;
+    public DirectionEnum direction;
 
     protected override void OnStart()
     {
@@ -15,7 +18,8 @@ public class IsPlayerInAttackRangeNode : ActionNode
     }
 
     protected override State OnUpdate() {
-        bool isInAttackRange = blackboard.playerDistance <= attackRange;
+        float playerDistanceAxis = direction == DirectionEnum.X ? blackboard.playerDistance.x : blackboard.playerDistance.y;
+        bool isInAttackRange = Mathf.Abs(playerDistanceAxis) <= attackRange;
 
         return isInAttackRange ? State.Success : State.Failure;
     }

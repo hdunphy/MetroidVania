@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CheckWallTransform: {fileID: 8331372875020072860}
+  PlayerFoundSpeedModifier: 1
 --- !u!114 &8331372875102800452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,8 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d9700a389d92f4f87bdd6d7776b5cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RunSpeed: 1
-  FallSpeedLimit: 15
+  MovementSpeed: 1.5
   MovementSmoothing: 0.05
   SetIsMoving:
     m_PersistentCalls:
@@ -161,6 +161,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  FallSpeedLimit: 15
   OnJumpEvent:
     m_PersistentCalls:
       m_Calls: []

@@ -11,7 +11,7 @@ namespace TheKiwiCoder {
     public class Blackboard {
         public Vector3 moveToPosition;
         public Vector2 moveDirection;
-        public float playerDistance;
+        public Vector2 playerDistance;
         public PlayerController player;
     }
 }

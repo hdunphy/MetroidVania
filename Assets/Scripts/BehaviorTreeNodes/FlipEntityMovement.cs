@@ -15,8 +15,7 @@ public class FlipEntityMovement : ActionNode
 
     protected override State OnUpdate()
     {
-        blackboard.moveDirection *= -1;
+        blackboard.moveDirection.x *= -1;
         return State.Success;
-
     }
 }

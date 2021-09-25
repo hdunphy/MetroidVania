@@ -315,12 +315,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d9700a389d92f4f87bdd6d7776b5cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RunSpeed: 1
-  FallSpeedLimit: 15
+  MovementSpeed: 2
   MovementSmoothing: 0.05
   SetIsMoving:
     m_PersistentCalls:
       m_Calls: []
+  FallSpeedLimit: 15
   OnJumpEvent:
     m_PersistentCalls:
       m_Calls: []

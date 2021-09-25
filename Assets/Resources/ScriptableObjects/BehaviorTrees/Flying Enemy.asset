@@ -19,7 +19,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -89,11 +89,11 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
-  child: {fileID: 0}
+  child: {fileID: 6081490161314969272}
 --- !u!114 &-5831910759299291871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -195,10 +195,12 @@ MonoBehaviour:
   - {fileID: 3151702469442261701}
   - {fileID: -7775875180165688876}
   - {fileID: -5831910759299291871}
+  - {fileID: 6081490161314969272}
+  - {fileID: 5147998414248908994}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    moveDirection: {x: 1, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
 --- !u!114 &3151702469442261701
 MonoBehaviour:
@@ -219,7 +221,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -243,10 +245,58 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
   child: {fileID: -4968782576850665742}
   restartOnSuccess: 1
   restartOnFailure: 1
+--- !u!114 &5147998414248908994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6de73c322a10e9a4b915278fe30fa0f7
+  position: {x: 0, y: 0}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
+    player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  duration: 1
+--- !u!114 &6081490161314969272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f744b70dd5cbb7e4d9b25752a7aa3f6e
+  position: {x: -149.99997, y: 938.09753}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
+    player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  duration: 1

@@ -19,7 +19,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: Resets speed modifier
   drawGizmos: 0
@@ -94,11 +94,12 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: Atack range of .25
   drawGizmos: 0
   attackRange: 0.25
+  direction: 0
 --- !u!114 &-3434111145884617785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +119,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -145,7 +146,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: Always repeating
   drawGizmos: 0
@@ -171,7 +172,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -195,7 +196,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -218,7 +219,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -269,8 +270,8 @@ MonoBehaviour:
   - {fileID: 206024987129007819}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    moveDirection: {x: 1, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
 --- !u!114 &206024987129007819
 MonoBehaviour:
@@ -291,7 +292,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -315,7 +316,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -339,7 +340,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -363,7 +364,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: Patrol behavior
   drawGizmos: 0
@@ -389,7 +390,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -413,7 +414,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: If player is not null then success. Else failure
   drawGizmos: 0
@@ -436,7 +437,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: '
 
@@ -461,7 +462,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: Move to attack
   drawGizmos: 0
@@ -488,7 +489,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -514,7 +515,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -538,7 +539,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: attack with no delay
   drawGizmos: 0
@@ -562,7 +563,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: Check if can attack
   drawGizmos: 0
@@ -589,7 +590,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -613,11 +614,11 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
-  duration: 0.25
+  duration: 0
 --- !u!114 &6281243585732541457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,7 +638,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 1
@@ -662,7 +663,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -689,7 +690,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -714,7 +715,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
-    playerDistance: 0
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: Sets speed Modifier
   drawGizmos: 0
