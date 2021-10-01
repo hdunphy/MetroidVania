@@ -8,6 +8,7 @@ public class AStarPathFinding : MonoBehaviour, IPathFinding
     [SerializeField, Tooltip("How far the pathfinding will check for the target")] private float FollowRadius;
     [SerializeField, Tooltip("Distance between each step in the algorithm checks for a path")] private float StepSize;
     [SerializeField, Tooltip("How close to the next move before popping the next move in the path")] private float NextMoveCheck;
+    [SerializeField, Tooltip("Collision radius for each step check")] private float StepCollisionSize;
     [SerializeField, Tooltip("TileMap Offset for checking collisions")] private Vector2 TilemapOffset;
 
     public bool _debug;
@@ -74,7 +75,7 @@ public class AStarPathFinding : MonoBehaviour, IPathFinding
 
     public void UpdatePath(Vector2 _target)
     {
-        Vector2 roundedTarget = Vector2Int.RoundToInt(_target) + TilemapOffset;
+        Vector2 roundedTarget = Vector2Int.RoundToInt(_target) /*+ TilemapOffset*/;
         if (roundedTarget != target)
         {
             target = roundedTarget;
@@ -87,7 +88,7 @@ public class AStarPathFinding : MonoBehaviour, IPathFinding
     private void CalculatePath()
     {
         Path.Clear();
-        Vector2 currentPos = Vector2Int.RoundToInt(transform.position) + TilemapOffset;
+        Vector2 currentPos = Vector2Int.RoundToInt(transform.position) /*+ TilemapOffset*/;
 
         Dictionary<Vector2, Vector2> cameFrom = new Dictionary<Vector2, Vector2>();
         Dictionary<Vector2, float> costSoFar = new Dictionary<Vector2, float>
@@ -98,8 +99,8 @@ public class AStarPathFinding : MonoBehaviour, IPathFinding
         PriorityQueue<Vector2> checkTileQueue = new PriorityQueue<Vector2>();
         checkTileQueue.Add(new PriorityElement<Vector2>(currentPos, GetHueristic(currentPos)));
 
-
-        while (!checkTileQueue.IsEmpty())
+        int count = 0;
+        while (!checkTileQueue.IsEmpty() && count++ < 150)
         {
             PriorityElement<Vector2> _CurrentElement = checkTileQueue.Dequeue();
             if (_CurrentElement.Item.Equals(target))
@@ -181,11 +182,11 @@ public class AStarPathFinding : MonoBehaviour, IPathFinding
         {
             for (float j = -StepSize; j <= StepSize; j += StepSize)
             {
-                Vector2 _tile = currentTile + new Vector2(i, j) + TilemapOffset;
+                Vector2 _tile = currentTile + new Vector2(i, j) /*+ TilemapOffset*/;
 
                 if (!(i == 0 && j == 0))
                 {
-                    if (!Physics2D.OverlapCircle(_tile, .495f, ObstacleLayer))
+                    if (!Physics2D.OverlapCircle(_tile, StepCollisionSize, ObstacleLayer))
                     {
                         adjacents.Add(_tile);
                     }

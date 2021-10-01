@@ -201,6 +201,7 @@ MonoBehaviour:
   FollowRadius: 7
   StepSize: 1
   NextMoveCheck: 0.25
+  StepCollisionSize: 0
   TilemapOffset: {x: 0, y: 0}
   _debug: 0
 --- !u!4 &91992304
@@ -20147,7 +20148,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1784139336}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: dc9f01842e94ec34bbefba93cdb69489, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -20213,7 +20214,8 @@ MonoBehaviour:
   FollowRadius: 7
   StepSize: 1
   NextMoveCheck: 0.25
-  TilemapOffset: {x: 0, y: 0}
+  StepCollisionSize: 0.35
+  TilemapOffset: {x: 0.5, y: 0.5}
   _debug: 1
 --- !u!114 &1784139343
 MonoBehaviour:
@@ -20227,7 +20229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4343f37e90c0f645874e57245424ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 10
+  MovementSpeed: 5
   MovementSmoothing: 0.05
   SetIsMoving:
     m_PersistentCalls:

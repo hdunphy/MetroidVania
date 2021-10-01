@@ -7,6 +7,7 @@ public class IsNearEdgeNode : ActionNode
 {
     private Transform CheckTransform;
     private LayerMask GroundLayer;
+    private bool UseGroundCheck;
 
     public float WallRadiusCheck = 0.2f;
     public float GroundDistanceCheck = 2f;
@@ -14,6 +15,7 @@ public class IsNearEdgeNode : ActionNode
     protected override void OnStart() {
         CheckTransform = context.enemyController.CheckWallTransform;
         GroundLayer = GameLayers.Singleton.GroundLayer;
+        UseGroundCheck = blackboard.useGroundCheck;
     }
 
     protected override void OnStop() {
@@ -26,7 +28,7 @@ public class IsNearEdgeNode : ActionNode
         var wallCheck = Physics2D.OverlapCircle(CheckTransform.position, WallRadiusCheck, GroundLayer);
         var groundCheck = Physics2D.Raycast(CheckTransform.position, -1 * CheckTransform.up, GroundDistanceCheck, GroundLayer);
 
-        if (wallCheck || !groundCheck)
+        if (wallCheck || (UseGroundCheck && !groundCheck))
         { //if touching a wall or cannot see the floor
             _state = Node.State.Success;
         }

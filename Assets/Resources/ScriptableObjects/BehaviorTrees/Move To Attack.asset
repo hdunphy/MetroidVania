@@ -17,6 +17,7 @@ MonoBehaviour:
   guid: 52b49f82b4b046f4cb484f69f95537c3
   position: {x: -0.0000051259995, y: 516}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -44,6 +45,7 @@ MonoBehaviour:
   guid: 00269fcadd24ba042a5b3383f10b3a19
   position: {x: 1230.279, y: 1115}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -68,6 +70,7 @@ MonoBehaviour:
   guid: 989bf16daa68292449debfa65a3c9248
   position: {x: 0.000025510788, y: 739}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -92,6 +95,7 @@ MonoBehaviour:
   guid: b05a578a03f3e1648af43f8d38756277
   position: {x: -674.6084, y: 1511}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -117,6 +121,7 @@ MonoBehaviour:
   guid: e79583459d4ecfc4f874131f000e1fcc
   position: {x: -369.60837, y: 966}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -144,6 +149,7 @@ MonoBehaviour:
   guid: 3dc6829b3ac49334d8ac168b6d8280be
   position: {x: -0.0000051259995, y: 358}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -170,6 +176,7 @@ MonoBehaviour:
   guid: 43d66e986d4c0e047bae3030d3d7da54
   position: {x: 0, y: 0}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -194,6 +201,7 @@ MonoBehaviour:
   guid: 8f4ea53258c5e9741bacd7a0a95635e4
   position: {x: 812.2791, y: 1115}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -217,6 +225,7 @@ MonoBehaviour:
   guid: 54ea587c458997640aaabe6f5215e646
   position: {x: -369.60837, y: 1116}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -269,6 +278,7 @@ MonoBehaviour:
   - {fileID: 3497152131152805594}
   - {fileID: 206024987129007819}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 1, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -290,6 +300,7 @@ MonoBehaviour:
   guid: fb157b1374cfcf5449f899af4242f9f0
   position: {x: -271.6084, y: 1512}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -314,6 +325,7 @@ MonoBehaviour:
   guid: 3abd7637eca16c04cbeb03ecff4eab26
   position: {x: -259.99994, y: 358.00006}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -338,6 +350,7 @@ MonoBehaviour:
   guid: f43cb516e6496994fa9fa709666a0341
   position: {x: -1036.4797, y: 966.00006}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -362,6 +375,7 @@ MonoBehaviour:
   guid: 3d000796dbff2d845b6a9bfa575d1357
   position: {x: 787.2793, y: 739.0001}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -388,6 +402,7 @@ MonoBehaviour:
   guid: 072b45f8bd2457f48b7549f05dbc81ed
   position: {x: 1016.2791, y: 1115}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -412,6 +427,7 @@ MonoBehaviour:
   guid: 808d56a45c9fe9c478b502df7b1dc111
   position: {x: -1036, y: 1120}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -435,6 +451,7 @@ MonoBehaviour:
   guid: 6015e33e188827243813b96b83397543
   position: {x: -643.6084, y: 1120}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -460,6 +477,7 @@ MonoBehaviour:
   guid: 16bc82bd4d5c79f45a93e736aa5d5d7d
   position: {x: -467.60834, y: 1325}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -487,6 +505,7 @@ MonoBehaviour:
   guid: 705bf69af05b52d4291a78db215b63cf
   position: {x: 0, y: 177}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -513,6 +532,7 @@ MonoBehaviour:
   guid: b65060330dfb17648a1159eb66650fb4
   position: {x: -51.6084, y: 1116}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -537,6 +557,7 @@ MonoBehaviour:
   guid: 25ffcdcca1f3e2e479deca5c4a4cc9b0
   position: {x: -467.60834, y: 1511}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -561,6 +582,7 @@ MonoBehaviour:
   guid: 719b9e2d31a3a78468d99290c23bcb14
   position: {x: -745.4798, y: 739.0001}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -588,6 +610,7 @@ MonoBehaviour:
   guid: 2c8a56bb6a157104abede3a323627e5a
   position: {x: 556.2791, y: 966.00006}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -612,6 +635,7 @@ MonoBehaviour:
   guid: 7e9eefc409cc123439da07efdb9e2bd9
   position: {x: -51.6084, y: 1322}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -636,6 +660,7 @@ MonoBehaviour:
   guid: 407caf9095e62d94c9dfa88f565268f4
   position: {x: 556.2791, y: 1116}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -661,6 +686,7 @@ MonoBehaviour:
   guid: e4621ff100f78cf47bdba6af92fa11ba
   position: {x: 1016.2791, y: 966.00006}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -688,6 +714,7 @@ MonoBehaviour:
   guid: 62377b1610d3d714981d6407a6d0b862
   position: {x: -745.4798, y: 966.00006}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
@@ -713,6 +740,7 @@ MonoBehaviour:
   guid: 95fe7ad57a31a4842a165f61747d230f
   position: {x: -252.6084, y: 1325}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}

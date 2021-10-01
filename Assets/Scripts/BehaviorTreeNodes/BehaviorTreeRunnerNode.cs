@@ -8,11 +8,19 @@ public class BehaviorTreeRunnerNode : ActionNode
     [Tooltip("Do not have cyclical references")]
     public BehaviourTree behaviourTree;
 
+    private Node firstChild;
+
     public override Node Clone()
     {
-        BehaviorTreeRunnerNode node = Instantiate(this);
-        node.behaviourTree = behaviourTree.Clone();
-        return node;
+        //BehaviorTreeRunnerNode node = Instantiate(this);
+        //node.behaviourTree = behaviourTree.Clone();
+        if (behaviourTree != null)
+        {
+            var _btRoot = (RootNode)behaviourTree.rootNode;
+            firstChild = _btRoot.child.Clone();
+            //firstChild.Bind(context, blackboard);
+        }
+        return firstChild;
     }
 
     public override void Bind(EnemyContext _context, Blackboard _blackboard)
@@ -21,13 +29,16 @@ public class BehaviorTreeRunnerNode : ActionNode
         behaviourTree.Bind(context, _blackboard);
     }
 
-    protected override void OnStart() {
+    protected override void OnStart()
+    {
     }
 
-    protected override void OnStop() {
+    protected override void OnStop()
+    {
     }
 
-    protected override State OnUpdate() {
+    protected override State OnUpdate()
+    {
         return behaviourTree.Update();
     }
 }

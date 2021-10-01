@@ -17,12 +17,14 @@ MonoBehaviour:
   guid: 27f016cd09839104b98ccfd25315c505
   position: {x: 513.4819, y: 594}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
-    playerDistance: 0
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
+  SetSpeedModifier: 0
 --- !u!114 &-8394154503382285488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,9 +42,10 @@ MonoBehaviour:
   guid: 39e7beb2a3388e845b0893379f4fe4fb
   position: {x: 513.4819, y: 449.00003}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
-    playerDistance: 0
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -60,16 +63,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b604a622953b36a41a847e70733ae067, type: 3}
-  m_Name: CheckForEdgeNode
+  m_Name: IsNearEdgeNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
   guid: a35d01d48dea6e64da1471c424b59fc5
   position: {x: 74.48187, y: 594}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
-    playerDistance: 0
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -92,9 +96,10 @@ MonoBehaviour:
   guid: 5144904f57a0b1c499c364a1a1554d4b
   position: {x: 0, y: 156}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
-    playerDistance: 0
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -118,9 +123,10 @@ MonoBehaviour:
   guid: 766953e5c3c7da94fbaca26f8a6bcf7f
   position: {x: 224.48187, y: 306}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
-    playerDistance: 0
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -144,9 +150,10 @@ MonoBehaviour:
   guid: a6037c148f4fbc74c85e54c9ab20e508
   position: {x: 337.48184, y: 594}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
-    playerDistance: 0
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -167,9 +174,10 @@ MonoBehaviour:
   guid: acee18a1c0630244cae0e896ff217a8e
   position: {x: 704.48193, y: 594}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
-    playerDistance: 0
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -200,9 +208,10 @@ MonoBehaviour:
   - {fileID: -9164852062333711600}
   - {fileID: -2712747345079735815}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
-    playerDistance: 0
+    moveDirection: {x: 1, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
 --- !u!114 &1407465321970840985
 MonoBehaviour:
@@ -221,9 +230,10 @@ MonoBehaviour:
   guid: 853219b5a2676794daac7b70cf6b05af
   position: {x: 74.48187, y: 449.00003}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
-    playerDistance: 0
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -245,9 +255,10 @@ MonoBehaviour:
   guid: 0b9c46b113be2aa4f8e3c6ec76838905
   position: {x: 0, y: 0}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
-    playerDistance: 0
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -269,9 +280,11 @@ MonoBehaviour:
   guid: 6ccabf62b6764b8408e8f1abc4619395
   position: {x: -210, y: 306}
   blackboard:
+    useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: 0
-    playerDistance: 0
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
   description: 
   drawGizmos: 0
+  SetSpeedModifier: 0
