@@ -7,21 +7,20 @@ public class AStarPathFinding : MonoBehaviour, IPathFinding
 {
     [SerializeField, Tooltip("How far the pathfinding will check for the target")] private float FollowRadius;
     [SerializeField, Tooltip("Distance between each step in the algorithm checks for a path")] private float StepSize;
-    [SerializeField, Tooltip("Distance Limit to player before Updating the path. Should be similar to Follow Radius")] private float DistanceCheck;
     [SerializeField, Tooltip("How close to the next move before popping the next move in the path")] private float NextMoveCheck;
+    [SerializeField, Tooltip("TileMap Offset for checking collisions")] private Vector2 TilemapOffset;
 
     public bool _debug;
 
     private Stack<Vector2> Path;
     private Vector2 nextMove;
-    private Vector2Int target;
+    private Vector2 target;
 
     private LayerMask ObstacleLayer;
 
     private void Awake()
     {
-        Path = new Stack<Vector2>();
-        nextMove = transform.position;
+        Initialize();
     }
 
     private void Start()
@@ -41,14 +40,20 @@ public class AStarPathFinding : MonoBehaviour, IPathFinding
         }
     }
 
+    public void Initialize()
+    {
+        Path = new Stack<Vector2>();
+        nextMove = transform.position;
+    }
+
     public Vector2 GetDirection()
     {
         Vector2 direction;
         Vector2 pos = transform.position;
-        
-        if ((Mathf.Abs(Vector2.Distance(pos, target))) < FollowRadius || Path.Count == 0)
+
+        if (/*(Mathf.Abs(Vector2.Distance(pos, target))) < FollowRadius - 1 || */Path.Count == 0)
         {
-            direction = (target - pos).normalized;
+            direction = Vector2.zero;
         }
         else
         {
@@ -62,14 +67,19 @@ public class AStarPathFinding : MonoBehaviour, IPathFinding
         return direction;
     }
 
+    public int StepsLeftInPath()
+    {
+        return Path.Count;
+    }
+
     public void UpdatePath(Vector2 _target)
     {
-        Vector2Int roundedTarget = Vector2Int.RoundToInt(_target);
+        Vector2 roundedTarget = Vector2Int.RoundToInt(_target) + TilemapOffset;
         if (roundedTarget != target)
         {
             target = roundedTarget;
             float Distance = Vector2.Distance(_target, transform.position);
-            if (Distance < DistanceCheck)
+            if (Distance < FollowRadius)
                 CalculatePath();
         }
     }
@@ -77,7 +87,7 @@ public class AStarPathFinding : MonoBehaviour, IPathFinding
     private void CalculatePath()
     {
         Path.Clear();
-        Vector2 currentPos = Vector2Int.RoundToInt(transform.position);
+        Vector2 currentPos = Vector2Int.RoundToInt(transform.position) + TilemapOffset;
 
         Dictionary<Vector2, Vector2> cameFrom = new Dictionary<Vector2, Vector2>();
         Dictionary<Vector2, float> costSoFar = new Dictionary<Vector2, float>
@@ -136,15 +146,31 @@ public class AStarPathFinding : MonoBehaviour, IPathFinding
     private void AddPossibleMove(float cost, Vector2 _move, PriorityQueue<Vector2> checkTileQueue,
         Dictionary<Vector2, Vector2> cameFrom, Vector2 _currentTile)
     {
-        float prority = cost + GetHueristic(_move);
-        checkTileQueue.Add(new PriorityElement<Vector2>(_move, prority));
+        bool addToPriorityQueue;
+        
         if (cameFrom.ContainsKey(_move))
         {
-            cameFrom[_move] = _currentTile;
+            if (cameFrom[_move] == _currentTile)
+            {
+                //This already exists, don't add move to stack
+                addToPriorityQueue = false;
+            }
+            else
+            {
+                addToPriorityQueue = true;
+                cameFrom[_move] = _currentTile;
+            }
         }
         else
         {
+            addToPriorityQueue = true;
             cameFrom.Add(_move, _currentTile);
+        }
+
+        if (addToPriorityQueue)
+        {
+            float prority = cost + GetHueristic(_move);
+            checkTileQueue.Add(new PriorityElement<Vector2>(_move, prority));
         }
     }
 
@@ -155,7 +181,7 @@ public class AStarPathFinding : MonoBehaviour, IPathFinding
         {
             for (float j = -StepSize; j <= StepSize; j += StepSize)
             {
-                Vector2 _tile = currentTile + new Vector2(i, j);
+                Vector2 _tile = currentTile + new Vector2(i, j) + TilemapOffset;
 
                 if (!(i == 0 && j == 0))
                 {

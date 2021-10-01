@@ -6,6 +6,14 @@ public class EntityMovement2D : EntityMovementBase
     private Vector2 MoveDirection;
     private Vector3 Velocity; //referenced velocity used in dampening function
 
+    //Unity properties
+    private void Start()
+    {
+        m_RigidBody2D = GetComponent<Rigidbody2D>();
+        CanMove = true;
+        IsFacingRight = true;
+        IsMoving = false;
+    }
 
     public override void SetMoveDirection(Vector2 moveDirection)
     {
