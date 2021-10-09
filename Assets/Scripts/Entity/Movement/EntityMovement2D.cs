@@ -17,7 +17,7 @@ public class EntityMovement2D : EntityMovementBase
 
     public override void SetMoveDirection(Vector2 moveDirection)
     {
-        MoveDirection = moveDirection;
+        MoveDirection = moveDirection.normalized;
     }
 
     private void Update()

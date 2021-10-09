@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
 
-public enum DirectionEnum { X, Y}
+public enum DirectionEnum { X, Y, XY }
 
 public class IsPlayerInAttackRangeNode : ActionNode
 {
@@ -18,9 +18,21 @@ public class IsPlayerInAttackRangeNode : ActionNode
     }
 
     protected override State OnUpdate() {
-        float playerDistanceAxis = direction == DirectionEnum.X ? blackboard.playerDistance.x : blackboard.playerDistance.y;
-        bool isInAttackRange = Mathf.Abs(playerDistanceAxis) <= attackRange;
+        float playerDistance = attackRange + 1;
+        switch (direction)
+        {
+            case DirectionEnum.X:
+                playerDistance = blackboard.playerDistance.x;
+                break;
+            case DirectionEnum.Y:
+                playerDistance = blackboard.playerDistance.y;
+                break;
+            case DirectionEnum.XY:
+                playerDistance = blackboard.playerDistance.magnitude;
+                break;
+        }
 
+        bool isInAttackRange = Mathf.Abs(playerDistance) <= attackRange;
         return isInAttackRange ? State.Success : State.Failure;
     }
 }

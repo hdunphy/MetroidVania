@@ -40,7 +40,31 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: feaf65e98f8845646b5982d4d09728d7
-  position: {x: -494.11496, y: 776.4826}
+  position: {x: -574.6063, y: 776}
+  blackboard:
+    useGroundCheck: 1
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
+    player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+--- !u!114 &-7830487866743138355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194e25b6ad8465b45a69a09828553ad2, type: 3}
+  m_Name: CalculatePlayerPositionNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a2c7d4b6c78d31448aa1acb99f018e4a
+  position: {x: -13.00002, y: 547}
   blackboard:
     useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
@@ -64,7 +88,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 2730cc6be18048e498dfd24c0a754201
-  position: {x: -75.000046, y: 775.9999}
+  position: {x: -155.60632, y: 776}
   blackboard:
     useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
@@ -125,32 +149,8 @@ MonoBehaviour:
   drawGizmos: 0
   children:
   - {fileID: -4119438017039707915}
-  - {fileID: 9039219473853169948}
---- !u!114 &-4744843182024788459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43890e1515b0f4b4aa6796dffac4d6f1, type: 3}
-  m_Name: MoveOnePathfindingStepNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 58f322db9ac76744bae892861fb8f300
-  position: {x: 0, y: 0}
-  blackboard:
-    useGroundCheck: 1
-    moveToPosition: {x: 0, y: 0, z: 0}
-    moveDirection: {x: 0, y: 0}
-    playerDistance: {x: 0, y: 0}
-    player: {fileID: 0}
-  description: 
-  drawGizmos: 0
-  StuckTimer: 1
+  - {fileID: -7830487866743138355}
+  - {fileID: -4019688138373938794}
 --- !u!114 &-4119438017039707915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ebba21f32ba8bd5469157ce9d951cdb7
-  position: {x: -269.8177, y: 547.2825}
+  position: {x: -350.6063, y: 547}
   blackboard:
     useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
@@ -179,6 +179,33 @@ MonoBehaviour:
   - {fileID: -8428023946153264031}
   - {fileID: 7195394911006329180}
   - {fileID: -7775875180165688876}
+--- !u!114 &-4019688138373938794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 80a5638c66b5e6947b6b18cf915ecd61
+  position: {x: 374.00003, y: 547}
+  blackboard:
+    useGroundCheck: 1
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
+    player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 6495985170286250861}
+  - {fileID: 9039219473853169948}
 --- !u!114 &-1043399050752651395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +221,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: aa16415d0d2552441a798fa4026cc14b
-  position: {x: -493.99994, y: 1182.1}
+  position: {x: -574.6063, y: 1182}
   blackboard:
     useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
@@ -203,6 +230,32 @@ MonoBehaviour:
     player: {fileID: 0}
   description: 
   drawGizmos: 0
+--- !u!114 &-41408684635186246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb434f427290374c83cae78dcfd674c, type: 3}
+  m_Name: IsPlayerInAttackRangeNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d6b1b3bdebdcba04a97971761307a8f6
+  position: {x: 50.206802, y: 918}
+  blackboard:
+    useGroundCheck: 1
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
+    player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  attackRange: 1.5
+  direction: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,11 +281,16 @@ MonoBehaviour:
   - {fileID: 6081490161314969272}
   - {fileID: 5147998414248908994}
   - {fileID: -1043399050752651395}
-  - {fileID: -4744843182024788459}
   - {fileID: 9039219473853169948}
   - {fileID: 7195394911006329180}
   - {fileID: 1484865089795037428}
   - {fileID: 57362935928020630}
+  - {fileID: -41408684635186246}
+  - {fileID: -4019688138373938794}
+  - {fileID: 6495985170286250861}
+  - {fileID: -7830487866743138355}
+  - {fileID: 8262045696942078213}
+  - {fileID: 6330257911331403730}
   blackboard:
     useGroundCheck: 0
     moveToPosition: {x: 0, y: 0, z: 0}
@@ -254,14 +312,14 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 18415418a03940342bfa0b35fc6e1bf1
-  position: {x: -151.99997, y: 1182}
+  position: {x: -232.6063, y: 1182}
   blackboard:
     useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
     moveDirection: {x: 0, y: 0}
     playerDistance: {x: 0, y: 0}
     player: {fileID: 0}
-  description: 
+  description: Runs patrol behavior
   drawGizmos: 0
   behaviourTree: {fileID: 11400000, guid: ef913080d27185b449432b5cba2e3bfc, type: 2}
 --- !u!114 &1484865089795037428
@@ -279,7 +337,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9745c218015283b488730f4b7e4dda06
-  position: {x: -269.9999, y: 918}
+  position: {x: -350.6063, y: 918}
   blackboard:
     useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
@@ -358,7 +416,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f744b70dd5cbb7e4d9b25752a7aa3f6e
-  position: {x: -75.000046, y: 917.9999}
+  position: {x: -155.60632, y: 918}
   blackboard:
     useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
@@ -368,6 +426,59 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   duration: 0.5
+--- !u!114 &6330257911331403730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 994d99d8e27df1847bfa1e4ca21e06ad
+  position: {x: 409.79126, y: 918}
+  blackboard:
+    useGroundCheck: 1
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
+    player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  duration: 0.1
+--- !u!114 &6495985170286250861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: dd1525b0211178a4695000e776bd6d17
+  position: {x: 239.49489, y: 776}
+  blackboard:
+    useGroundCheck: 1
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
+    player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -41408684635186246}
+  - {fileID: 8262045696942078213}
+  - {fileID: 6330257911331403730}
 --- !u!114 &7195394911006329180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +494,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c0b33e3c39643574585528a7ead62690
-  position: {x: -270.00003, y: 775.9999}
+  position: {x: -350.6063, y: 776}
   blackboard:
     useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
@@ -393,6 +504,31 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   child: {fileID: 1484865089795037428}
+--- !u!114 &8262045696942078213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdcc4ffbbc3e872478c0369b4b644c9b, type: 3}
+  m_Name: SetEntityMovement
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 905b44e046f029c409fbdf0711f2949e
+  position: {x: 238.99998, y: 918}
+  blackboard:
+    useGroundCheck: 1
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveDirection: {x: 0, y: 0}
+    playerDistance: {x: 0, y: 0}
+    player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  SetSpeedModifier: 0
 --- !u!114 &9039219473853169948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,7 +544,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b06cf5aae19c0e54f915c211d28c3b18
-  position: {x: -23.063578, y: 555.9999}
+  position: {x: 500.04175, y: 776}
   blackboard:
     useGroundCheck: 1
     moveToPosition: {x: 0, y: 0, z: 0}
