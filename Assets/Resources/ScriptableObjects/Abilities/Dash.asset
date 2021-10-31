@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Dash
   abilityType: 1
   actionTime: 0.25
-  cooldownTime: 1
+  cooldownTime: 0.8
   sprite: {fileID: 7482667652216324306, guid: e6f64059679c4b64da31e2c5de7dd67a, type: 3}
   DashVelocity: 20
