@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1997431600, guid: 176085f1e5a75ef4696e56a773b71371, type: 3}
       propertyPath: SceneToLoad
-      value: Room_2
+      value: Transport Room
       objectReference: {fileID: 0}
     - target: {fileID: 1997431600, guid: 176085f1e5a75ef4696e56a773b71371, type: 3}
       propertyPath: RoomIdentifier
@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3047143325872965826, guid: 176085f1e5a75ef4696e56a773b71371, type: 3}
       propertyPath: m_Name
-      value: Portal B Room_2 (Right)
+      value: Portal B Armory (Right)
       objectReference: {fileID: 0}
     - target: {fileID: 3047143325872965828, guid: 176085f1e5a75ef4696e56a773b71371, type: 3}
       propertyPath: m_RootOrder
