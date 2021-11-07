@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1323961909}
     m_Modifications:
+    - target: {fileID: 884295355888455171, guid: 71ab1def4576e5d4881137e8f4586b89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 884295355924447878, guid: 71ab1def4576e5d4881137e8f4586b89, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -140,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 884295355924447878, guid: 71ab1def4576e5d4881137e8f4586b89, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.5
+      value: 17.5
       objectReference: {fileID: 0}
     - target: {fileID: 884295355924447878, guid: 71ab1def4576e5d4881137e8f4586b89, type: 3}
       propertyPath: m_LocalPosition.z
@@ -195,6 +199,10 @@ PrefabInstance:
     - target: {fileID: 1997431600, guid: 176085f1e5a75ef4696e56a773b71371, type: 3}
       propertyPath: SceneToLoad
       value: Bridge
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997431600, guid: 176085f1e5a75ef4696e56a773b71371, type: 3}
+      propertyPath: RoomIdentifier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3047143325872965826, guid: 176085f1e5a75ef4696e56a773b71371, type: 3}
       propertyPath: m_Name

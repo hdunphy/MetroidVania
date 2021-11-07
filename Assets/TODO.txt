@@ -1,0 +1,5 @@
+Bugs
+-Multiple Event systems?
+-Need to add respawn entities to Vent Shaft
+DONE -Elevator in bridge extierior is going the wrong way
+DONE -bridge exterior to bridge connection is using the wrong letter
