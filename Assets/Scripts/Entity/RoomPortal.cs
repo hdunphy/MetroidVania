@@ -31,14 +31,22 @@ public class RoomPortal : MonoBehaviour
         Debug.Log($"Loading Scene: {sceneName}, From Scene: {gameObject.scene.buildIndex}");
         playerController.LeaveRoom();
 
-        //Load new scene
-        yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        if(sceneName == "{missing}")
+        {
+            Debug.LogWarning($"Scene not added for portal {gameObject.name}");
+            playerController.EnterRoom(LoadPosition.position); //Move the player to the load position of the current portal
+        }
+        else
+        {
+            //Load new scene
+            yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
-        //Once new scene is loaded, look for the connecting RoomPortal with the same identifier
-        RoomPortal connectingPortal = FindObjectsOfType<RoomPortal>().First(x => x != this && x.RoomIdentifier == RoomIdentifier);
-        playerController.EnterRoom(connectingPortal.LoadPosition.position); //Move the player to the load position of the new portal
+            //Once new scene is loaded, look for the connecting RoomPortal with the same identifier
+            RoomPortal connectingPortal = FindObjectsOfType<RoomPortal>().First(x => x != this && x.RoomIdentifier == RoomIdentifier);
+            playerController.EnterRoom(connectingPortal.LoadPosition.position); //Move the player to the load position of the new portal
 
-        //Unload old scene
-        yield return SceneManager.UnloadSceneAsync(gameObject.scene.name);
+            //Unload old scene
+            yield return SceneManager.UnloadSceneAsync(gameObject.scene.name);
+        }
     }
 }

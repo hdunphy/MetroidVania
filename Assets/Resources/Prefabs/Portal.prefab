@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0d421a84b771f41bab51e87c9f862e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToLoad: 2
+  SceneToLoad: '{missing}'
   LoadPosition: {fileID: 5512875406443089797}
   RoomIdentifier: 0
 --- !u!1 &7041712238640279148

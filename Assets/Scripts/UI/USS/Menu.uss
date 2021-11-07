@@ -1,0 +1,57 @@
+.menu-button {
+    left: auto;
+    right: auto;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 255);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    -unity-font-style: bold;
+}
+
+.menu-button:hover {
+    left: auto;
+    right: auto;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.menu-button:active {
+    left: auto;
+    right: auto;
+    width: 100%;
+    background-color: rgba(192, 57, 43, 0.64);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

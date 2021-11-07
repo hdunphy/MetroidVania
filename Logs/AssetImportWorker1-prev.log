@@ -396,3 +396,88 @@ System memory in use after: 149.3 MB.
 Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 4329.
 Total: 3.259500 ms (FindLiveObjects: 0.373800 ms CreateObjectMapping: 0.100300 ms MarkObjects: 2.667900 ms  DeleteObjects: 0.116200 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 398151.349973 seconds.
+  path: Assets/Scenes/Game Scenes/Bridge Exterior.unity
+  artifactKey: Guid(5831cf47e18b26741bb0cae7de590ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Game Scenes/Bridge Exterior.unity using Guid(5831cf47e18b26741bb0cae7de590ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6f2cd7b4b8bf269bd54ee01733a11c3') in 0.192729 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.054587 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.238 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.2 MB.
+System memory in use after: 149.3 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 4333.
+Total: 2.847700 ms (FindLiveObjects: 0.374000 ms CreateObjectMapping: 0.099400 ms MarkObjects: 2.235000 ms  DeleteObjects: 0.138400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 422435.342584 seconds.
+  path: Packages/com.unity.ugui
+  artifactKey: Guid(8f7652e09069a1943278893d4264401e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ugui using Guid(8f7652e09069a1943278893d4264401e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d993d136c8f7de6e4d0d5a15e79e2f0') in 0.083107 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.024900 seconds.
+  path: Packages/com.unity.ugui/Editor
+  artifactKey: Guid(bee384ad5b4d1a843a018082e7db53cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ugui/Editor using Guid(bee384ad5b4d1a843a018082e7db53cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1251fda1fd4ba8a6d662b0c38b8e2058') in 0.008111 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.857592 seconds.
+  path: Packages/com.unity.ugui/Editor/UI
+  artifactKey: Guid(853edc343b78a7c4c81cbb3851d48c0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ugui/Editor/UI using Guid(853edc343b78a7c4c81cbb3851d48c0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a00f24e0ae6ed51a2f4f6b01ae6bce2b') in 0.007794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.327737 seconds.
+  path: Assets/TheKiwiCoder/BehaviourTree/UIBuilder/BehaviourTreeEditor.uxml
+  artifactKey: Guid(12f41ec3b5735b747a38daddd0ffefd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheKiwiCoder/BehaviourTree/UIBuilder/BehaviourTreeEditor.uxml using Guid(12f41ec3b5735b747a38daddd0ffefd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d5335251a83ec06247e8cde3597b543') in 0.081578 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 198.127773 seconds.
+  path: Assets/Scripts/UI/MainMenu.uxml
+  artifactKey: Guid(9f7cd91c807e43f4cba3d0358678643b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/MainMenu.uxml using Guid(9f7cd91c807e43f4cba3d0358678643b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c787200ab20c42452062f5ff1c7f03e') in 0.013473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.971135 seconds.
+  path: Assets/Scripts/UI
+  artifactKey: Guid(82ef5d4189b004345aac5805c8c875bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI using Guid(82ef5d4189b004345aac5805c8c875bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35900c9e43b5fbba31d8cb19525acfa7') in 0.003598 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004725 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.80 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.205 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.3 MB.
+System memory in use after: 149.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 4337.
+Total: 2.923200 ms (FindLiveObjects: 0.448600 ms CreateObjectMapping: 0.103700 ms MarkObjects: 2.244400 ms  DeleteObjects: 0.125300 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
