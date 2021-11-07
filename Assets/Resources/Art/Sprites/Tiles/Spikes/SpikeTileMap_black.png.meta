@@ -93,6 +93,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -102,8 +103,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -709,6 +710,30 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      SpikeTileMap_black_19: -8382673841785343907
+      SpikeTileMap_black_5: 5618649142821399225
+      SpikeTileMap_black_12: -292379451831582067
+      SpikeTileMap_black_14: -9082257633585480531
+      SpikeTileMap_black_7: -708585809467718601
+      SpikeTileMap_black_17: 587896849703939420
+      SpikeTileMap_black_18: 5826331750430497015
+      SpikeTileMap_black_1: -9209564455453623918
+      SpikeTileMap_black_2: 3906795826174845846
+      SpikeTileMap_black_15: 2998165522174588677
+      SpikeTileMap_black_21: 1775969835087640628
+      SpikeTileMap_black_13: 7205855500836018745
+      SpikeTileMap_black_6: -6884574450216715047
+      SpikeTileMap_black_4: 2248827967431258292
+      SpikeTileMap_black_8: 8277116378520625170
+      SpikeTileMap_black_9: -7795562343484332345
+      SpikeTileMap_black_11: -3989055160720198130
+      SpikeTileMap_black_20: 7812156267048893544
+      SpikeTileMap_black_22: -5544835623584232604
+      SpikeTileMap_black_3: -4021273561513768971
+      SpikeTileMap_black_10: -644180561405390785
+      SpikeTileMap_black_16: -5677875963695676591
+      SpikeTileMap_black_0: 8603732372551545619
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -120,6 +120,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -129,8 +130,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -970,6 +971,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Ship Interior Tileset_18: 6771430213515496262
+      Ship Interior Tileset_20: 5369755156461195748
+      Ship Interior Door Top1: 9140422086224722772
+      Ship Interior Tileset_6: 1869459940292344989
+      Ship Interior Tileset_12: 4475562935307857449
+      Ship Interior Tileset_26: 1092478213592953599
+      Ship Interior Tileset_7: 1655600559812747074
+      Ship Interior Single Middle: 2345214462980353345
+      Ship Interior Door Top2: 592968859465239264
+      Ship Interior Tileset_8: -907680648579501441
+      Ship Interior Diagonal TL: 7576790991203980316
+      Ship Interior Tileset_16: -2156810355271924141
+      Ship Interior Single: -8431295026626948010
+      Ship Interior Tileset_11: 6918078530856883504
+      Ship Interior Tileset_28: 1916733088150555677
+      Ship Interior Tileset_22: -4446313619320683061
+      Ship Interior Single Right: 182637380326872399
+      Ship Interior Single Left: 4786086960955720825
+      Ship Interior Tileset_17: 8114887328619704723
+      Ship Interior Tileset_24: -6355200541036583450
+      Ship Interior Tileset_23: -6889585355903422187
+      Ship Interior Tileset_25: 7743736046984373443
+      Ship Interior Tileset_10: 3965462851383140158
+      Ship Interior Tileset_29: 1065757740891652761
+      Ship Interior Tileset_9: 8196215607256404384
+      Ship Interior Diagonal TR: -6693554112544797755
+      Ship Interior Tileset_21: 1964098754643448571
+      Ship Interior Tileset_19: -4383532671806532350
+      Ship Interior Tileset_13: 5620204525645076099
+      Ship Interior Tileset_27: -2584783095396609827
+      Ship Interior Tileset_5: 413417439312001566
+      Color_pallet: -6331231475464576310
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
