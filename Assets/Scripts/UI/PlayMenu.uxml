@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="SaveGame" src="SaveGame.uxml" />
+    <Style src="USS/Menu.uss" />
+    <ui:VisualElement name="background" style="flex-grow: 1; justify-content: center;">
+        <ui:VisualElement name="save-game-container" style="height: 50%; flex-direction: row; align-items: center; justify-content: center;">
+            <ui:Instance template="SaveGame" name="save-game0" />
+            <ui:Instance template="SaveGame" name="save-game1" />
+            <ui:Instance template="SaveGame" name="save-game2" />
+        </ui:VisualElement>
+        <ui:Button text="Back" display-tooltip-when-elided="true" name="back-button" class="menu-button" style="position: absolute; left: 10px; top: 10px; width: auto;" />
+    </ui:VisualElement>
+</ui:UXML>

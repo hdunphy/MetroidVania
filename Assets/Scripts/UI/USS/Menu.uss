@@ -12,7 +12,7 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     font-size: 20px;
-    color: rgba(0, 0, 0, 255);
+    color: rgb(0, 0, 0);
     margin-top: 5px;
     margin-bottom: 5px;
     -unity-font-style: bold;
@@ -52,6 +52,91 @@
     border-bottom-right-radius: 5px;
     font-size: 20px;
     color: rgb(255, 255, 255);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.delete-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 25px;
+    height: 25px;
+    border-left-color: rgba(255, 0, 0, 255);
+    border-right-color: rgba(255, 0, 0, 255);
+    border-top-color: rgba(255, 0, 0, 255);
+    border-bottom-color: rgba(255, 0, 0, 255);
+    background-color: rgba(188, 188, 188, 0);
+    color: rgba(255, 0, 0, 255);
+    -unity-font-style: bold;
+    font-size: 19px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.delete-button:hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 25px;
+    height: 25px;
+    border-left-color: rgb(255, 52, 52);
+    border-right-color: rgb(255, 52, 52);
+    border-top-color: rgb(255, 52, 52);
+    border-bottom-color: rgb(255, 52, 52);
+    background-color: rgba(188, 188, 188, 0);
+    color: rgb(255, 52, 52);
+    -unity-font-style: bold;
+    font-size: 19px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.delete-button:active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 25px;
+    height: 25px;
+    border-left-color: rgb(255, 203, 203);
+    border-right-color: rgb(255, 203, 203);
+    border-top-color: rgb(255, 203, 203);
+    border-bottom-color: rgb(255, 203, 203);
+    background-color: rgba(188, 188, 188, 0);
+    color: rgb(255, 203, 203);
+    -unity-font-style: bold;
+    font-size: 19px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.save-game-style {
+    height: auto;
+    min-height: 150px;
+    max-height: 250px;
+    width: auto;
+    min-width: 200px;
+    max-width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
 }

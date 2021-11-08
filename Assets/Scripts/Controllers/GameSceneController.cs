@@ -10,6 +10,7 @@ public class GameSceneController : MonoBehaviour
     [SerializeField] private CameraFollow CameraPrefab; //Camera Prefab to load
     [SerializeField] private PlayerController PlayerPrefab; //Player prefab to instantiate on start
     [SerializeField] private Vector3 StartPosition; //Start position of the player
+    [SerializeField] private bool IsTestingMode = true; //True if starting from this screen and want to start game on load
 
     public static GameSceneController Singleton;
     public Vector3 _startPosition { get => StartPosition; }
@@ -30,13 +31,23 @@ public class GameSceneController : MonoBehaviour
 
     private void Start()
     {
-        StartGame();
+        if(IsTestingMode)
+            StartGame();
     }
 
     public void StartGame()
     {
+        string path = Application.persistentDataPath + "/saves/" + SaveData.current.SaveName + ".save";
+        SaveData.current = (SaveData)SerializationManager.Load(path);
+
+        Debug.Log("Loaded");
+
         InitialSceneToLoad = string.IsNullOrEmpty(SaveData.current.PlayerSceneName) ?
             InitialSceneToLoad : SaveData.current.PlayerSceneName;
+
+        if(SaveData.current.PlayerPosition != Vector3.zero)
+            StartPosition = SaveData.current.PlayerPosition;
+
         StartCoroutine(LoadInitialScene(InitialSceneToLoad));
     }
 
@@ -60,11 +71,14 @@ public class GameSceneController : MonoBehaviour
         var player = FindObjectOfType<PlayerController>();
         if (player == null)
         { //Make sure the player is in the scene
-            Instantiate(PlayerPrefab, StartPosition, Quaternion.identity);
+            player = Instantiate(PlayerPrefab, StartPosition, Quaternion.identity);
         }
-        //else
-        //{
-        //    player.transform.position = StartPosition;
-        //}
+
+        player.OnLoad(StartPosition);
+
+        foreach (var sceneObject in FindObjectsOfType<SceneObjectState>())
+        {
+            sceneObject.OnLoad();
+        }
     }
 }

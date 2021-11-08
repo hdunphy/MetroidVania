@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="USS/Menu.uss" />
+    <ui:VisualElement name="background" class="save-game-style" style="flex-grow: 1; background-color: rgb(44, 62, 80); margin-left: 20px; margin-right: 20px; margin-top: 5px; margin-bottom: 5px;">
+        <ui:VisualElement name="top-element" style="height: 70%; align-items: center; justify-content: center;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="delete-button" class="delete-button" />
+            <ui:Label text="Name" display-tooltip-when-elided="true" name="save-name" style="font-size: 30px; -unity-font-style: normal;" />
+            <ui:Label text="00:00" display-tooltip-when-elided="true" name="time-label" />
+        </ui:VisualElement>
+        <ui:VisualElement name="bottom-element" style="height: 30%; flex-grow: 1; align-items: center; justify-content: center; margin-left: 5px; margin-right: 5px;">
+            <ui:Button text="Button" display-tooltip-when-elided="true" name="start-button" class="menu-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
