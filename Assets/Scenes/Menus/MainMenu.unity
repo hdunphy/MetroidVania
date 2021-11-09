@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 274610843}
   - component: {fileID: 274610842}
-  - component: {fileID: 274610841}
   m_Layer: 0
   m_Name: Menu Camera
   m_TagString: Untagged
@@ -141,14 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &274610841
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274610840}
-  m_Enabled: 1
 --- !u!20 &274610842
 Camera:
   m_ObjectHideFlags: 0
@@ -159,7 +150,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.8235295, g: 0.32941177, b: 0, a: 1}
+  m_BackGroundColor: {r: 0.8235295, g: 0.32941177, b: 0, a: 0.39215687}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -236,7 +227,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a55edd2a465ba409d72e5c296f77f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Camera: {fileID: 274610840}
   PlayMenu: {fileID: 2076785945}
+  BootSceneName: Boot Scene
 --- !u!114 &1755173388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: ddcf152ff0cca06499d3dc8b5858f640, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 9f7cd91c807e43f4cba3d0358678643b, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: fe86ba23a2ab5e542b49cab39606b76d, type: 3}
   m_SortingOrder: 0
 --- !u!4 &1755173389
 Transform:

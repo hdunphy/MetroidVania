@@ -51,4 +51,19 @@ public class PlayerInputController : MonoBehaviour
             PlayerController.OnPlayerInteraction();
         }
     }
+
+    public void OnPause(CallbackContext callback)
+    {
+        if (callback.started)
+        {
+            if(GameSceneController.Singleton.CurrentGameState == GameSceneController.GameState.InGame)
+            {
+                GameSceneController.Singleton.SetPaused(true);
+            }
+            else if (GameSceneController.Singleton.CurrentGameState == GameSceneController.GameState.Paused)
+            {
+                GameSceneController.Singleton.SetPaused(false);
+            }
+        }
+    }
 }

@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private UIDocument PlayMenu;
+    [SerializeField] private string BootSceneName = "Boot Scene";
 
     private Button PlayButton;
     private Button ControlsButton;
@@ -39,27 +40,38 @@ public class MainMenuController : MonoBehaviour
 
     private void Start()
     {
-        SceneManager.LoadScene("Boot Scene", LoadSceneMode.Additive);
+        if (!SceneManager.GetSceneByName(BootSceneName).isLoaded)
+        {
+            SceneManager.LoadScene(BootSceneName, LoadSceneMode.Additive);
+        }
     }
 
     private void PlayButton_clicked()
     {
-        PlayMenu.gameObject.SetActive(true);
-        gameObject.SetActive(false);
+        if(GameSceneController.Singleton.CurrentGameState == GameSceneController.GameState.Menu)
+        {
+            PlayMenu.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
+        else if (GameSceneController.Singleton.CurrentGameState == GameSceneController.GameState.Paused)
+        {
+            GameSceneController.Singleton.SetPaused(false);
+        }
     }
 
     private void ControlsButton_clicked()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Go to Controls");
     }
 
     private void OptionsButton_clicked()
     {
-        throw new NotImplementedException();
+        Debug.Log("Go to Options");
     }
 
     private void QuitButton_clicked()
     {
-        throw new NotImplementedException();
+        Debug.Log("Quitting");
+        Application.Quit();
     }
 }

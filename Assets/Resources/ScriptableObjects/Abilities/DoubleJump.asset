@@ -16,5 +16,5 @@ MonoBehaviour:
   abilityType: 0
   actionTime: 0
   cooldownTime: 0
-  sprite: {fileID: 7482667652216324306, guid: e6f64059679c4b64da31e2c5de7dd67a, type: 3}
+  sprite: {fileID: 4005100697490415953, guid: 4a73fc37709ccc64d8e4a9c3619a7ee5, type: 3}
   JumpVelocity: 20

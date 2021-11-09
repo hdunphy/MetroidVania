@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="USS/Menu.uss" />
+    <ui:VisualElement name="menu-button-container" style="background-color: rgba(255, 255, 255, 0); height: auto; justify-content: flex-end; align-items: center; flex-grow: 1; width: auto; flex-shrink: 0;">
+        <ui:Button text="Play" display-tooltip-when-elided="true" name="play-button" class="menu-button" />
+        <ui:Button text="Controls" display-tooltip-when-elided="true" name="controls-button" class="menu-button" />
+        <ui:Button text="Options" display-tooltip-when-elided="true" name="options-button" class="menu-button" />
+        <ui:Button text="Quit" display-tooltip-when-elided="true" name="quit-button" class="menu-button" />
+    </ui:VisualElement>
+</ui:UXML>

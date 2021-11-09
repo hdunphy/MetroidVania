@@ -15,6 +15,10 @@ public class GameSceneController : MonoBehaviour
 
     public static GameSceneController Singleton;
     public Vector3 _startPosition { get => StartPosition; }
+    public GameState CurrentGameState { get; private set; }
+    public static string MainMenuScene { get => "MainMenu";}
+
+    public enum GameState { InGame, Paused, Menu }
 
     private void Awake()
     {
@@ -23,6 +27,7 @@ public class GameSceneController : MonoBehaviour
         if (Singleton == null)
         {
             Singleton = this;
+            CurrentGameState = GameState.Menu; //initialize to Menu since first loads when at main menu
         }
         else
         { //if Gamelayer already exists then destory this. We don't want duplicates
@@ -36,8 +41,14 @@ public class GameSceneController : MonoBehaviour
             StartGame();
     }
 
+    /// <summary>
+    /// Start the game
+    /// Can also be used to reload the game upon death
+    /// </summary>
     public void StartGame()
     {
+        CurrentGameState = GameState.InGame;
+
         string path = Application.persistentDataPath + "/saves/" + SaveData.current.SaveName + ".save";
         SaveData.current = (SaveData)SerializationManager.Load(path);
 
@@ -50,6 +61,26 @@ public class GameSceneController : MonoBehaviour
             StartPosition = SaveData.current.PlayerPosition;
 
         StartCoroutine(LoadInitialScene(InitialSceneToLoad));
+    }
+
+    /// <summary>
+    /// Load/Unload the pause menu
+    /// </summary>
+    /// <param name="isPaused"></param>
+    public void SetPaused(bool isPaused)
+    {
+        CurrentGameState = isPaused ? GameState.Paused : GameState.InGame;
+
+        if(CurrentGameState == GameState.Paused)
+        {
+            Time.timeScale = 0;
+            SceneManager.LoadScene(MainMenuScene, LoadSceneMode.Additive);
+        }
+        else if(CurrentGameState == GameState.InGame)
+        {
+            SceneManager.UnloadSceneAsync(MainMenuScene);
+            Time.timeScale = 1;
+        }
     }
 
     /// <summary>

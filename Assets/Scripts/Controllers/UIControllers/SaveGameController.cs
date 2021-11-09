@@ -11,7 +11,7 @@ public class SaveGameController
     private Button StartButton;
     private Button DeleteButton;
     private bool IsNewFile;
-    private const string MenuScene = "MainMenu";
+    //private const string MenuScene = "MainMenu";
 
     public SaveGameController(FileInfo _fileInfo, VisualElement _root, bool _isNewFile = false)
     {
@@ -60,7 +60,7 @@ public class SaveGameController
             Debug.Log($"Save succeeded? {success}");
         }
 
-        SceneManager.UnloadSceneAsync(MenuScene);
+        SceneManager.UnloadSceneAsync(GameSceneController.MainMenuScene);
         GameSceneController.Singleton.StartGame();
     }
 
