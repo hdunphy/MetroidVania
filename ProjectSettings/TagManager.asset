@@ -59,3 +59,6 @@ TagManager:
   - name: Environmental
     uniqueID: 3890340045
     locked: 0
+  - name: Text
+    uniqueID: 1633682073
+    locked: 0
