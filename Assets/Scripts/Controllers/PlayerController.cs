@@ -68,7 +68,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            //CharacterController2D.Respawn();
             transform.position = respawnPosition;
         }
     }
@@ -79,7 +78,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void CharacterDeath()
     {
-        gameObject.SetActive(false);
+        GameSceneController.Singleton.LoadLastSave(this);
     }
 
     /// <summary>

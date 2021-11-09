@@ -83,4 +83,32 @@ public class GameSceneController : MonoBehaviour
             sceneObject.OnLoad();
         }
     }
+
+    public void LoadLastSave(PlayerController player)
+    {
+        UnloadAllScenesExcept(gameObject.scene.name);
+        StartCoroutine(LoadLastSaveCoroutine(player));
+    }
+
+    private IEnumerator LoadLastSaveCoroutine(PlayerController player)
+    {
+        Destroy(player.gameObject);
+
+        yield return new WaitForSeconds(0.5f);
+
+        StartGame();
+    }
+
+    void UnloadAllScenesExcept(string sceneName)
+    {
+        int c = SceneManager.sceneCount;
+        for (int i = 0; i < c; i++)
+        {
+            Scene scene = SceneManager.GetSceneAt(i);
+            if (scene.name != sceneName)
+            {
+                SceneManager.UnloadSceneAsync(scene);
+            }
+        }
+    }
 }
