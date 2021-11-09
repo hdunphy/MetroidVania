@@ -10,6 +10,7 @@ public class GameSceneController : MonoBehaviour
     [SerializeField] private CameraFollow CameraPrefab; //Camera Prefab to load
     [SerializeField] private PlayerController PlayerPrefab; //Player prefab to instantiate on start
     [SerializeField] private Vector3 StartPosition; //Start position of the player
+    [SerializeField] private Transform EssentialObjectTransform; //Object to parent instantiated objects
     [SerializeField] private bool IsTestingMode = true; //True if starting from this screen and want to start game on load
 
     public static GameSceneController Singleton;
@@ -65,13 +66,14 @@ public class GameSceneController : MonoBehaviour
 
         if (Camera.main == null)
         { //Make sure the camera is in the scene
-            Instantiate(CameraPrefab, StartPosition + (Vector3.back * 10), Quaternion.identity);
+            var cam = Instantiate(CameraPrefab, EssentialObjectTransform);
+            cam.transform.position = StartPosition + (Vector3.back * 10);
         }
 
-        var player = FindObjectOfType<PlayerController>();
+        var player = EssentialObjectTransform.GetComponentInChildren<PlayerController>();
         if (player == null)
         { //Make sure the player is in the scene
-            player = Instantiate(PlayerPrefab, StartPosition, Quaternion.identity);
+            player = Instantiate(PlayerPrefab, EssentialObjectTransform);
         }
 
         player.OnLoad(StartPosition);

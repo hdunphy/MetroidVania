@@ -193,6 +193,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 259989573158325766, guid: f0ff9c2d1ddd94b42ac096a4e0bc5423, type: 3}
+      propertyPath: EssentialObjectTransform
+      value: 
+      objectReference: {fileID: 2324968103491605979}
     - target: {fileID: 7203295084166772290, guid: f0ff9c2d1ddd94b42ac096a4e0bc5423, type: 3}
       propertyPath: m_Name
       value: Game Manager
