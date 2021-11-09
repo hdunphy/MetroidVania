@@ -23,6 +23,8 @@ public class Damageable : MonoBehaviour
     private UnityEvent TakeDamage;
 
     public float currentHealth { get; private set; } //Current health of the entity
+
+    public float GetHealthPercent => currentHealth / TotalHealth;
     private bool canTakeDamage; //Check if entity can take damage this frame
 
     private void Start()
@@ -40,9 +42,9 @@ public class Damageable : MonoBehaviour
     {
         if (!IsInvincible && canTakeDamage)
         { //If the entity is not invincible and can take damage
+            currentHealth -= damage;
             TakeDamage?.Invoke();
 
-            currentHealth -= damage;
             Vector2 _damageDirection = Vector3.Normalize(transform.position - damagePosition); //Find the direction the damge came from
 
             if (m_Rigidbody2D != null)

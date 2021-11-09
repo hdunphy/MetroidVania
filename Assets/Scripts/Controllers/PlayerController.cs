@@ -81,6 +81,12 @@ public class PlayerController : MonoBehaviour
         GameSceneController.Singleton.LoadLastSave(this);
     }
 
+    public void SetHUDHealth()
+    {
+        var damageable = GetComponent<Damageable>();
+        HUDController.Singleton.SetHealthBarPercent(damageable.GetHealthPercent);
+    }
+
     /// <summary>
     /// Leaving a room into another scene
     ///     Need to stop all movement
@@ -113,6 +119,7 @@ public class PlayerController : MonoBehaviour
         hasLoaded = true;
         List<Ability> startingAbilities = PlayerAbilityManager.Singleton.GetAbilitiesByIds(SaveData.current.PlayerHeldAbilityIds);
         CharacterController2D.SetCharacterAbilities(startingAbilities);
+        HUDController.Singleton.SetCurrentPercent(GetComponent<Damageable>().GetHealthPercent);
         EnterRoom(loadPosition);
     }
 

@@ -98,14 +98,10 @@ public class GameSceneController : MonoBehaviour
     /// <returns>IEnumerator so it can be run as a coroutine</returns>
     private IEnumerator LoadInitialScene(string initialSceneName)
     {
-        if (SceneManager.GetActiveScene().name != initialSceneName)
-        { //Make sure the scene isn't already loaded
-            yield return SceneManager.LoadSceneAsync(initialSceneName, LoadSceneMode.Additive);
-        }
-
-        if (Camera.main == null)
+        var cam = EssentialObjectTransform.GetComponentInChildren<CameraFollow>();
+        if (cam == null)
         { //Make sure the camera is in the scene
-            var cam = Instantiate(CameraPrefab, EssentialObjectTransform);
+            cam = Instantiate(CameraPrefab, EssentialObjectTransform);
             cam.transform.position = StartPosition + (Vector3.back * 10);
         }
 
@@ -113,6 +109,11 @@ public class GameSceneController : MonoBehaviour
         if (player == null)
         { //Make sure the player is in the scene
             player = Instantiate(PlayerPrefab, EssentialObjectTransform);
+        }
+
+        if (SceneManager.GetActiveScene().name != initialSceneName)
+        { //Make sure the scene isn't already loaded
+            yield return SceneManager.LoadSceneAsync(initialSceneName, LoadSceneMode.Additive);
         }
 
         player.OnLoad(StartPosition);
@@ -131,6 +132,11 @@ public class GameSceneController : MonoBehaviour
 
     private IEnumerator LoadLastSaveCoroutine(PlayerController player)
     {
+        //remove connection main camera to player
+        if (Camera.main.TryGetComponent(out CameraFollow cameraFollow))
+        {
+            cameraFollow.SetTarget(cameraFollow.transform);
+        }
         Destroy(player.gameObject);
 
         yield return new WaitForSeconds(0.5f);
