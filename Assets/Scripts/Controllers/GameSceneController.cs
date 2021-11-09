@@ -83,6 +83,14 @@ public class GameSceneController : MonoBehaviour
         }
     }
 
+    public void QuitToMenu()
+    {
+        UnloadAllScenesExcept(gameObject.scene.name);
+        CurrentGameState = GameState.Menu;
+
+        SceneManager.LoadScene(MainMenuScene);
+    }
+
     /// <summary>
     /// Which scene to load initially and all essential objects
     /// </summary>
@@ -130,7 +138,7 @@ public class GameSceneController : MonoBehaviour
         StartGame();
     }
 
-    void UnloadAllScenesExcept(string sceneName)
+    private void UnloadAllScenesExcept(string sceneName)
     {
         int c = SceneManager.sceneCount;
         for (int i = 0; i < c; i++)

@@ -40,9 +40,38 @@ public class MainMenuController : MonoBehaviour
 
     private void Start()
     {
-        if (!SceneManager.GetSceneByName(BootSceneName).isLoaded)
+        if (SceneManager.GetSceneByName(BootSceneName).isLoaded)
         {
-            SceneManager.LoadScene(BootSceneName, LoadSceneMode.Additive);
+            SetButtonOptions();
+        }
+        else
+        {
+            StartCoroutine(GetBootScene());
+        }
+
+    }
+
+    private IEnumerator GetBootScene()
+    {
+        yield return SceneManager.LoadSceneAsync(BootSceneName, LoadSceneMode.Additive);
+
+        SetButtonOptions();
+    }
+
+    private void SetButtonOptions()
+    {
+        switch (GameSceneController.Singleton.CurrentGameState)
+        {
+            case GameSceneController.GameState.InGame:
+                break;
+            case GameSceneController.GameState.Paused:
+                PlayButton.text = "Resume";
+                QuitButton.text = "Exit to Menu";
+                break;
+            case GameSceneController.GameState.Menu:
+                PlayButton.text = "Play";
+                QuitButton.text = "Quit";
+                break;
         }
     }
 
@@ -71,7 +100,14 @@ public class MainMenuController : MonoBehaviour
 
     private void QuitButton_clicked()
     {
-        Debug.Log("Quitting");
-        Application.Quit();
+        if (GameSceneController.Singleton.CurrentGameState == GameSceneController.GameState.Menu)
+        {
+            Debug.Log("Quitting");
+            Application.Quit();
+        }
+        else if (GameSceneController.Singleton.CurrentGameState == GameSceneController.GameState.Paused)
+        {
+            GameSceneController.Singleton.QuitToMenu();
+        }
     }
 }
