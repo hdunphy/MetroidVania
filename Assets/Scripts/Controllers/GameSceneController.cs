@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameSceneController : MonoBehaviour
@@ -16,7 +17,7 @@ public class GameSceneController : MonoBehaviour
     public static GameSceneController Singleton;
     public Vector3 _startPosition { get => StartPosition; }
     public GameState CurrentGameState { get; private set; }
-    public static string MainMenuScene { get => "MainMenu";}
+    public static string MainMenuScene { get => "MainMenu"; }
 
     public enum GameState { InGame, Paused, Menu }
 
@@ -37,7 +38,7 @@ public class GameSceneController : MonoBehaviour
 
     private void Start()
     {
-        if(IsTestingMode)
+        if (IsTestingMode)
             StartGame();
     }
 
@@ -57,7 +58,7 @@ public class GameSceneController : MonoBehaviour
         InitialSceneToLoad = string.IsNullOrEmpty(SaveData.current.PlayerSceneName) ?
             InitialSceneToLoad : SaveData.current.PlayerSceneName;
 
-        if(SaveData.current.PlayerPosition != Vector3.zero)
+        if (SaveData.current.PlayerPosition != Vector3.zero)
             StartPosition = SaveData.current.PlayerPosition;
 
         StartCoroutine(LoadInitialScene(InitialSceneToLoad));
@@ -71,20 +72,25 @@ public class GameSceneController : MonoBehaviour
     {
         CurrentGameState = isPaused ? GameState.Paused : GameState.InGame;
 
-        if(CurrentGameState == GameState.Paused)
+        if (CurrentGameState == GameState.Paused)
         {
             Time.timeScale = 0;
-            SceneManager.LoadScene(MainMenuScene, LoadSceneMode.Additive);
+            FindObjectOfType<PlayerInputController>().EnableInput(false);
+
+            StartCoroutine(LoadSceneAndThen(MainMenuScene, LoadSceneMode.Additive,
+                () => FindObjectOfType<MenuCameraController>().SetCameraPosition(FindObjectOfType<CameraFollow>().transform.position)));
         }
-        else if(CurrentGameState == GameState.InGame)
+        else if (CurrentGameState == GameState.InGame)
         {
             SceneManager.UnloadSceneAsync(MainMenuScene);
             Time.timeScale = 1;
+            FindObjectOfType<PlayerInputController>().EnableInput(true);
         }
     }
 
     public void QuitToMenu()
     {
+        Time.timeScale = 1;//game was coming from pause menu
         UnloadAllScenesExcept(gameObject.scene.name);
         CurrentGameState = GameState.Menu;
 
@@ -155,5 +161,12 @@ public class GameSceneController : MonoBehaviour
                 SceneManager.UnloadSceneAsync(scene);
             }
         }
+    }
+
+    private IEnumerator LoadSceneAndThen(string sceneName, LoadSceneMode mode, Action action)
+    {
+        yield return SceneManager.LoadSceneAsync(sceneName, mode);
+
+        action.Invoke();
     }
 }

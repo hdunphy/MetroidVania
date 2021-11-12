@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerInputController : MonoBehaviour
@@ -60,10 +62,15 @@ public class PlayerInputController : MonoBehaviour
             {
                 GameSceneController.Singleton.SetPaused(true);
             }
-            else if (GameSceneController.Singleton.CurrentGameState == GameSceneController.GameState.Paused)
-            {
-                GameSceneController.Singleton.SetPaused(false);
-            }
+            //else if (GameSceneController.Singleton.CurrentGameState == GameSceneController.GameState.Paused)
+            //{
+            //    GameSceneController.Singleton.SetPaused(false);
+            //}
         }
+    }
+
+    public void EnableInput(bool isEnabled)
+    {
+        GetComponent<PlayerInput>().enabled = isEnabled;
     }
 }

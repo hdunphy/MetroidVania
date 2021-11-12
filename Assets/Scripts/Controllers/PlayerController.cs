@@ -104,7 +104,6 @@ public class PlayerController : MonoBehaviour
     /// <param name="loadPosition">The Vector3 for where the player should move to in new room</param>
     public void EnterRoom(Vector3 loadPosition)
     {
-        Debug.Log($"Pos: {loadPosition}");
         transform.position = loadPosition; //Move player to position
         Camera.main.transform.position = new Vector3(loadPosition.x, loadPosition.y, Camera.main.transform.position.z); //Move camera to position
         Movement.enabled = true; //re-enable player movement
