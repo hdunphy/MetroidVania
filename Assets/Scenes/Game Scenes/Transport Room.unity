@@ -6602,7 +6602,7 @@ GameObject:
   - component: {fileID: 1429380903}
   - component: {fileID: 1429380902}
   - component: {fileID: 1429380901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7369,6 +7369,10 @@ PrefabInstance:
     - target: {fileID: 4449899342751719406, guid: 597e1a956817be24a81d6fe66bffec3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449899342751719407, guid: 597e1a956817be24a81d6fe66bffec3f, type: 3}
+      propertyPath: GUID
+      value: Bridge Door Switch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 597e1a956817be24a81d6fe66bffec3f, type: 3}

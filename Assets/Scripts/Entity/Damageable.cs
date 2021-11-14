@@ -65,6 +65,16 @@ public class Damageable : MonoBehaviour
         }
     }
 
+    public void Heal(float addedHealth)
+    {
+        currentHealth = currentHealth += addedHealth > TotalHealth ? TotalHealth : currentHealth;
+    }
+
+    public void SetFullHealth()
+    {
+        currentHealth = TotalHealth;
+    }
+
     /// <summary>
     /// Kill Entity
     /// </summary>

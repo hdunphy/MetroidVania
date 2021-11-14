@@ -19,7 +19,7 @@ public class AbilityPickupLoader : SceneObjectState
     public void OnPickupEvent()
     {
         SceneObjectData.isOn = false; //Object is picked up so no longer on
-        OnSave();
+        OnUpdateState(gameObject.scene.name);
     }
 
     public override void AfterLoad()
@@ -27,7 +27,7 @@ public class AbilityPickupLoader : SceneObjectState
         UpdateAbilityPickup();
     }
 
-    public override void AfterSave()
+    public override void AfterUpdate()
     {
         UpdateAbilityPickup();
     }

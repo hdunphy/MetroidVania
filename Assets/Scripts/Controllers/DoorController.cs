@@ -3,11 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
+public class DoorController : SceneObjectState
 {
     [SerializeField] private Animator Animator;
     [SerializeField] private SpriteRenderer SpriteRenderer;
     [SerializeField] private Sprite DoorClosedSprite;
+
+    private void Start()
+    {
+        SceneObjectData = new SceneObjectData { guid = GUID, isOn = false };
+        OnLoad();
+    }
 
     /// <summary>
     /// Called to start the open door animation
@@ -15,6 +21,7 @@ public class DoorController : MonoBehaviour
     /// </summary>
     public void Open()
     {
+        SceneObjectData.isOn = true;
         //Animate
         Animator.enabled = true;
     }
@@ -29,15 +36,13 @@ public class DoorController : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    /// <summary>
-    /// Changes the door state depending on Loading conditions.
-    ///     If isOpen is true than the door should not be visible
-    ///     Else if isOpen is false and the door is closed it should be visible and blocking the path
-    /// </summary>
-    /// <param name="_isOpen">bool if the door is open or closed</param>
-    //public void SetIsOpen(bool _isOpen)
-    //{
-    //    Animator.enabled = false; //Disable the animator so it can't open the door
-    //    gameObject.SetActive(!_isOpen);
-    //}
+    public override void AfterLoad()
+    {
+        gameObject.SetActive(!SceneObjectData.isOn);
+    }
+
+    public override void AfterUpdate()
+    {
+        //not used
+    }
 }

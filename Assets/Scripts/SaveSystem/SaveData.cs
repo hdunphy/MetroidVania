@@ -62,4 +62,18 @@ public class SaveData
 
         return data;
     }
+
+    public void SaveSceneObject(string sceneName, SceneObjectData sceneObjectData)
+    {
+        SceneData sceneData = GetScene(sceneName);
+        int index = sceneData.SceneObjectDatas.FindIndex(x => x.guid == sceneObjectData.guid);
+        if (index == -1)
+        {
+            sceneData.SceneObjectDatas.Add(sceneObjectData);
+        }
+        else
+        {
+            sceneData.SceneObjectDatas[index] = sceneObjectData;
+        }
+    }
 }

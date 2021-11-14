@@ -38,6 +38,8 @@ public class SaveStationController : MonoBehaviour, IPlayerInteractable
 
     public void Interact(PlayerController controller)
     {
+        controller.SetFullHealth();
+
         SaveStationText.text = OnSaveText;
         SaveData.current.PlayerPosition = controller.transform.position;
         SaveData.current.PlayerSceneName = gameObject.scene.name;

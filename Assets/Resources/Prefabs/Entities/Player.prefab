@@ -5653,6 +5653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Movement: {fileID: 5026255635176180353}
   CharacterController2D: {fileID: 7881196547339656336}
+  Damageable: {fileID: 6580378475252913759}
   m_Rigidbody2D: {fileID: 1748305981502414567}
   OnDeathEvent:
     m_PersistentCalls:

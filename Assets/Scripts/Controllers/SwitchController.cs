@@ -1,13 +1,14 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class DoorSwitchController : SceneObjectState
+public class SwitchController : SceneObjectState
 {
-    [SerializeField] private DoorController Door; //The door this switch controls
     [SerializeField] private SpriteRenderer SpriteRenderer; //Sprite render for the switch
     [SerializeField] private Sprite OffSprite; //Sprite for off state
     [SerializeField] private Sprite OnSprite; //Sprite for on State
     [SerializeField] private Animator Animator; //Animator
+    [SerializeField] private UnityEvent<bool> OnUpdateState;
 
     private void Start()
     {
@@ -18,24 +19,24 @@ public class DoorSwitchController : SceneObjectState
     /// <summary>
     /// Called when switch is damaged by player
     /// </summary>
-    public void OnDoorSwitched()
+    public void SwitchOn()
     {
         if (!SceneObjectData.isOn)
         { //Don't want to reopen the door. Only open if door is closed
             GetComponent<Damageable>().enabled = false;
             //Animate switch moving to on position
             Animator.enabled = true;
-            Door.Open();
+            OnUpdateState?.Invoke(true);
 
             SceneObjectData.isOn = true;
-            OnSave();
+            OnUpdateState(gameObject.scene.name);
         }
     }
 
     /// <summary>
     /// Called by animator after animation is done
     /// </summary>
-    public void SetDoorSwitchOnState()
+    public void SetSwitchOnState()
     {
         Animator.enabled = false;
         SpriteRenderer.sprite = OnSprite;
@@ -44,29 +45,27 @@ public class DoorSwitchController : SceneObjectState
     /// <summary>
     /// Called to turn the switch to off
     /// </summary>
-    public void SetDoorSwitchOffState()
+    public void SetSwitchOffState()
     {
         GetComponent<Damageable>().enabled = true;
         Animator.enabled = false;
         SpriteRenderer.sprite = OffSprite;
+
     }
 
     public override void AfterLoad()
     {
         if (SceneObjectData.isOn)
         {
-            SetDoorSwitchOnState();
+            SetSwitchOnState();
         }
         else
         {
-            SetDoorSwitchOffState();
+            SetSwitchOffState();
         }
-        //If isOn then door is open and should not be visible
-        //Else IsNotOn then door is closed and is visible
-        Door.gameObject.SetActive(!SceneObjectData.isOn); 
     }
 
-    public override void AfterSave()
+    public override void AfterUpdate()
     {
         //Nothing in this case
     }

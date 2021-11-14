@@ -89,8 +89,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 423197430433617308}
-        m_TargetAssemblyTypeName: DoorSwitchController, Assembly-CSharp
-        m_MethodName: OnDoorSwitched
+        m_TargetAssemblyTypeName: SwitchController, Assembly-CSharp
+        m_MethodName: SwitchOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -113,11 +113,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GUID: Switch_1
-  Door: {fileID: 0}
   SpriteRenderer: {fileID: 423197430937498450}
   OffSprite: {fileID: -1494352897237206093, guid: bfb372de0d086e24e9af5d2b4fc9b98d, type: 3}
   OnSprite: {fileID: -4284778255937859276, guid: bfb372de0d086e24e9af5d2b4fc9b98d, type: 3}
   Animator: {fileID: 4414502992915067227}
+  OnUpdateState:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &4414502992915067227
 Animator:
   serializedVersion: 3

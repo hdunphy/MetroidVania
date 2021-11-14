@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private EntityMovementHorizontal Movement;
     [SerializeField] private CharacterController2D CharacterController2D;
+    [SerializeField] private Damageable Damageable;
     [SerializeField] private Rigidbody2D m_Rigidbody2D;
     [SerializeField] private UnityEvent OnDeathEvent;
 
@@ -57,13 +58,12 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void OnDeath()
     {
-        var damageable = GetComponent<Damageable>();
-        if(damageable.currentHealth <= 0)
+        if(Damageable.currentHealth <= 0)
         {
             Debug.Log("Character is Dead");
 
             Movement.SetCanMove(false);
-            damageable.enabled = false;
+            Damageable.enabled = false;
             OnDeathEvent?.Invoke();
         }
         else
@@ -83,8 +83,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetHUDHealth()
     {
-        var damageable = GetComponent<Damageable>();
-        HUDController.Singleton.SetHealthBarPercent(damageable.GetHealthPercent);
+        HUDController.Singleton.SetHealthBarPercent(Damageable.GetHealthPercent);
     }
 
     /// <summary>
@@ -118,7 +117,7 @@ public class PlayerController : MonoBehaviour
         hasLoaded = true;
         List<Ability> startingAbilities = PlayerAbilityManager.Singleton.GetAbilitiesByIds(SaveData.current.PlayerHeldAbilityIds);
         CharacterController2D.SetCharacterAbilities(startingAbilities);
-        HUDController.Singleton.SetCurrentPercent(GetComponent<Damageable>().GetHealthPercent);
+        HUDController.Singleton.SetCurrentPercent(Damageable.GetHealthPercent);
         EnterRoom(loadPosition);
     }
 
@@ -127,6 +126,15 @@ public class PlayerController : MonoBehaviour
         CharacterController2D.AddAbility(ability);
     }
 
+    public void Heal(float healthAmount)
+    {
+        Damageable.Heal(healthAmount);
+    }
+
+    public void SetFullHealth()
+    {
+        Damageable.SetFullHealth();
+    }
 
     public void OnPlayerInteraction()
     {

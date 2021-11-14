@@ -48,12 +48,15 @@ public class GameSceneController : MonoBehaviour
     /// </summary>
     public void StartGame()
     {
+        if(CurrentGameState == GameState.Menu)
+        {
+            string path = Application.persistentDataPath + "/saves/" + SaveData.current.SaveName + ".save";
+            SaveData.current = (SaveData)SerializationManager.Load(path);
+
+            Debug.Log("Loaded");
+        }
+
         CurrentGameState = GameState.InGame;
-
-        string path = Application.persistentDataPath + "/saves/" + SaveData.current.SaveName + ".save";
-        SaveData.current = (SaveData)SerializationManager.Load(path);
-
-        Debug.Log("Loaded");
 
         InitialSceneToLoad = string.IsNullOrEmpty(SaveData.current.PlayerSceneName) ?
             InitialSceneToLoad : SaveData.current.PlayerSceneName;

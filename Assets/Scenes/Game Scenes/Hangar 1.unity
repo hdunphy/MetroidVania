@@ -24587,6 +24587,34 @@ PrefabInstance:
       propertyPath: GUID
       value: Hangar_Switch_1
       objectReference: {fileID: 0}
+    - target: {fileID: 423197430433617308, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
+      propertyPath: OnUpdateState.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423197430433617308, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
+      propertyPath: OnUpdateState.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423197430433617308, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
+      propertyPath: OnUpdateState.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1130916065}
+    - target: {fileID: 423197430433617308, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
+      propertyPath: OnUpdateState.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 423197430433617308, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
+      propertyPath: OnUpdateState.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 423197430433617308, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
+      propertyPath: OnUpdateState.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 423197430433617308, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
+      propertyPath: OnUpdateState.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 423197430433617311, guid: 8d8d5bc9f2064c347b27ed3141132bd0, type: 3}
       propertyPath: m_Name
       value: Switch
@@ -24737,6 +24765,10 @@ PrefabInstance:
     - target: {fileID: 4449899342751719406, guid: 597e1a956817be24a81d6fe66bffec3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449899342751719407, guid: 597e1a956817be24a81d6fe66bffec3f, type: 3}
+      propertyPath: GUID
+      value: Hangar_Switch_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 597e1a956817be24a81d6fe66bffec3f, type: 3}
@@ -24913,7 +24945,7 @@ GameObject:
   - component: {fileID: 1429380903}
   - component: {fileID: 1429380902}
   - component: {fileID: 1429380901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

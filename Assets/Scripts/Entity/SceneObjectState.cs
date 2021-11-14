@@ -8,33 +8,29 @@ public abstract class SceneObjectState : MonoBehaviour
     [SerializeField, Tooltip("GUID used by save system")] protected string GUID;
     protected SceneObjectData SceneObjectData { get; set; }
 
-    private void OnValidate()
-    {
-        if(FindObjectsOfType<SceneObjectState>().Any(x => x.GUID == GUID && x != this))
-        {
-            var duplicate = FindObjectsOfType<SceneObjectState>().First(x => x.GUID == GUID && x != this);
-            Debug.LogWarning($"Two Objects with the same GUID: {GUID}\nOn Object [{name}] and [{duplicate.name}].");
-        }
-    }
+    //private void OnValidate()
+    //{
+    //    if(FindObjectsOfType<SceneObjectState>().Any(x => x.GUID == GUID && x != this))
+    //    {
+    //        var duplicate = FindObjectsOfType<SceneObjectState>().First(x => x.GUID == GUID && x != this);
+    //        Debug.LogWarning($"Two Objects with the same GUID: {GUID}\nOn Object [{name}] and [{duplicate.name}].");
+    //    }
+    //}
 
     /// <summary>
     /// Used by SaveSystem. Updates the Scene Object Data in the Current SaveData Object for the current scene.
     ///     **Assumes that the SceneObjectData has been updated before calling**
     /// </summary>
-    public virtual void OnSave()
+    public virtual void OnUpdateState(string sceneName)
     {
-        SceneData sceneData = SaveData.current.GetScene(gameObject.scene.name);
-        int index = sceneData.SceneObjectDatas.FindIndex(x => x.guid == GUID);
-        if (index == -1)
+        SaveData.current.SaveSceneObject(sceneName, SceneObjectData);
+
+        if(!SerializationManager.Save(SaveData.current.SaveName, SaveData.current))
         {
-            sceneData.SceneObjectDatas.Add(SceneObjectData);
-        }
-        else
-        {
-            sceneData.SceneObjectDatas[index] = SceneObjectData;
+            Debug.LogWarning("Not saved");
         }
 
-        AfterSave();
+        AfterUpdate();
     }
 
     /// <summary>
@@ -63,5 +59,5 @@ public abstract class SceneObjectState : MonoBehaviour
     /// <summary>
     /// Abstract function called after finished saving the object's state
     /// </summary>
-    public abstract void AfterSave();
+    public abstract void AfterUpdate();
 }
