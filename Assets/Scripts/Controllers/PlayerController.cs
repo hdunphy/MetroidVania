@@ -115,6 +115,7 @@ public class PlayerController : MonoBehaviour
     public void OnLoad(Vector3 loadPosition)
     {
         hasLoaded = true;
+        m_Rigidbody2D.velocity = Vector2.zero;
         List<Ability> startingAbilities = PlayerAbilityManager.Singleton.GetAbilitiesByIds(SaveData.current.PlayerHeldAbilityIds);
         CharacterController2D.SetCharacterAbilities(startingAbilities);
         HUDController.Singleton.SetCurrentPercent(Damageable.GetHealthPercent);
@@ -134,6 +135,7 @@ public class PlayerController : MonoBehaviour
     public void SetFullHealth()
     {
         Damageable.SetFullHealth();
+        SetHUDHealth();
     }
 
     public void OnPlayerInteraction()
